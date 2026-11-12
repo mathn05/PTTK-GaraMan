@@ -1,71 +1,171 @@
 package garaman.servlet;
 
-import garaman.dao.*;
-import garaman.entity.*;
-import java.util.*;
-import java.time.*;
+import garaman.dao.DAO6;
+import garaman.dao.VehicleBrandDAO6;
+import garaman.dao.VehicleDAO6;
+import garaman.entity.Customer6;
+import garaman.entity.Vehicle6;
+import garaman.entity.VehicleBrand6;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
-
-
-import jakarta.servlet.*;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.*;
-import java.io.IOException;
 import java.time.Year;
+import java.util.Locale;
+import java.util.Map;
 
 @WebServlet("/vehicle")
 public class VehicleServlet6 extends HttpServlet {
-    @Override public void doGet(HttpServletRequest req,HttpServletResponse resp) throws ServletException,IOException {
-        Map<String,Object> c=BookingServlet6.context(req,true);synchronized(c){form(req,resp,c);}
-    }
-    @Override public void doPost(HttpServletRequest req,HttpServletResponse resp) throws ServletException,IOException {
-        Map<String,Object> c=BookingServlet6.context(req,false);synchronized(c){
-            try {
-                if(c.get("completed")!=null||c.get("holdCode")!=null)throw new IllegalArgumentException("Hãy quay lại và chỉnh sửa lịch hẹn trước khi thêm xe.");
-                if(!text(req,"action").isEmpty())throw new IllegalArgumentException("Thao tác không hợp lệ.");
-                Integer brandId=integer(req,"vehicleBrand");
-                if(brandId<=0)throw new IllegalArgumentException("Vui lòng chọn hãng xe hợp lệ.");
-                VehicleBrand6 brand;
-                try(var dao=new VehicleBrandDAO6()){brand=dao.findById(brandId);}
-                if(brand==null)throw new IllegalArgumentException("Hãng xe không tồn tại.");
-                String plate=text(req,"licensePlate"),model=text(req,"vehicleModel");
-                Integer year=text(req,"manufactureYear").isEmpty()?null:integer(req,"manufactureYear");
-                if(!plate.toUpperCase(Locale.ROOT).replaceAll("[\\s.\\-]","").matches("[A-Z0-9]{1,20}")||model.isBlank()||model.length()>255
-                   ||(year!=null&&(year<1886||year>Year.now(DAO6.zone()).getValue()+1)))throw new IllegalArgumentException("Thông tin xe không hợp lệ.");
-                Customer6 customer=customer(req);
-                Vehicle6 v=new Vehicle6();
-                v.setCus(customer);v.setBrand(brand);v.setLicensePlate(plate);v.setVehicleModel(model);v.setManufactureYear(year);
-                try(var dao=new VehicleDAO6()){Vehicle6 saved=dao.saveVehicle(v,customer.getId());c.put("vehicleId",saved.getId());}
-                resp.sendRedirect(url(req,"/booking",Map.of("context",c.get("id"))));
-            }catch(IllegalArgumentException e){resp.setStatus(400);req.setAttribute("message",e.getMessage());form(req,resp,c);}
+    @Override
+    public void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        Map<String, Object> c = BookingServlet6.context(req, true);
+        synchronized (c) {
+            form(req, resp, c);
         }
     }
 
-    private void form(HttpServletRequest req,HttpServletResponse resp,Map<String,Object> c) throws ServletException,IOException {
-        req.setAttribute("context",c.get("id"));req.setAttribute("cus",customer(req));req.setAttribute("maxYear",Year.now(DAO6.zone()).getValue()+1);
-        for(String name:new String[]{"licensePlate","vehicleModel","manufactureYear"})req.setAttribute(name,text(req,name));
-        Integer selected=null;try{Integer id=integer(req,"vehicleBrand");if(id>0)selected=id;}catch(IllegalArgumentException ignored){}
-        req.setAttribute("selectedBrandId",selected);
-        try(var dao=new VehicleBrandDAO6()){req.setAttribute("vehicleBrandList",dao.getVehicleBrands());}
-        view(req,resp,"customer/AddNewVehicleView6");
+    @Override
+    public void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        Map<String, Object> c = BookingServlet6.context(req, false);
+        synchronized (c) {
+            try {
+                if (c.get("completed") != null || c.get("holdCode") != null) {
+                    throw new IllegalArgumentException(
+                            "Hãy quay lại và chỉnh sửa lịch hẹn trước khi thêm xe.");
+                }
+                if (!text(req, "action").isEmpty()) {
+                    throw new IllegalArgumentException("Thao tác không hợp lệ.");
+                }
+
+                Integer brandId = integer(req, "vehicleBrand");
+                if (brandId <= 0) {
+                    throw new IllegalArgumentException("Vui lòng chọn hãng xe hợp lệ.");
+                }
+                VehicleBrand6 brand;
+                try (VehicleBrandDAO6 brandDAO = new VehicleBrandDAO6()) {
+                    brand = brandDAO.findById(brandId);
+                }
+                if (brand == null) {
+                    throw new IllegalArgumentException("Hãng xe không tồn tại.");
+                }
+
+                String plate = text(req, "licensePlate");
+                String model = text(req, "vehicleModel");
+                Integer year = null;
+                if (!text(req, "manufactureYear").isEmpty()) {
+                    year = integer(req, "manufactureYear");
+                }
+                String normalizedPlate = plate.toUpperCase(Locale.ROOT).replaceAll("[\\s.\\-]", "");
+                int maxYear = Year.now(DAO6.zone()).getValue() + 1;
+                if (!normalizedPlate.matches("[A-Z0-9]{1,20}") || model.isBlank() || model.length() > 255
+                        || (year != null && (year < 1886 || year > maxYear))) {
+                    throw new IllegalArgumentException("Thông tin xe không hợp lệ.");
+                }
+
+                // Chỉ Servlet gán dữ liệu nghiệp vụ; Km chưa biết giữ nguyên null.
+                Customer6 customer = customer(req);
+                Vehicle6 vehicle = new Vehicle6();
+                vehicle.setCus(customer);
+                vehicle.setBrand(brand);
+                vehicle.setLicensePlate(plate);
+                vehicle.setVehicleModel(model);
+                vehicle.setManufactureYear(year);
+                try (VehicleDAO6 vehicleDAO = new VehicleDAO6(customer)) {
+                    Vehicle6 savedVehicle = vehicleDAO.saveVehicle(vehicle, customer.getId());
+                    c.put("vehicleId", savedVehicle.getId());
+                }
+                resp.sendRedirect(url(req, "/booking", Map.of("context", c.get("id"))));
+            } catch (IllegalArgumentException e) {
+                resp.setStatus(400);
+                req.setAttribute("message", e.getMessage());
+                form(req, resp, c);
+            }
+        }
     }
 
-    private static Customer6 customer(HttpServletRequest req){
-        Member6 u=(Member6)req.getSession().getAttribute("currentUser");
-        if(!(u instanceof Customer6 c))throw new IllegalArgumentException("Phiên khách hàng không hợp lệ.");
-        try(var dao=new CustomerDAO6()){Customer6 fresh=dao.getCustomerInfo(c.getCustomerCode());if(fresh==null)throw new IllegalArgumentException("Không tìm thấy hồ sơ khách hàng.");return fresh;}
+    private void form(HttpServletRequest req, HttpServletResponse resp, Map<String, Object> c)
+            throws ServletException, IOException {
+        req.setAttribute("context", c.get("id"));
+        req.setAttribute("cus", customer(req));
+        req.setAttribute("maxYear", Year.now(DAO6.zone()).getValue() + 1);
+        for (String name : new String[]{"licensePlate", "vehicleModel", "manufactureYear"}) {
+            req.setAttribute(name, text(req, name));
+        }
+
+        // Chuỗi brand không hợp lệ không được đưa vào EL để ép kiểu số.
+        Integer selected = null;
+        try {
+            Integer id = integer(req, "vehicleBrand");
+            if (id > 0) {
+                selected = id;
+            }
+        } catch (IllegalArgumentException ignored) {
+            // Giữ lựa chọn rỗng khi hiển thị lại form lỗi.
+        }
+        req.setAttribute("selectedBrandId", selected);
+        try (VehicleBrandDAO6 brandDAO = new VehicleBrandDAO6()) {
+            VehicleBrand6[] vehicleBrandList = brandDAO.getVehicleBrands();
+            req.setAttribute("vehicleBrandList", vehicleBrandList);
+        }
+        view(req, resp, "customer/AddNewVehicleView6");
     }
-    private static String encode(String value){return URLEncoder.encode(value,StandardCharsets.UTF_8);}
-    private static Integer integer(HttpServletRequest req,String name){try{return Integer.parseInt(text(req,name));}catch(NumberFormatException e){throw new IllegalArgumentException("Giá trị "+name+" không hợp lệ.");}}
-    private static String text(HttpServletRequest req,String name){String v=req.getParameter(name);return v==null?"":v.trim();}
-    private static String url(HttpServletRequest req,String route,Map<String,?> params){
-        var out=new StringBuilder(req.getContextPath()).append(route);String sep="?";
-        for(var e:params.entrySet()){if(e.getValue()==null)continue;out.append(sep).append(encode(e.getKey())).append('=').append(encode(String.valueOf(e.getValue())));sep="&";}
-        return out.toString();
+
+    private static Customer6 customer(HttpServletRequest req) {
+        // Danh tính lấy từ session đăng nhập, không nhận mã khách hàng từ form.
+        Object user = req.getSession().getAttribute("currentUser");
+        if (!(user instanceof Customer6 c) || c.getId() == null || c.getId() <= 0) {
+            throw new IllegalArgumentException("Phiên khách hàng không hợp lệ.");
+        }
+        return c;
     }
-    private static void view(HttpServletRequest req,HttpServletResponse resp,String name) throws ServletException,IOException {
-        req.setAttribute("ctx",req.getContextPath());req.setAttribute("businessZone",DAO6.zone().getId());
-        req.getRequestDispatcher("/WEB-INF/views/"+name+".jsp").forward(req,resp);
+
+    private static Integer integer(HttpServletRequest req, String name) {
+        try {
+            return Integer.parseInt(text(req, name));
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("Giá trị " + name + " không hợp lệ.");
+        }
+    }
+
+    private static String encode(String value) {
+        return URLEncoder.encode(value, StandardCharsets.UTF_8);
+    }
+
+    private static String text(HttpServletRequest req, String name) {
+        String value = req.getParameter(name);
+        if (value == null) {
+            return "";
+        }
+        return value.trim();
+    }
+
+    private static String url(HttpServletRequest req, String route, Map<String, ?> params) {
+        StringBuilder result = new StringBuilder(req.getContextPath());
+        result.append(route);
+        String separator = "?";
+        for (Map.Entry<String, ?> entry : params.entrySet()) {
+            if (entry.getValue() == null) {
+                continue;
+            }
+            result.append(separator);
+            result.append(encode(entry.getKey()));
+            result.append('=');
+            result.append(encode(String.valueOf(entry.getValue())));
+            separator = "&";
+        }
+        return result.toString();
+    }
+
+    private static void view(HttpServletRequest req, HttpServletResponse resp, String name)
+            throws ServletException, IOException {
+        req.setAttribute("ctx", req.getContextPath());
+        req.setAttribute("businessZone", DAO6.zone().getId());
+        req.getRequestDispatcher("/WEB-INF/views/" + name + ".jsp").forward(req, resp);
     }
 }

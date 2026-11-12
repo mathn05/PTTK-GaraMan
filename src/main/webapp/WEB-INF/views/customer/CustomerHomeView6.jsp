@@ -7,5 +7,7 @@
   <h1>CHĂM SÓC CHIẾC XE CỦA BẠN DỄ DÀNG HƠN</h1>
   <p>Đặt lịch bảo dưỡng / sửa chữa trực tuyến, chọn thời gian phù hợp và gửi yêu cầu đến gara.</p>
 </section>
-<div class="center home-action"><a class="button" href="${ctx}/booking">ĐẶT LỊCH HẸN NGAY →</a></div>
+<div class="center home-action">
+  <a class="button" href="${ctx}/booking">ĐẶT LỊCH HẸN NGAY →</a>
+</div>
 <%@ include file="../user/bottom.jspf" %>

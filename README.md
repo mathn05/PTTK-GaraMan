@@ -4,6 +4,8 @@ Project Java web thực tế tại `C:\Users\admin\Documents\tai lieu nam 4\PTTK
 
 **Bản hiệu lực — cách A: Servlet đóng gói:** [hồ sơ bàn giao](docs/final/README.md), [bảng sửa sơ đồ cụ thể](docs/final/02_Bang_thay_doi_thiet_ke.md), [Scenario module 1](docs/final/Scenario_V3_Module1.md), [Scenario module 2](docs/final/Scenario_V3_Module2.md). Tài liệu cũ ngoài docs/final được giữ làm lịch sử, không dùng để phủ định quyết định mới.
 
+Đã refactor cách viết hai module để dễ trình bày: [file sửa, trước/sau và hướng dẫn giải thích](docs/final/08_File_thay_doi.md), [truy vết65 bước đặt lịch](docs/final/Scenario_V3_Ky_thuat_Module1.md), [truy vết84 bước báo cáo](docs/final/Scenario_V3_Ky_thuat_Module2.md). Giữ nguyên nghiệp vụ, API, CSDL và control giao diện.
+
 ## Mở ứng dụng hiện đang chạy
 
 **http://localhost:8080/garaman6/login**
@@ -98,7 +100,7 @@ Lệnh browser riêng yêu cầu Tomcat test đã được khởi động bằng
 powershell -ExecutionPolicy Bypass -File .\scripts\Test-GaraMan.ps1 -Smoke
 ```
 
-JUnit thiếu config thì fail rõ, không skip thành pass. Guard actual DATABASE() và HTTP /test-runtime trước ghi, chỉ target garaman6_v3_it; browser/regression dọn dữ liệu trong finally kể cả test fail. Script tổng dùng Tomcat test riêng, dừng đúng Tomcat test ở finally; không SHUTDOWN MySQL để thử lỗi. Lượt cuối: 27 JUnit + 49 browser + 38 regression + 4 guard/cleanup đều đạt. Main có thêm 11 kiểm tra chỉ đọc sau migration, dữ liệu nghiệp vụ không đổi qua kiểm tra này.
+JUnit thiếu config thì fail rõ, không skip thành pass. Guard actual DATABASE() và HTTP /test-runtime trước ghi, chỉ target garaman6_v3_it; probe chỉ được chèn từ src/test vào WAR test, không có trong WAR chính. Browser/regression dọn dữ liệu trong finally kể cả test fail. Script tổng dùng Tomcat test riêng, dừng đúng Tomcat test ở finally; không SHUTDOWN MySQL để thử lỗi. Lượt refactor cuối: 29 JUnit + 49 browser + 38 regression + 4 guard/cleanup đều đạt. Main có thêm 11 kiểm tra chỉ đọc, dữ liệu nghiệp vụ không đổi qua kiểm tra này.
 
 Kết quả: target/surefire-reports; [evidence cuối](docs/final/evidence/), screenshots desktop/mobile và hồi quy. WAR: **target/garaman6.war**. Log main `.runtime/tomcat-base/logs`, test `.runtime/tomcat-test-base/logs`; MySQL `.runtime/mysql/server.log`.
 

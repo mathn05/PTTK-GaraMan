@@ -1,6 +1,6 @@
 """Run the project WAR on native Windows Tomcat without requiring an IDE plugin."""
 from pathlib import Path
-import argparse, hashlib, json, os, shutil, socket, subprocess, time, urllib.request
+import argparse, hashlib, json, os, shutil, socket, subprocess, time, urllib.request, zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
 HOME=ROOT/'.runtime/apache-tomcat-10.1.61'
@@ -44,7 +44,15 @@ def start():
     source=(HOME/'conf/server.xml').read_text(encoding='utf-8')
     source=source.replace('<Server port="8005"','<Server port="-1"').replace('<Connector port="8080"',f'<Connector address="127.0.0.1" port="{port}"')
     (BASE/'conf/server.xml').write_text(source,encoding='utf-8')
-    shutil.copy2(ROOT/'target/garaman6.war',BASE/'webapps/garaman6.war')
+    deployed_war=BASE/'webapps/garaman6.war'
+    shutil.copy2(ROOT/'target/garaman6.war',deployed_war)
+    if TEST_MODE:
+        # Production WAR stays unchanged. The existing browser guard needs the
+        # actual application's DB identity, supplied by this test-only servlet.
+        probe=ROOT/'target/test-classes/garaman/TestRuntimeServlet6.class'
+        if not probe.is_file():raise RuntimeError('Compile tests before starting test Tomcat')
+        with zipfile.ZipFile(deployed_war,'a',zipfile.ZIP_DEFLATED) as war:
+            war.write(probe,'WEB-INF/classes/garaman/TestRuntimeServlet6.class')
     # Tomcat expands a changed WAR and replaces its own old exploded application.
     java=shutil.which('java')
     config=ROOT/('.local/test.properties' if TEST_MODE else '.local/garaman.properties')

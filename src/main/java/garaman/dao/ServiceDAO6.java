@@ -2,23 +2,64 @@ package garaman.dao;
 
 import garaman.entity.Service6;
 import garaman.exception.DataAccessException6;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class ServiceDAO6 extends DAO6 {
-    public ServiceDAO6(){super();}
-    public ServiceDAO6(Connection con){super(con);}
-    public Service6 getServiceInfo(String serviceCode){
-        try(var ps=con.prepareStatement("SELECT * FROM tblService6 WHERE serviceCode=?")) {
-            ps.setString(1,serviceCode);try(var rs=ps.executeQuery()){return rs.next()?readService(rs):null;}
-        }catch(SQLException e){throw new DataAccessException6("Không tải được dịch vụ",e);}
+    public ServiceDAO6() {
+        super();
     }
+
+    public ServiceDAO6(Connection con) {
+        super(con);
+    }
+
+    public Service6 getServiceInfo(String serviceCode) {
+        String sql = """
+                SELECT * FROM tblService6
+                WHERE serviceCode = ?
+                """;
+        try (PreparedStatement statement = con.prepareStatement(sql)) {
+            statement.setString(1, serviceCode);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (!resultSet.next()) {
+                    return null;
+                }
+                return readService(resultSet);
+            }
+        } catch (SQLException e) {
+            throw new DataAccessException6("Không tải được dịch vụ", e);
+        }
+    }
+
     Service6 findById(Integer id) throws SQLException {
-        if(id==null||id<=0)return null;
-        try(var ps=con.prepareStatement("SELECT * FROM tblService6 WHERE id=?")){ps.setInt(1,id);try(var rs=ps.executeQuery()){return rs.next()?readService(rs):null;}}
+        if (id == null || id <= 0) {
+            return null;
+        }
+        String sql = """
+                SELECT * FROM tblService6
+                WHERE id = ?
+                """;
+        try (PreparedStatement statement = con.prepareStatement(sql)) {
+            statement.setInt(1, id);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (!resultSet.next()) {
+                    return null;
+                }
+                return readService(resultSet);
+            }
+        }
     }
 
     private Service6 readService(ResultSet rs) throws SQLException {
-        Service6 s=new Service6();s.setId(rs.getObject("id",Integer.class));s.setServiceCode(rs.getString("serviceCode"));s.setServiceName(rs.getString("serviceName"));
-        s.setDescription(rs.getString("description"));s.setUnitPrice(rs.getBigDecimal("unitPrice"));return s;
+        Service6 service = new Service6();
+        service.setId(rs.getObject("id", Integer.class));
+        service.setServiceCode(rs.getString("serviceCode"));
+        service.setServiceName(rs.getString("serviceName"));
+        service.setDescription(rs.getString("description"));
+        service.setUnitPrice(rs.getBigDecimal("unitPrice"));
+        return service;
     }
 }
