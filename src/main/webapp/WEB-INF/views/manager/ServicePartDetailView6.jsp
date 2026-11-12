@@ -1,7 +1,7 @@
 <%@ page pageEncoding="UTF-8" %>
-<%@ include file="../shared/tags.jspf" %>
+<%@ include file="../user/tags.jspf" %>
 <c:set var="pageTitle" value="Chi tiết dịch vụ / phụ tùng" />
-<%@ include file="../shared/top.jspf" %>
+<%@ include file="../user/top.jspf" %>
 <c:choose><c:when test="${itemType == 'SERVICE'}">
   <h1 class="bar light">THÔNG TIN CHI TIẾT DỊCH VỤ</h1>
   <dl class="details item-details"><dt>Mã dịch vụ</dt><dd><c:out value="${service.serviceCode}" /></dd><dt>Tên dịch vụ</dt><dd><c:out value="${service.serviceName}" /></dd><dt>Thông tin / mô tả</dt><dd><c:out value="${service.description}" /></dd><dt>Giá dịch vụ hiện tại</dt><dd><fmt:formatNumber value="${service.unitPrice}" maxFractionDigits="2" /> VNĐ</dd><dt>Số lần sử dụng toàn thời gian</dt><dd id="lifetimeUsageCount">${lifetimeUsageCount} lần</dd></dl>
@@ -20,6 +20,6 @@
   </tbody></table></div>
 </c:otherwise></c:choose>
 <p class="muted">Khoảng thống kê: <c:out value="${startDate}" /> → <c:out value="${endDate}" /> · Chỉ hóa đơn đã thanh toán.</p>
-<%@ include file="../shared/pagination.jspf" %>
+<%@ include file="../user/pagination.jspf" %>
 <a class="button secondary" href="<c:out value='${backUrl}' />">← Quay lại danh sách</a>
-<%@ include file="../shared/bottom.jspf" %>
+<%@ include file="../user/bottom.jspf" %>

@@ -1,7 +1,7 @@
 <%@ page pageEncoding="UTF-8" %>
-<%@ include file="../shared/tags.jspf" %>
+<%@ include file="../user/tags.jspf" %>
 <c:set var="pageTitle" value="Thêm xe mới" />
-<%@ include file="../shared/top.jspf" %>
+<%@ include file="../user/top.jspf" %>
 <section class="narrow"><h1>THÊM XE MỚI</h1><p class="center muted">Nhập thông tin xe để lưu và chọn trong biểu mẫu đặt lịch hẹn.</p>
   <h2 class="bar light">THÔNG TIN PHƯƠNG TIỆN</h2>
   <form action="${ctx}/vehicle" method="post">
@@ -14,4 +14,4 @@
     <div class="actions"><a class="button secondary" href="${ctx}/booking?context=${context}">← Quay lại</a><button class="button" type="submit">Lưu thông tin xe</button></div>
   </form>
 </section>
-<%@ include file="../shared/bottom.jspf" %>
+<%@ include file="../user/bottom.jspf" %>

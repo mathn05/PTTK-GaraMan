@@ -1,7 +1,7 @@
 <%@ page pageEncoding="UTF-8" %>
-<%@ include file="../shared/tags.jspf" %>
+<%@ include file="../user/tags.jspf" %>
 <c:set var="pageTitle" value="Kết quả thống kê doanh thu" />
-<%@ include file="../shared/top.jspf" %>
+<%@ include file="../user/top.jspf" %>
 <h1 class="bar light">KẾT QUẢ THỐNG KÊ DỊCH VỤ / PHỤ TÙNG</h1>
 <div class="report-caption"><span><c:out value="${startDate}" /> → <c:out value="${endDate}" /></span><span>Loại: ${statisticType == 'SERVICE' ? 'Dịch vụ' : statisticType == 'PART' ? 'Phụ tùng' : 'Tất cả'} · Hóa đơn đã thanh toán</span></div>
 <div class="table-wrap"><table id="revenueTable"><thead><tr><th>Mã DV/PT</th><th>Tên dịch vụ / phụ tùng</th><th class="numeric">Số lần sử dụng</th><th class="numeric">Tổng doanh thu (VNĐ)</th></tr></thead><tbody>
@@ -10,6 +10,6 @@
   </c:forEach>
   <c:if test="${empty revenueStats}"><tr><td colspan="4" class="empty">Không có dữ liệu trong khoảng thời gian đã chọn.</td></tr></c:if>
 </tbody><tfoot><tr><td colspan="3">Tổng doanh thu toàn bộ kết quả</td><td class="numeric money" id="totalRevenue" data-value="${totalRevenue}"><fmt:formatNumber value="${totalRevenue}" minFractionDigits="0" maxFractionDigits="2" /> VNĐ</td></tr></tfoot></table></div>
-<%@ include file="../shared/pagination.jspf" %>
+<%@ include file="../user/pagination.jspf" %>
 <a class="button secondary" href="<c:out value='${backUrl}' />">← Quay lại bộ lọc</a>
-<%@ include file="../shared/bottom.jspf" %>
+<%@ include file="../user/bottom.jspf" %>

@@ -1,7 +1,7 @@
 <%@ page pageEncoding="UTF-8" %>
-<%@ include file="../shared/tags.jspf" %>
+<%@ include file="../user/tags.jspf" %>
 <c:set var="pageTitle" value="Đặt lịch hẹn" />
-<%@ include file="../shared/top.jspf" %>
+<%@ include file="../user/top.jspf" %>
 <h1>ĐẶT LỊCH HẸN SỬA CHỮA</h1>
 <form action="${ctx}/booking" method="post" id="bookingForm">
   <input type="hidden" name="csrfToken" value="${sessionScope.csrfToken}"><input type="hidden" name="context" value="${context}">
@@ -31,4 +31,4 @@
   </div>
   <div class="actions"><a class="button secondary" href="${ctx}/booking?action=home">← QUAY LẠI</a><button class="button" type="submit" name="action" value="hold">XÁC NHẬN →</button></div>
 </form>
-<%@ include file="../shared/bottom.jspf" %>
+<%@ include file="../user/bottom.jspf" %>

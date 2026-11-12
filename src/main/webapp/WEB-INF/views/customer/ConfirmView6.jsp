@@ -1,7 +1,7 @@
 <%@ page pageEncoding="UTF-8" %>
-<%@ include file="../shared/tags.jspf" %>
+<%@ include file="../user/tags.jspf" %>
 <c:set var="pageTitle" value="Xác nhận lịch hẹn" />
-<%@ include file="../shared/top.jspf" %>
+<%@ include file="../user/top.jspf" %>
 <section class="narrow">
   <c:choose><c:when test="${completed}"><div class="success-banner"><h1>ĐẶT LỊCH HẸN THÀNH CÔNG</h1><p>Mã lịch hẹn: <strong id="appointmentCode"><c:out value="${appointment.appointmentCode}" /></strong> · <span class="badge">Chờ tiếp nhận</span></p></div></c:when><c:otherwise><h1>XÁC NHẬN LỊCH HẸN</h1></c:otherwise></c:choose>
   <h2 class="bar">CHI TIẾT YÊU CẦU ĐẶT LỊCH</h2>
@@ -23,4 +23,4 @@
     </div>
   </c:otherwise></c:choose>
 </section>
-<%@ include file="../shared/bottom.jspf" %>
+<%@ include file="../user/bottom.jspf" %>

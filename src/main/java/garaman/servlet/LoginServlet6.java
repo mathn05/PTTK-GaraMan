@@ -17,7 +17,7 @@ import java.io.IOException;
 @WebServlet("/login")
 public class LoginServlet6 extends HttpServlet {
     @Override public void doGet(HttpServletRequest req,HttpServletResponse resp) throws ServletException,IOException {
-        if(req.getSession().getAttribute("currentUser")!=null){home(req,resp);return;}view(req,resp,"auth/LoginView6");
+        if(req.getSession().getAttribute("currentUser")!=null){home(req,resp);return;}view(req,resp,"user/LoginView6");
     }
     @Override public void doPost(HttpServletRequest req,HttpServletResponse resp) throws ServletException,IOException {
         if("logout".equals(text(req,"action"))){BookingServlet6.releaseAll(req.getSession());req.getSession().invalidate();resp.sendRedirect(req.getContextPath()+"/login");return;}
@@ -36,7 +36,7 @@ public class LoginServlet6 extends HttpServlet {
             home(req,resp);
         }
     }
-    private void invalid(HttpServletRequest req,HttpServletResponse resp) throws ServletException,IOException {resp.setStatus(401);req.setAttribute("message","Tên đăng nhập hoặc mật khẩu không đúng, hoặc tài khoản chưa hoạt động.");view(req,resp,"auth/LoginView6");}
+    private void invalid(HttpServletRequest req,HttpServletResponse resp) throws ServletException,IOException {resp.setStatus(401);req.setAttribute("message","Tên đăng nhập hoặc mật khẩu không đúng, hoặc tài khoản chưa hoạt động.");view(req,resp,"user/LoginView6");}
     private void home(HttpServletRequest req,HttpServletResponse resp) throws IOException {resp.sendRedirect(req.getContextPath()+("CUSTOMER".equals(req.getSession().getAttribute("currentRole"))?"/booking?action=home":"/revenue?action=home"));}
 
     private static void error(HttpServletRequest req,HttpServletResponse resp,int status,String message) throws ServletException,IOException {

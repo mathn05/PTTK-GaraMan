@@ -1,7 +1,7 @@
 <%@ page pageEncoding="UTF-8" %>
-<%@ include file="../shared/tags.jspf" %>
+<%@ include file="../user/tags.jspf" %>
 <c:set var="pageTitle" value="Bộ lọc thống kê doanh thu" />
-<%@ include file="../shared/top.jspf" %>
+<%@ include file="../user/top.jspf" %>
 <section class="report-panel narrow"><h1 class="bar light">BỘ LỌC THỐNG KÊ DOANH THU</h1>
   <form action="${ctx}/revenue" method="get" class="filter-form"><input type="hidden" name="action" value="list">
     <div class="form-row"><label for="startDate">Ngày bắt đầu <span class="required">*</span></label><input id="startDate" name="startDate" type="date" value="<c:out value='${startDate}' />" required></div>
@@ -11,4 +11,4 @@
     <div class="actions"><a class="button secondary" href="${ctx}/revenue?action=menu">← Quay lại</a><button class="button" type="submit" name="btnConfirm">THỐNG KÊ →</button></div>
   </form>
 </section>
-<%@ include file="../shared/bottom.jspf" %>
+<%@ include file="../user/bottom.jspf" %>

@@ -1,7 +1,7 @@
 <%@ page pageEncoding="UTF-8" %>
-<%@ include file="../shared/tags.jspf" %>
+<%@ include file="../user/tags.jspf" %>
 <c:set var="pageTitle" value="Chi tiết hóa đơn" />
-<%@ include file="../shared/top.jspf" %>
+<%@ include file="../user/top.jspf" %>
 <h1 class="bar light center">HÓA ĐƠN THANH TOÁN CHI TIẾT</h1>
 <div class="invoice-meta">
   <p><strong>Mã hóa đơn:</strong> <c:out value="${invoice.invoiceCode}" /></p><p><strong>Ngày phát hành:</strong> <fmt:formatDate value="${invoice.issueDate}" pattern="dd/MM/yyyy HH:mm:ss" /></p><p><strong>Phiếu:</strong> <c:out value="${invoice.order.repairOrderCode}" /></p>
@@ -22,4 +22,4 @@
 </c:when><c:otherwise><p>Hóa đơn chưa thanh toán.</p></c:otherwise></c:choose>
 </section>
 <a class="button secondary" href="<c:out value='${backUrl}' />">← Quay lại chi tiết</a>
-<%@ include file="../shared/bottom.jspf" %>
+<%@ include file="../user/bottom.jspf" %>

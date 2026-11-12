@@ -1,7 +1,7 @@
 <%@ page pageEncoding="UTF-8" %>
-<%@ include file="../shared/tags.jspf" %>
+<%@ include file="../user/tags.jspf" %>
 <c:set var="pageTitle" value="Đăng nhập" />
-<%@ include file="../shared/top.jspf" %>
+<%@ include file="../user/top.jspf" %>
 <section class="login-card">
   <div class="section-label">GARAMAN AUTO SERVICE</div>
   <h1>ĐĂNG NHẬP</h1>
@@ -15,4 +15,4 @@
     <button class="button" type="submit" name="btnLogin">Đăng nhập →</button>
   </form>
 </section>
-<%@ include file="../shared/bottom.jspf" %>
+<%@ include file="../user/bottom.jspf" %>
