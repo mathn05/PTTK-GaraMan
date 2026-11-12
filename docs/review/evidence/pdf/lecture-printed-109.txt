@@ -1,8 +1,0 @@
-Chương 4. Thiết kế
-27. Trang gdLophocphan.jsp hiển thị cho giảng viên
-28. Giảng viên click chọn 1 lớp học phần.
-29. Trang gdLophocphan.jsp gọi trang gdDiem.jsp
-30. Trang gdDiem.jsp gọi lớp DangkihocDAO yêu cầu lấy danh sách sinh viên đăng kí và kết 
-quả đã có của lớp học phần đã chọn
-109
-Hình 4.12: Biểu đồ tuần tự thiết kế modul nhập điểm

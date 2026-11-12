@@ -1,5 +1,0 @@
-Chương 4. Thiết kế
-•
-Các lớp thực thể liên quan.
-102
-Hình 4.7: Thiết kế giao diện cho modul xem thống kê loại học lực

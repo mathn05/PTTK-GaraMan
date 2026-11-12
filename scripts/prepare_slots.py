@@ -2,7 +2,9 @@
 from pathlib import Path
 import argparse, os, subprocess
 from schema_tools import ROOT, connect, verify_schema
-from test_support import properties
+def properties(path):
+    return {k.strip():v.strip() for line in Path(path).read_text(encoding='utf-8-sig').splitlines()
+            if line.strip() and not line.lstrip().startswith('#') and '=' in line for k,v in [line.split('=',1)]}
 p=argparse.ArgumentParser();p.add_argument('--test',action='store_true');a=p.parse_args()
 config=ROOT/('.local/test.properties' if a.test else '.local/garaman.properties')
 args=['java','-Dgaraman.config='+str(config),'-Duser.timezone=Asia/Ho_Chi_Minh']

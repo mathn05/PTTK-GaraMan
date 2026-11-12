@@ -1,5 +1,0 @@
-Chương 4. Thiết kế
-•
-Các lớp thực thể liên quan
-100
-Hình 4.5: Thiết kế giao diện modul nhập điểm

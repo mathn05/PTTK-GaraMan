@@ -1,5 +1,0 @@
-Chương 4. Thiết kế
-•
-Tầng thực thể gồm tất cả các thực thể liên quan.
-98
-Hình 4.3: Thiết kế giao diện cho modul đăng kí học

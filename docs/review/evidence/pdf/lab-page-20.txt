@@ -1,8 +1,0 @@
-20
-Edit a User
-List of all Users
-GitHub Repository
-The source code this tutorial (User Management) is available on my GitHub repository 
-at https://github.com/RameshMF/jsp-servlet-jdbc-mysql-crud-tutorial.
-Check out Build Todo App using JSP, Servlet, JDBC, and MySQL. 
-Servlet + JSP + JDBC + MySQL Examples

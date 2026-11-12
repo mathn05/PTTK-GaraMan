@@ -5,10 +5,7 @@ target/
 .kotlin
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -43,3 +40,38 @@ build/
 .local/
 tmp/
 *.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Documents and input materials
+docs/
+input/
+
+# Tests and test-only endpoints/scripts
+src/test/
+src/main/java/garaman/servlet/TestRuntimeServlet6.java
+scripts/Test-GaraMan.ps1
+scripts/ExportContracts.java
+scripts/browser_regression_v3.py
+scripts/browser_test.py
+scripts/export_final_evidence.py
+scripts/export_schema.py
+scripts/generate_entities.py
+scripts/generate_final_design.py
+scripts/generate_final_scenarios.py
+scripts/migrate_v3.py
+scripts/runtime_smoke.py
+scripts/seed_data.py
+scripts/test_guardrails.py
+scripts/test_support.py
+scripts/validate_final_documents.py
+scripts/verify_main_readonly.py
+scripts/write_evidence.py
+
+# Historical migration and test-expectation SQL files
+sql/V1__reconstructed_baseline.sql
+sql/V2__booking_changes.sql
+sql/preflight-v2.sql
+sql/seed-expected.json
