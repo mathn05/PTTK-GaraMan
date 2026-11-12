@@ -1,0 +1,1268 @@
+{
+  "architecture": "Servlet packaging; no standalone business helpers",
+  "module1": {
+    "module": 1,
+    "report": [
+      {
+        "n": 1,
+        "text": "Tại CustomerHomeView6.jsp, khách chọn Đặt lịch hẹn; trình duyệt gửi GET /booking.",
+        "technicalFrom": 1,
+        "technicalTo": 1
+      },
+      {
+        "n": 2,
+        "text": "Container đi qua AppFilter6 và AuthFilter6 rồi dispatch BookingServlet6.doGet(req,resp).",
+        "technicalFrom": 2,
+        "technicalTo": 4
+      },
+      {
+        "n": 3,
+        "text": "BookingServlet6 lấy context/tab qua phương thức context, tạo Map mới trong session nếu cần, khóa Map rồi gọi form.",
+        "technicalFrom": 5,
+        "technicalTo": 6
+      },
+      {
+        "n": 4,
+        "text": "BookingServlet6.form gọi customer(req), dùng mã khách trong session để gọi CustomerDAO6.getCustomerInfo(customerCode).",
+        "technicalFrom": 7,
+        "technicalTo": 8
+      },
+      {
+        "n": 5,
+        "text": "CustomerDAO6 đọc ResultSet, tạo Customer6 và dùng MemberDAO6.fillMember gán hồ sơ/Account nếu có; trả Customer6 về Servlet.",
+        "technicalFrom": 9,
+        "technicalTo": 10
+      },
+      {
+        "n": 6,
+        "text": "BookingServlet6.form gọi VehicleDAO6.getVehiclesOfCustomer(customerId); DAO đóng gói từng xe cùng customer/brand và trả Vehicle6[].",
+        "technicalFrom": 11,
+        "technicalTo": 13
+      },
+      {
+        "n": 7,
+        "text": "BookingServlet6.form gọi SlotDAO6.getAvailableSlots(appointmentDate); DAO query slot trong ngày, đóng gói AppointmentSlot6[] rồi trả kết quả.",
+        "technicalFrom": 14,
+        "technicalTo": 15
+      },
+      {
+        "n": 8,
+        "text": "BookingServlet6 đặt dữ liệu request và forward BookAppointmentView6.jsp; JSP hiển thị khách, xe, ngày/slot và biểu mẫu.",
+        "technicalFrom": 16,
+        "technicalTo": 17
+      },
+      {
+        "n": 9,
+        "text": "Khách đổi ngày; app.js gửi GET /booking?action=slots với context và ngày đã chọn.",
+        "technicalFrom": 18,
+        "technicalTo": 19
+      },
+      {
+        "n": 10,
+        "text": "BookingServlet6.doGet lấy lại context, cập nhật ngày rồi gọi form; form tải lại hồ sơ/xe/slot theo thứ tự trên và trả HTML.",
+        "technicalFrom": 20,
+        "technicalTo": 21
+      },
+      {
+        "n": 11,
+        "text": "JavaScript thay fieldset slot từ HTML phản hồi; xe và nội dung khách đang nhập được giữ trên trang.",
+        "technicalFrom": 22,
+        "technicalTo": 22
+      },
+      {
+        "n": 12,
+        "text": "Khách chọn xe, slot, kiểm tra liên hệ readonly, nhập yêu cầu rồi bấm Xác nhận; JSP POST /booking action=hold.",
+        "technicalFrom": 23,
+        "technicalTo": 23
+      },
+      {
+        "n": 13,
+        "text": "Sau kiểm CSRF/role, BookingServlet6.doPost lấy và khóa context, parse/validate action, ngày, nội dung và lựa chọn.",
+        "technicalFrom": 24,
+        "technicalTo": 25
+      },
+      {
+        "n": 14,
+        "text": "BookingServlet6 lấy Customer6 trusted từ DB, gọi VehicleDAO6.findById rồi so ownership bằng Objects.equals.",
+        "technicalFrom": 26,
+        "technicalTo": 27
+      },
+      {
+        "n": 15,
+        "text": "BookingServlet6 gọi SlotDAO6.findById(slotId), nhận slot và kiểm ngày của startTime khớp ngày đã chọn.",
+        "technicalFrom": 28,
+        "technicalTo": 28
+      },
+      {
+        "n": 16,
+        "text": "BookingServlet6 gọi SlotDAO6.holdSlot(slotId); DAO dùng token riêng và guarded UPDATE giữ slot 3 phút theo DB, đọc lại đúng token rồi trả AppointmentSlot6.",
+        "technicalFrom": 29,
+        "technicalTo": 30
+      },
+      {
+        "n": 17,
+        "text": "Sau khi hold thành công, BookingServlet6 khởi tạo Appointment6 tạm, gán khách/xe/slot/nội dung bằng setter và giữ draft/token/hạn trong Map server của tab.",
+        "technicalFrom": 31,
+        "technicalTo": 32
+      },
+      {
+        "n": 18,
+        "text": "BookingServlet6.confirm đặt lịch tạm vào request, gọi SlotDAO6.remainingHoldMillis để lấy TTL server rồi forward ConfirmView6.jsp.",
+        "technicalFrom": 33,
+        "technicalTo": 35
+      },
+      {
+        "n": 19,
+        "text": "ConfirmView6.jsp hiển thị lịch và hạn giữ chỗ; JavaScript đếm elapsed bằng performance.now trên TTL server.",
+        "technicalFrom": 36,
+        "technicalTo": 37
+      },
+      {
+        "n": 20,
+        "text": "Khách chọn Xác nhận đặt lịch; JSP POST /appointment cùng context và CSRF token.",
+        "technicalFrom": 38,
+        "technicalTo": 38
+      },
+      {
+        "n": 21,
+        "text": "AppointmentServlet6 lấy và khóa Map context, lấy lại draft đã có, kiểm ownership với hồ sơ mới; không tạo lại draft.",
+        "technicalFrom": 39,
+        "technicalTo": 40
+      },
+      {
+        "n": 22,
+        "text": "AppointmentServlet6 gọi SlotDAO6.validateHold(slotId,holdCode), nhận true trong happy case.",
+        "technicalFrom": 41,
+        "technicalTo": 42
+      },
+      {
+        "n": 23,
+        "text": "AppointmentServlet6 gọi AppointmentDAO6.createAppointment(draft,holdCode); DAO validate graph và mở transaction sở hữu.",
+        "technicalFrom": 43,
+        "technicalTo": 44
+      },
+      {
+        "n": 24,
+        "text": "AppointmentDAO6 gọi SlotDAO6.consumeHold trên cùng connection, rồi SELECT xe thuộc khách FOR SHARE.",
+        "technicalFrom": 45,
+        "technicalTo": 46
+      },
+      {
+        "n": 25,
+        "text": "AppointmentDAO6 tạo placeholder unique hợp lệ, INSERT lịch PENDING với staff null và lấy generated ID; DB tự sinh activeSlotId UNIQUE.",
+        "technicalFrom": 47,
+        "technicalTo": 49
+      },
+      {
+        "n": 26,
+        "text": "AppointmentDAO6 cập nhật mã cuối LH từ generated ID ngay trong transaction trước khi trả kết quả.",
+        "technicalFrom": 50,
+        "technicalTo": 50
+      },
+      {
+        "n": 27,
+        "text": "AppointmentDAO6.findById đọc lại lịch đã lưu cùng customer/vehicle/slot/optional staff; DAO commit và trả Appointment6 persisted cho AppointmentServlet6.",
+        "technicalFrom": 51,
+        "technicalTo": 52
+      },
+      {
+        "n": 28,
+        "text": "AppointmentServlet6 giữ completed, xóa draft/hold khỏi Map và redirect GET /booking?action=confirm theo PRG.",
+        "technicalFrom": 53,
+        "technicalTo": 54
+      },
+      {
+        "n": 29,
+        "text": "BookingServlet6.doGet lấy completed, forward ConfirmView6.jsp hiển thị Đặt lịch hẹn thành công, mã lịch, thời điểm tạo và Chờ tiếp nhận.",
+        "technicalFrom": 55,
+        "technicalTo": 56
+      }
+    ],
+    "technical": [
+      {
+        "n": 1,
+        "report": 1,
+        "text": "Khách → link JSP → HTTP GET, không gọi trực tiếp lớp Java.",
+        "path": "src/main/webapp/WEB-INF/views/customer/CustomerHomeView6.jsp",
+        "line": 10,
+        "source": "<div class=\"center home-action\"><a class=\"button\" href=\"${ctx}/booking\">ĐẶT LỊCH HẸN NGAY →</a></div>"
+      },
+      {
+        "n": 2,
+        "report": 2,
+        "text": "AppFilter kiểm UTF-8/session/CSRF với POST.",
+        "path": "src/main/java/garaman/filter/AppFilter6.java",
+        "line": 22,
+        "source": "if(req.getServletPath().startsWith(\"/assets/\")){chain.doFilter(req,resp);return;}"
+      },
+      {
+        "n": 3,
+        "report": 2,
+        "text": "AuthFilter kiểm CUSTOMER cho route booking.",
+        "path": "src/main/java/garaman/filter/AuthFilter6.java",
+        "line": 16,
+        "source": "String required=Set.of(\"/booking\",\"/appointment\",\"/vehicle\").contains(req.getServletPath())?\"CUSTOMER\":\"MANAGER\";"
+      },
+      {
+        "n": 4,
+        "report": 2,
+        "text": "Container dispatch GET.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 19,
+        "source": "@Override public void doGet(HttpServletRequest req,HttpServletResponse resp) throws ServletException,IOException {"
+      },
+      {
+        "n": 5,
+        "report": 3,
+        "text": "Context thuộc session map, cap64, UUID, ngày mặc định ngày mai.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 90,
+        "source": "static Map<String,Object> context(HttpServletRequest req,boolean create){"
+      },
+      {
+        "n": 6,
+        "report": 3,
+        "text": "Khóa từng context, không dùng một bộ attribute chung ghi đè các tab.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 22,
+        "source": "synchronized(c){"
+      },
+      {
+        "n": 7,
+        "report": 4,
+        "text": "Servlet lấy currentUser Customer6 từ session, query hồ sơ mới.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 106,
+        "source": "private static Customer6 customer(HttpServletRequest req){"
+      },
+      {
+        "n": 8,
+        "report": 4,
+        "text": "DAO query Customer JOIN Member theo customerCode.",
+        "path": "src/main/java/garaman/dao/CustomerDAO6.java",
+        "line": 10,
+        "source": "public Customer6 getCustomerInfo(String customerCode) {"
+      },
+      {
+        "n": 9,
+        "report": 5,
+        "text": "DAO new Customer6, setter customerCode, nhận profile từ fillMember.",
+        "path": "src/main/java/garaman/dao/CustomerDAO6.java",
+        "line": 16,
+        "source": "Customer6 readCustomer(ResultSet rs) throws SQLException {"
+      },
+      {
+        "n": 10,
+        "report": 5,
+        "text": "Gán các setter void của Member; username có thì new Account6 và setAcc, không có giữ null.",
+        "path": "src/main/java/garaman/dao/MemberDAO6.java",
+        "line": 25,
+        "source": "static void fillMember(ResultSet rs, Member6 m) throws SQLException {"
+      },
+      {
+        "n": 11,
+        "report": 6,
+        "text": "Servlet gọi DAO với id hồ sơ trusted.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 72,
+        "source": "req.setAttribute(\"vehicleList\",vehicles.getVehiclesOfCustomer(((Customer6)req.getAttribute(\"cus\")).getId()));"
+      },
+      {
+        "n": 12,
+        "report": 6,
+        "text": "Query physical customerFK, ORDER BY id, vòng readVehicle.",
+        "path": "src/main/java/garaman/dao/VehicleDAO6.java",
+        "line": 13,
+        "source": "public Vehicle6[] getVehiclesOfCustomer(Integer customerId){"
+      },
+      {
+        "n": 13,
+        "report": 6,
+        "text": "new Vehicle6, getObject Integer cho Km/năm, CustomerDAO.findById và VehicleBrandDAO.findById; trả xe.",
+        "path": "src/main/java/garaman/dao/VehicleDAO6.java",
+        "line": 57,
+        "source": "private Vehicle6 readVehicle(ResultSet rs) throws SQLException {"
+      },
+      {
+        "n": 14,
+        "report": 7,
+        "text": "Lọc ngày nửa mở, tương lai, AVAILABLE/HELD hết hạn, không active appointment; sort startTime,id.",
+        "path": "src/main/java/garaman/dao/SlotDAO6.java",
+        "line": 15,
+        "source": "public AppointmentSlot6[] getAvailableSlots(LocalDate appointmentDate){"
+      },
+      {
+        "n": 15,
+        "report": 7,
+        "text": "new AppointmentSlot6, setter void id/startTime/token/expiry/status, return array qua caller.",
+        "path": "src/main/java/garaman/dao/SlotDAO6.java",
+        "line": 68,
+        "source": "private AppointmentSlot6 readSlot(ResultSet rs) throws SQLException {"
+      },
+      {
+        "n": 16,
+        "report": 8,
+        "text": "form giữ lựa chọn context, min/max ngày, request attrs rồi forward.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 67,
+        "source": "private void form(HttpServletRequest req,HttpServletResponse resp,Map<String,Object> c) throws ServletException,IOException {"
+      },
+      {
+        "n": 17,
+        "report": 8,
+        "text": "EL/JSTL render contact readonly và các control cũ, không tạo entity.",
+        "path": "src/main/webapp/WEB-INF/views/customer/BookAppointmentView6.jsp",
+        "line": 22,
+        "source": "<label for=\"fullName\">Họ và tên</label><input id=\"fullName\" name=\"fullName\" value=\"<c:out value='${cus.fullName}' />\" readonly>"
+      },
+      {
+        "n": 18,
+        "report": 9,
+        "text": "Đọc HTML attribute để tránh control action che form.action, URLSearchParams.",
+        "path": "src/main/webapp/assets/app.js",
+        "line": 29,
+        "source": "const url = new URL(booking.getAttribute(\"action\"), document.baseURI);"
+      },
+      {
+        "n": 19,
+        "report": 9,
+        "text": "Fetch HTML, version phản hồi hiện hành.",
+        "path": "src/main/webapp/assets/app.js",
+        "line": 31,
+        "source": "const response = await fetch(url, {headers: {\"Accept\": \"text/html\"}});"
+      },
+      {
+        "n": 20,
+        "report": 10,
+        "text": "Cập nhật ngày trong Map khi GET.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 24,
+        "source": "if(!text(req,\"appointmentDate\").isEmpty())c.put(\"appointmentDate\",date(req,\"appointmentDate\"));"
+      },
+      {
+        "n": 21,
+        "report": 10,
+        "text": "form đọc lại customer → vehicle list → slot list, không endpoint JSON.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 72,
+        "source": "req.setAttribute(\"vehicleList\",vehicles.getVehiclesOfCustomer(((Customer6)req.getAttribute(\"cus\")).getId()));"
+      },
+      {
+        "n": 22,
+        "report": 11,
+        "text": "DOMParser chọn slot-fieldset, chỉ replace phản hồi version hiện tại.",
+        "path": "src/main/webapp/assets/app.js",
+        "line": 36,
+        "source": "if (current === version) booking.querySelector(\".slot-fieldset\").replaceWith(slots);"
+      },
+      {
+        "n": 23,
+        "report": 12,
+        "text": "Form gửi context/csrfToken/ngày/slot/vehicle/description, không live Java object.",
+        "path": "src/main/webapp/WEB-INF/views/customer/BookAppointmentView6.jsp",
+        "line": 32,
+        "source": "<div class=\"actions\"><a class=\"button secondary\" href=\"${ctx}/booking?action=home\">← QUAY LẠI</a><button class=\"button\" type=\"submit\" name=\"action\" value=\"hold\">XÁC NHẬN →</button></div>"
+      },
+      {
+        "n": 24,
+        "report": 13,
+        "text": "Container dispatch POST.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 28,
+        "source": "@Override public void doPost(HttpServletRequest req,HttpServletResponse resp) throws ServletException,IOException {"
+      },
+      {
+        "n": 25,
+        "report": 13,
+        "text": "Whitelist action, chưa completed/hold, validate ngày cấu hình và nội dung≤255.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 32,
+        "source": "if(!Set.of(\"edit\",\"hold\",\"addVehicle\").contains(action))throw new IllegalArgumentException(\"Thao tác không hợp lệ.\");"
+      },
+      {
+        "n": 26,
+        "report": 14,
+        "text": "Đọc hồ sơ mới; không tin customer/contact client.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 47,
+        "source": "Customer6 customer=customer(req);Vehicle6 selected;"
+      },
+      {
+        "n": 27,
+        "report": 14,
+        "text": "So sánh giá trị Integer, kể cả >127.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 49,
+        "source": "if(selected==null||!Objects.equals(selected.getCus().getId(),customer.getId())){error(req,resp,403,\"Xe không thuộc khách hàng hiện tại.\");return;}"
+      },
+      {
+        "n": 28,
+        "report": 15,
+        "text": "Query slot và so ngày theo DAO6.zone().",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 52,
+        "source": "AppointmentSlot6 info=slots.findById(slotId);"
+      },
+      {
+        "n": 29,
+        "report": 16,
+        "text": "UUID + UPDATE tương lai/chưa active + NOW(6)+3 phút.",
+        "path": "src/main/java/garaman/dao/SlotDAO6.java",
+        "line": 29,
+        "source": "public AppointmentSlot6 holdSlot(Integer slotId){"
+      },
+      {
+        "n": 30,
+        "report": 16,
+        "text": "Đọc đúng token và readSlot; autocommit hoàn tất, không giữ transaction chờ khách.",
+        "path": "src/main/java/garaman/dao/SlotDAO6.java",
+        "line": 37,
+        "source": "try(var read=con.prepareStatement(\"SELECT * FROM tblAppointmentSlot6 WHERE id=? AND holdCode=?\")) {"
+      },
+      {
+        "n": 31,
+        "report": 17,
+        "text": "Context giữ token/expiry do server trả.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 57,
+        "source": "c.put(\"holdCode\",held.getHoldCode());c.put(\"holdExpiresAt\",held.getHoldExpiresAt());"
+      },
+      {
+        "n": 32,
+        "report": 17,
+        "text": "Servlet new entity (id null), setters void, c.put draft; không request trusted/guard/forward vòng.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 59,
+        "source": "Appointment6 draft=new Appointment6();"
+      },
+      {
+        "n": 33,
+        "report": 18,
+        "text": "Chọn draft hoặc completed, đặt request attrs.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 77,
+        "source": "static void confirm(HttpServletRequest req,HttpServletResponse resp,Map<String,Object> c) throws ServletException,IOException {"
+      },
+      {
+        "n": 34,
+        "report": 18,
+        "text": "Query TIMESTAMPDIFF/GREATEST cho đúng HELD/token, trả long TTL.",
+        "path": "src/main/java/garaman/dao/SlotDAO6.java",
+        "line": 48,
+        "source": "public long remainingHoldMillis(Integer slotId,String holdCode){"
+      },
+      {
+        "n": 35,
+        "report": 18,
+        "text": "Forward thẳng JSP hiển thị.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 82,
+        "source": "view(req,resp,\"customer/ConfirmView6\");"
+      },
+      {
+        "n": 36,
+        "report": 19,
+        "text": "Render thông tin lịch và thời hạn.",
+        "path": "src/main/webapp/WEB-INF/views/customer/ConfirmView6.jsp",
+        "line": 19,
+        "source": "<div class=\"notice\" id=\"holdTimer\" data-remaining=\"${holdRemainingMillis}\">Khung giờ đang được giữ đến <strong><fmt:formatDate value=\"${holdExpiresAt}\" pattern=\"HH:mm:ss dd/MM/yyyy\" /></strong>. Còn <strong data-countdown>03:00</strong> để xác nhận.</div>"
+      },
+      {
+        "n": 37,
+        "report": 19,
+        "text": "Không dựa vào Date.now máy khách để quyết định mốc hết hạn.",
+        "path": "src/main/webapp/assets/app.js",
+        "line": 6,
+        "source": "const started = performance.now();"
+      },
+      {
+        "n": 38,
+        "report": 20,
+        "text": "Trình duyệt chỉ gửi scalar context/token.",
+        "path": "src/main/webapp/WEB-INF/views/customer/ConfirmView6.jsp",
+        "line": 22,
+        "source": "<form action=\"${ctx}/appointment\" method=\"post\"><input type=\"hidden\" name=\"csrfToken\" value=\"${sessionScope.csrfToken}\"><input type=\"hidden\" name=\"context\" value=\"${context}\"><button class=\"button\" id=\"confirmBooking\" type=\"submit\">XÁC NHẬN ĐẶT LỊCH →</button></form>"
+      },
+      {
+        "n": 39,
+        "report": 21,
+        "text": "Lấy draft/token/slot từ server.",
+        "path": "src/main/java/garaman/servlet/AppointmentServlet6.java",
+        "line": 25,
+        "source": "Appointment6 draft=(Appointment6)c.get(\"draft\");String holdCode=(String)c.get(\"holdCode\");Integer slotId=(Integer)c.get(\"slotId\");"
+      },
+      {
+        "n": 40,
+        "report": 21,
+        "text": "Bảo vệ ownership bằng giá trị Integer.",
+        "path": "src/main/java/garaman/servlet/AppointmentServlet6.java",
+        "line": 27,
+        "source": "if(!Objects.equals(draft.getCus().getId(),customer(req).getId())){error(req,resp,403,\"Lịch hẹn không thuộc phiên hiện tại.\");return;}"
+      },
+      {
+        "n": 41,
+        "report": 22,
+        "text": "Servlet gọi validateHold.",
+        "path": "src/main/java/garaman/servlet/AppointmentServlet6.java",
+        "line": 29,
+        "source": "if(!slots.validateHold(slotId,holdCode)){resp.setStatus(409);req.setAttribute(\"message\",\"Giữ chỗ đã hết hạn. Chọn Chỉnh sửa để chọn lại khung giờ.\");BookingServlet6.confirm(req,resp,c);return;}"
+      },
+      {
+        "n": 42,
+        "report": 22,
+        "text": "DB kiểm HELD/token/expiry/startTime tương lai, trả boolean.",
+        "path": "src/main/java/garaman/dao/SlotDAO6.java",
+        "line": 44,
+        "source": "try(var ps=con.prepareStatement(\"SELECT id FROM tblAppointmentSlot6 WHERE id=? AND status='HELD' AND holdCode=? AND holdExpiresAt>NOW(6) AND startTime>NOW(6)\")) {"
+      },
+      {
+        "n": 43,
+        "report": 23,
+        "text": "Truyền đúng draft cũ vào DAO.",
+        "path": "src/main/java/garaman/servlet/AppointmentServlet6.java",
+        "line": 31,
+        "source": "try(var dao=new AppointmentDAO6()){c.put(\"completed\",dao.createAppointment(draft,holdCode));}"
+      },
+      {
+        "n": 44,
+        "report": 23,
+        "text": "Chỉ transaction owner mở/commit/rollback; borrowed cần autoCommit=false.",
+        "path": "src/main/java/garaman/dao/AppointmentDAO6.java",
+        "line": 21,
+        "source": "tx=owner;if(tx)con.setAutoCommit(false);"
+      },
+      {
+        "n": 45,
+        "report": 24,
+        "text": "Guarded consume đúng token còn hạn → BOOKED, xóa hold; cùng transaction.",
+        "path": "src/main/java/garaman/dao/AppointmentDAO6.java",
+        "line": 23,
+        "source": "if(!new SlotDAO6(con).consumeHold(appointment.getSlot().getId(),holdCode))throw new BookingConflictException6(\"Giữ chỗ đã hết hạn hoặc không còn hợp lệ. Vui lòng chọn lại khung giờ.\");"
+      },
+      {
+        "n": 46,
+        "report": 24,
+        "text": "Khóa kiểm ownership trước INSERT, rollback nếu thất bại.",
+        "path": "src/main/java/garaman/dao/AppointmentDAO6.java",
+        "line": 24,
+        "source": "try(var ps=con.prepareStatement(\"SELECT id FROM tblVehicle6 WHERE id=? AND tblCustomer6tblMember6id=? FOR SHARE\")) {"
+      },
+      {
+        "n": 47,
+        "report": 25,
+        "text": "Private UUID placeholder không sequence/MAX+1.",
+        "path": "src/main/java/garaman/dao/AppointmentDAO6.java",
+        "line": 28,
+        "source": "String temporary=temporaryCode();int id;"
+      },
+      {
+        "n": 48,
+        "report": 25,
+        "text": "INSERT NOT NULL/UNIQUE hợp lệ ngay từ đầu, NOW(6), FK physical dài.",
+        "path": "src/main/java/garaman/dao/AppointmentDAO6.java",
+        "line": 29,
+        "source": "try(var ps=con.prepareStatement(\"INSERT INTO tblAppointment6(appointmentCode,requestDescription,createAt,status,tblEmployee6tblMember6id,tblVehicle6id,tblAppointmentSlot6id,tblCustomer6tblMember6id) VALUES(?,?,NOW(6),'PENDING',NULL,?,?,?)\",Statement.RETURN_GENERATED_KEYS)) {"
+      },
+      {
+        "n": 49,
+        "report": 25,
+        "text": "Lấy generated key, không suy đoán MAX+1.",
+        "path": "src/main/java/garaman/dao/AppointmentDAO6.java",
+        "line": 31,
+        "source": "try(var rs=ps.getGeneratedKeys()){if(!rs.next())throw new SQLException(\"Không có ID lịch hẹn\");id=rs.getInt(1);}"
+      },
+      {
+        "n": 50,
+        "report": 26,
+        "text": "UPDATE theo id và placeholder, affectedRows=1, không mã tạm ra ngoài.",
+        "path": "src/main/java/garaman/dao/AppointmentDAO6.java",
+        "line": 35,
+        "source": "ps.setString(1,\"LH\"+String.format(Locale.ROOT,\"%04d\",id));ps.setInt(2,id);ps.setString(3,temporary);"
+      },
+      {
+        "n": 51,
+        "report": 27,
+        "text": "new Appointment6 persisted, CustomerDAO/VehicleDAO/SlotDAO/MemberDAO dùng cùng con.",
+        "path": "src/main/java/garaman/dao/AppointmentDAO6.java",
+        "line": 46,
+        "source": "Appointment6 findById(Integer id) throws SQLException {"
+      },
+      {
+        "n": 52,
+        "report": 27,
+        "text": "Commit sau hydrate thành công; rollback bao gồm consume/INSERT/mã nếu lỗi.",
+        "path": "src/main/java/garaman/dao/AppointmentDAO6.java",
+        "line": 39,
+        "source": "if(tx)con.commit();return saved;"
+      },
+      {
+        "n": 53,
+        "report": 28,
+        "text": "Giữ kết quả sau DAO return.",
+        "path": "src/main/java/garaman/servlet/AppointmentServlet6.java",
+        "line": 31,
+        "source": "try(var dao=new AppointmentDAO6()){c.put(\"completed\",dao.createAppointment(draft,holdCode));}"
+      },
+      {
+        "n": 54,
+        "report": 28,
+        "text": "URL chỉ action/context, không object.",
+        "path": "src/main/java/garaman/servlet/AppointmentServlet6.java",
+        "line": 34,
+        "source": "resp.sendRedirect(url(req,\"/booking\",Map.of(\"action\",\"confirm\",\"context\",c.get(\"id\"))));"
+      },
+      {
+        "n": 55,
+        "report": 29,
+        "text": "GET success chọn completed, không INSERT lại.",
+        "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+        "line": 23,
+        "source": "if(\"confirm\".equals(text(req,\"action\"))||c.get(\"holdCode\")!=null||c.get(\"completed\")!=null){confirm(req,resp,c);return;}"
+      },
+      {
+        "n": 56,
+        "report": 29,
+        "text": "JSP hiển thị persisted graph; refresh/double-submit cùng context giữ cùng kết quả.",
+        "path": "src/main/webapp/WEB-INF/views/customer/ConfirmView6.jsp",
+        "line": 6,
+        "source": "<c:choose><c:when test=\"${completed}\"><div class=\"success-banner\"><h1>ĐẶT LỊCH HẸN THÀNH CÔNG</h1><p>Mã lịch hẹn: <strong id=\"appointmentCode\"><c:out value=\"${appointment.appointmentCode}\" /></strong> · <span class=\"badge\">Chờ tiếp nhận</span></p></div></c:when><c:otherwise><h1>XÁC NHẬN LỊCH HẸN</h1></c:otherwise></c:choose>"
+      }
+    ]
+  },
+  "module2": {
+    "module": 2,
+    "report": [
+      {
+        "n": 1,
+        "text": "Tại ManagerHomeView6.jsp, nhân viên chọn Xem báo cáo, trình duyệt GET /revenue?action=menu.",
+        "technicalFrom": 1,
+        "technicalTo": 1
+      },
+      {
+        "n": 2,
+        "text": "Container qua filters rồi dispatch RevenueServlet6.doGet; handler forward ReportMenuView6.jsp.",
+        "technicalFrom": 2,
+        "technicalTo": 2
+      },
+      {
+        "n": 3,
+        "text": "Nhân viên chọn Thống kê dịch vụ/phụ tùng theo doanh thu; trình duyệt GET /revenue?action=filter.",
+        "technicalFrom": 3,
+        "technicalTo": 3
+      },
+      {
+        "n": 4,
+        "text": "RevenueServlet6 gọi filter, đặt bộ lọc mặc định tháng trước/ALL và forward RevenueStatisticsFilterView6.jsp.",
+        "technicalFrom": 4,
+        "technicalTo": 5
+      },
+      {
+        "n": 5,
+        "text": "Nhân viên chọn ALL, startDate, endDate rồi bấm Thống kê; form GET /revenue action=list.",
+        "technicalFrom": 6,
+        "technicalTo": 6
+      },
+      {
+        "n": 6,
+        "text": "RevenueServlet6.doGet kiểm bộ lọc bằng private reportFilter rồi gọi list.",
+        "technicalFrom": 7,
+        "technicalTo": 7
+      },
+      {
+        "n": 7,
+        "text": "RevenueServlet6.list chuyển ngày sang Date, gọi RevenueDAO6.getRevenueStatistics(startDate,endDate,statisticType).",
+        "technicalFrom": 8,
+        "technicalTo": 8
+      },
+      {
+        "n": 8,
+        "text": "RevenueDAO6 tổng hợp PAID theo issueDate và giá lịch sử; ALL UNION ALL dịch vụ/phụ tùng; sort doanh thu DESC, mã ASC, loại ASC.",
+        "technicalFrom": 9,
+        "technicalTo": 10
+      },
+      {
+        "n": 9,
+        "text": "RevenueDAO6 khởi tạo từng RevenueStats6, gán mã/tên/loại/count Integer/doanh thu BigDecimal, trả RevenueStats6[] cho Servlet.",
+        "technicalFrom": 11,
+        "technicalTo": 11
+      },
+      {
+        "n": 10,
+        "text": "RevenueServlet6 cộng BigDecimal toàn tập, clamp trang, slice20 và đặt tổng/trang/URL bộ lọc, forward RevenueStatisticsListView6.jsp.",
+        "technicalFrom": 12,
+        "technicalTo": 13
+      },
+      {
+        "n": 11,
+        "text": "RevenueStatisticsListView6.jsp hiển thị danh sách ALL và phân trang; nhân viên chọn SERVICE DV0001.",
+        "technicalFrom": 14,
+        "technicalTo": 14
+      },
+      {
+        "n": 12,
+        "text": "ServicePartServlet6 kiểm bộ lọc/loại/mã/action, gọi ServiceDAO6.getServiceInfo(serviceCode).",
+        "technicalFrom": 15,
+        "technicalTo": 15
+      },
+      {
+        "n": 13,
+        "text": "ServiceDAO6 query và private readService đóng gói Service6 từ ResultSet, trả dịch vụ về handler.",
+        "technicalFrom": 16,
+        "technicalTo": 17
+      },
+      {
+        "n": 14,
+        "text": "ServicePartServlet6 gọi ServiceUsageDAO6.getAllServiceUsageOfService(code,start,end) trước khi lấy lifetime.",
+        "technicalFrom": 18,
+        "technicalTo": 18
+      },
+      {
+        "n": 15,
+        "text": "ServiceUsageDAO6 lọc PAID theo issueDate/kỳ và code, đóng gói từng ServiceUsage6 cùng Service/Technician/RepairOrder và graph con; trả mảng history.",
+        "technicalFrom": 19,
+        "technicalTo": 21
+      },
+      {
+        "n": 16,
+        "text": "ServicePartServlet6 slice history và gọi ServiceUsageDAO6.getTotalUsageCount(code), nhận Integer tổng số dòng toàn thời gian.",
+        "technicalFrom": 22,
+        "technicalTo": 23
+      },
+      {
+        "n": 17,
+        "text": "ServicePartServlet6 đặt lifetime/trang/Back/link invoice rồi forward ServicePartDetailView6.jsp; JSP hiển thị dịch vụ và lịch sử, không đánh giá.",
+        "technicalFrom": 24,
+        "technicalTo": 25
+      },
+      {
+        "n": 18,
+        "text": "Nhân viên chọn Quay lại; RevenueServlet6 tải lại danh sách ALL cùng kỳ/trang bằng đoạn chung các bước6–10.",
+        "technicalFrom": 26,
+        "technicalTo": 26
+      },
+      {
+        "n": 19,
+        "text": "Nhân viên chọn PART PT0005 trên danh sách ALL; trình duyệt GET /service-part với item/filter/page.",
+        "technicalFrom": 27,
+        "technicalTo": 27
+      },
+      {
+        "n": 20,
+        "text": "ServicePartServlet6 kiểm tham số rồi gọi SparePartDAO6.getPartInfo(partCode).",
+        "technicalFrom": 28,
+        "technicalTo": 28
+      },
+      {
+        "n": 21,
+        "text": "SparePartDAO6 query view/brand/category, private readPart đóng gói SparePart6 và các thuộc tính con, trả về handler.",
+        "technicalFrom": 29,
+        "technicalTo": 30
+      },
+      {
+        "n": 22,
+        "text": "ServicePartServlet6 gọi PartUsageDAO6.getAllPartUsageOfPart(code,start,end) trước lifetime.",
+        "technicalFrom": 31,
+        "technicalTo": 31
+      },
+      {
+        "n": 23,
+        "text": "PartUsageDAO6 lọc PAID theo issueDate/kỳ và code, đóng gói từng PartUsage6 cùng SparePart/Technician/RepairOrder và graph con rồi trả mảng.",
+        "technicalFrom": 32,
+        "technicalTo": 33
+      },
+      {
+        "n": 24,
+        "text": "ServicePartServlet6 slice history rồi gọi PartUsageDAO6.getTotalUsageCount(code), nhận Integer lifetime không lọc kỳ.",
+        "technicalFrom": 34,
+        "technicalTo": 35
+      },
+      {
+        "n": 25,
+        "text": "ServicePartServlet6 chuẩn bị ảnh hợp lệ/trang/URL, forward ServicePartDetailView6.jsp hiển thị phụ tùng/lifetime/history, không rating.",
+        "technicalFrom": 36,
+        "technicalTo": 37
+      },
+      {
+        "n": 26,
+        "text": "Nhân viên chọn Xem hóa đơn tại dòng thuộc HD0001; JSP gửi GET /service-part?action=invoice cùng usageId và ngữ cảnh.",
+        "technicalFrom": 38,
+        "technicalTo": 38
+      },
+      {
+        "n": 27,
+        "text": "ServicePartServlet6 kiểm usageId Integer >0, tải lại thông tin phụ tùng → history → lifetime rồi kiểm dòng thuộc item/kỳ bằng Objects.equals.",
+        "technicalFrom": 39,
+        "technicalTo": 40
+      },
+      {
+        "n": 28,
+        "text": "Sau membership hợp lệ, ServicePartServlet6 gọi InvoiceDAO6.getInvoiceCodeByUsage(itemType,usageId), nhận String mã hóa đơn.",
+        "technicalFrom": 41,
+        "technicalTo": 42
+      },
+      {
+        "n": 29,
+        "text": "ServicePartServlet6 redirect /invoice với invoiceCode và item/filter/page/usagePage.",
+        "technicalFrom": 43,
+        "technicalTo": 43
+      },
+      {
+        "n": 30,
+        "text": "Container dispatch InvoiceServlet6.doGet; handler kiểm mã rồi gọi InvoiceDAO6.getInvoiceDetail(invoiceCode).",
+        "technicalFrom": 44,
+        "technicalTo": 44
+      },
+      {
+        "n": 31,
+        "text": "InvoiceDAO6 đọc vwInvoice6, tạo Invoice6 và gán thông tin/tổng BigDecimal, gọi findOrderById để lấy phiếu/khách/xe/người bán.",
+        "technicalFrom": 45,
+        "technicalTo": 46
+      },
+      {
+        "n": 32,
+        "text": "InvoiceDAO6 gọi ServiceUsageDAO6.byOrder rồi PartUsageDAO6.byOrder để nạp đầy đủ hai mảng dòng hóa đơn, gán cho order/Invoice.",
+        "technicalFrom": 47,
+        "technicalTo": 48
+      },
+      {
+        "n": 33,
+        "text": "Với hóa đơn PAID, InvoiceDAO6 tạo Payment6 từ cùng dòng Invoice và nạp người thu tiền qua MemberDAO6; kiểm tổng bằng compareTo, setPayment rồi trả Invoice6.",
+        "technicalFrom": 49,
+        "technicalTo": 51
+      },
+      {
+        "n": 34,
+        "text": "InvoiceServlet6 đặt invoice, dựng Back URL giữ ngữ cảnh và forward InvoiceDetailView6.jsp; JSP hiển thị đầy đủ mọi dòng, khách/xe, người bán, thanh toán/người thu.",
+        "technicalFrom": 52,
+        "technicalTo": 53
+      }
+    ],
+    "technical": [
+      {
+        "n": 1,
+        "report": 1,
+        "text": "Thao tác người dùng → link GET.",
+        "path": "src/main/webapp/WEB-INF/views/manager/ManagerHomeView6.jsp",
+        "line": 6,
+        "source": "<div class=\"center home-action\"><a class=\"button\" href=\"${ctx}/revenue?action=menu\">XEM BÁO CÁO →</a></div>"
+      },
+      {
+        "n": 2,
+        "report": 2,
+        "text": "Switch action menu, RequestDispatcher qua private view.",
+        "path": "src/main/java/garaman/servlet/RevenueServlet6.java",
+        "line": 27,
+        "source": "case \"\", \"menu\" -> view(req,resp,\"manager/ReportMenuView6\");"
+      },
+      {
+        "n": 3,
+        "report": 3,
+        "text": "Link chọn loại báo cáo.",
+        "path": "src/main/webapp/WEB-INF/views/manager/ReportMenuView6.jsp",
+        "line": 6,
+        "source": "<a class=\"button teal\" href=\"${ctx}/revenue?action=filter\">Thống kê dịch vụ / phụ tùng theo doanh thu →</a>"
+      },
+      {
+        "n": 4,
+        "report": 4,
+        "text": "Lấy ngày theo DAO6.zone, đặt start/end/type request attrs.",
+        "path": "src/main/java/garaman/servlet/RevenueServlet6.java",
+        "line": 36,
+        "source": "private void filter(HttpServletRequest req,HttpServletResponse resp) throws ServletException,IOException {"
+      },
+      {
+        "n": 5,
+        "report": 4,
+        "text": "Forward filter view.",
+        "path": "src/main/java/garaman/servlet/RevenueServlet6.java",
+        "line": 41,
+        "source": "view(req,resp,\"manager/RevenueStatisticsFilterView6\");"
+      },
+      {
+        "n": 6,
+        "report": 5,
+        "text": "Giữ nguyên control, ngày HTTP String ISO.",
+        "path": "src/main/webapp/WEB-INF/views/manager/RevenueStatisticsFilterView6.jsp",
+        "line": 9,
+        "source": "<div class=\"form-row\"><label for=\"statisticType\">Loại thống kê</label><select id=\"statisticType\" name=\"statisticType\"><option value=\"ALL\" ${statisticType == 'ALL' ? 'selected' : ''}>Tất cả</option><option value=\"SERVICE\" ${statisticType == 'SERVICE' ? 'selected' : ''}>Dịch vụ</option><option value=\"PART\" ${statisticType == 'PART' ? 'selected' : ''}>Phụ tùng</option></select></div>"
+      },
+      {
+        "n": 7,
+        "report": 6,
+        "text": "Kiểm ngày/loại/thứ tự khoảng, chuyển sang luồng list.",
+        "path": "src/main/java/garaman/servlet/RevenueServlet6.java",
+        "line": 30,
+        "source": "try{reportFilter(req);list(req,resp);}"
+      },
+      {
+        "n": 8,
+        "report": 7,
+        "text": "Private date(LocalDate) dùng zone thống nhất.",
+        "path": "src/main/java/garaman/servlet/RevenueServlet6.java",
+        "line": 45,
+        "source": "try(var dao=new RevenueDAO6()){all=dao.getRevenueStatistics(date(LocalDate.parse((String)req.getAttribute(\"startDate\"))),date(LocalDate.parse((String)req.getAttribute(\"endDate\"))),(String)req.getAttribute(\"statisticType\"));}"
+      },
+      {
+        "n": 9,
+        "report": 8,
+        "text": "COUNT(*) service và SUM historical price; phần part SUM quantity*price.",
+        "path": "src/main/java/garaman/dao/RevenueDAO6.java",
+        "line": 16,
+        "source": "String services=\"SELECT s.serviceCode AS itemCode,s.serviceName AS itemName,'SERVICE' AS itemType,COUNT(*) AS usageCount,SUM(u.saleUnitPrice) AS totalRevenue FROM tblServiceUsage6 u JOIN tblService6 s ON s.id=u.tblService6id JOIN tblInvoice6 i ON i.tblRepairOrder6id=u.tblRepairOrder6id WHERE i.issueDate>=? AND i.issueDate<? AND i.paymentStatus='PAID' GROUP BY s.id,s.serviceCode,s.serviceName\";"
+      },
+      {
+        "n": 10,
+        "report": 8,
+        "text": "ALL UNION ALL, bind [start,end+1), ổn định mã/loại khi bằng tiền.",
+        "path": "src/main/java/garaman/dao/RevenueDAO6.java",
+        "line": 18,
+        "source": "String sql=(\"ALL\".equals(statisticType)?\"(\"+services+\") UNION ALL (\"+parts+\")\":\"SERVICE\".equals(statisticType)?services:parts)+\" ORDER BY totalRevenue DESC,itemCode ASC,itemType ASC\";"
+      },
+      {
+        "n": 11,
+        "report": 9,
+        "text": "Setter void theo từng dòng, getBigDecimal không double.",
+        "path": "src/main/java/garaman/dao/RevenueDAO6.java",
+        "line": 24,
+        "source": "RevenueStats6 r=new RevenueStats6();r.setItemCode(rs.getString(\"itemCode\"));r.setItemName(rs.getString(\"itemName\"));r.setItemType(rs.getString(\"itemType\"));"
+      },
+      {
+        "n": 12,
+        "report": 10,
+        "text": "Tổng toàn tập trước slice.",
+        "path": "src/main/java/garaman/servlet/RevenueServlet6.java",
+        "line": 47,
+        "source": "BigDecimal total=BigDecimal.ZERO;for(var row:all)total=total.add(row.getTotalRevenue());"
+      },
+      {
+        "n": 13,
+        "report": 10,
+        "text": "Forward list với request attrs.",
+        "path": "src/main/java/garaman/servlet/RevenueServlet6.java",
+        "line": 50,
+        "source": "view(req,resp,\"manager/RevenueStatisticsListView6\");"
+      },
+      {
+        "n": 14,
+        "report": 11,
+        "text": "GET detail chứa itemType/itemCode/kỳ/type/page.",
+        "path": "src/main/webapp/WEB-INF/views/manager/RevenueStatisticsListView6.jsp",
+        "line": 8,
+        "source": "<c:forEach var=\"r\" items=\"${revenueStats}\"><c:url var=\"detailUrl\" value=\"/service-part\"><c:param name=\"itemType\" value=\"${r.itemType}\" /><c:param name=\"itemCode\" value=\"${r.itemCode}\" /><c:param name=\"startDate\" value=\"${startDate}\" /><c:param name=\"endDate\" value=\"${endDate}\" /><c:param name=\"statisticType\" value=\"${statisticType}\" /><c:param name=\"page\" value=\"${currentPage}\" /></c:url>"
+      },
+      {
+        "n": 15,
+        "report": 12,
+        "text": "Nhánh SERVICE sau validate.",
+        "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+        "line": 31,
+        "source": "Service6 service=services.getServiceInfo(code);if(service==null){error(req,resp,404,\"Không tìm thấy dịch vụ.\");return;}"
+      },
+      {
+        "n": 16,
+        "report": 13,
+        "text": "Query theo serviceCode.",
+        "path": "src/main/java/garaman/dao/ServiceDAO6.java",
+        "line": 10,
+        "source": "public Service6 getServiceInfo(String serviceCode){"
+      },
+      {
+        "n": 17,
+        "report": 13,
+        "text": "new Service6, setter void, unitPrice getBigDecimal.",
+        "path": "src/main/java/garaman/dao/ServiceDAO6.java",
+        "line": 20,
+        "source": "private Service6 readService(ResultSet rs) throws SQLException {"
+      },
+      {
+        "n": 18,
+        "report": 14,
+        "text": "Thứ tự history trước lifetime trong code.",
+        "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+        "line": 32,
+        "source": "ServiceUsage6[] all=usages.getAllServiceUsageOfService(code,start,end);rows=all.length;usagePage=clampPage(page(req,\"usagePage\"),rows);"
+      },
+      {
+        "n": 19,
+        "report": 15,
+        "text": "Query JOIN Invoice, biên ngày nửa mở, sort issueDate DESC/id DESC.",
+        "path": "src/main/java/garaman/dao/ServiceUsageDAO6.java",
+        "line": 20,
+        "source": "String sql=\"SELECT u.* FROM tblServiceUsage6 u JOIN tblService6 s ON s.id=u.tblService6id JOIN tblInvoice6 i ON i.tblRepairOrder6id=u.tblRepairOrder6id WHERE s.serviceCode=? AND i.issueDate>=? AND i.issueDate<? AND i.paymentStatus='PAID' ORDER BY i.issueDate DESC,u.id DESC\";"
+      },
+      {
+        "n": 20,
+        "report": 15,
+        "text": "new usage + historical BigDecimal; ServiceDAO.findById, MemberDAO.findTechnicianById, InvoiceDAO.findOrderById.",
+        "path": "src/main/java/garaman/dao/ServiceUsageDAO6.java",
+        "line": 32,
+        "source": "private ServiceUsage6 readUsage(ResultSet rs) throws SQLException {"
+      },
+      {
+        "n": 21,
+        "report": 15,
+        "text": "Nạp order/customer/vehicle/salesperson/optional appointment, không tự nạp ngược usages.",
+        "path": "src/main/java/garaman/dao/InvoiceDAO6.java",
+        "line": 42,
+        "source": "RepairOrder6 findOrderById(Integer id) throws SQLException {"
+      },
+      {
+        "n": 22,
+        "report": 16,
+        "text": "Đặt item/slice rồi gọi lifetime.",
+        "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+        "line": 33,
+        "source": "req.setAttribute(\"service\",service);req.setAttribute(\"serviceUsageList\",slice(all,usagePage));req.setAttribute(\"lifetimeUsageCount\",usages.getTotalUsageCount(code));"
+      },
+      {
+        "n": 23,
+        "report": 16,
+        "text": "COUNT mọi dòng, không lọc kỳ/PAID; không có dòng thì trả Integer 0.",
+        "path": "src/main/java/garaman/dao/ServiceUsageDAO6.java",
+        "line": 14,
+        "source": "try(var ps=con.prepareStatement(\"SELECT COUNT(*) FROM tblServiceUsage6 u JOIN tblService6 s ON s.id=u.tblService6id WHERE s.serviceCode=?\")) {"
+      },
+      {
+        "n": 24,
+        "report": 17,
+        "text": "Đặt attrs/URLs giữ kỳ/page/usagePage.",
+        "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+        "line": 54,
+        "source": "view(req,resp,\"manager/ServicePartDetailView6\");"
+      },
+      {
+        "n": 25,
+        "report": 17,
+        "text": "EL/JSTL render SERVICE, lifetime riêng history.",
+        "path": "src/main/webapp/WEB-INF/views/manager/ServicePartDetailView6.jsp",
+        "line": 5,
+        "source": "<c:choose><c:when test=\"${itemType == 'SERVICE'}\">"
+      },
+      {
+        "n": 26,
+        "report": 18,
+        "text": "backUrl về report list giữ reportParams, không thêm lượt chi tiết.",
+        "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+        "line": 46,
+        "source": "var p=reportParams(req);p.put(\"action\",\"list\");req.setAttribute(\"backUrl\",url(req,\"/revenue\",p));p.remove(\"action\");p.put(\"itemType\",type);p.put(\"itemCode\",code);p.put(\"usagePage\",usagePage);"
+      },
+      {
+        "n": 27,
+        "report": 19,
+        "text": "Loại PART phân biệt kể cả code giống service.",
+        "path": "src/main/webapp/WEB-INF/views/manager/RevenueStatisticsListView6.jsp",
+        "line": 8,
+        "source": "<c:forEach var=\"r\" items=\"${revenueStats}\"><c:url var=\"detailUrl\" value=\"/service-part\"><c:param name=\"itemType\" value=\"${r.itemType}\" /><c:param name=\"itemCode\" value=\"${r.itemCode}\" /><c:param name=\"startDate\" value=\"${startDate}\" /><c:param name=\"endDate\" value=\"${endDate}\" /><c:param name=\"statisticType\" value=\"${statisticType}\" /><c:param name=\"page\" value=\"${currentPage}\" /></c:url>"
+      },
+      {
+        "n": 28,
+        "report": 20,
+        "text": "Nhánh PART sau validate chung.",
+        "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+        "line": 38,
+        "source": "SparePart6 part=parts.getPartInfo(code);if(part==null){error(req,resp,404,\"Không tìm thấy phụ tùng.\");return;}"
+      },
+      {
+        "n": 29,
+        "report": 21,
+        "text": "vwSparePart6 có stock receipts−usages.",
+        "path": "src/main/java/garaman/dao/SparePartDAO6.java",
+        "line": 12,
+        "source": "try(var ps=con.prepareStatement(SELECT+\" WHERE p.partCode=?\")) {"
+      },
+      {
+        "n": 30,
+        "report": 21,
+        "text": "new SparePart6/PartBrand6/Category6, setters void, unitPrice BigDecimal.",
+        "path": "src/main/java/garaman/dao/SparePartDAO6.java",
+        "line": 21,
+        "source": "private SparePart6 readPart(ResultSet rs) throws SQLException {"
+      },
+      {
+        "n": 31,
+        "report": 22,
+        "text": "History theo bộ lọc gốc.",
+        "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+        "line": 39,
+        "source": "PartUsage6[] all=usages.getAllPartUsageOfPart(code,start,end);rows=all.length;usagePage=clampPage(page(req,\"usagePage\"),rows);"
+      },
+      {
+        "n": 32,
+        "report": 23,
+        "text": "Query/sort giống nguyên tắc service, quantity không phải count.",
+        "path": "src/main/java/garaman/dao/PartUsageDAO6.java",
+        "line": 20,
+        "source": "String sql=\"SELECT u.* FROM tblPartUsage6 u JOIN tblSparePart6 s ON s.id=u.tblSparePart6id JOIN tblInvoice6 i ON i.tblRepairOrder6id=u.tblRepairOrder6id WHERE s.partCode=? AND i.issueDate>=? AND i.issueDate<? AND i.paymentStatus='PAID' ORDER BY i.issueDate DESC,u.id DESC\";"
+      },
+      {
+        "n": 33,
+        "report": 23,
+        "text": "new PartUsage6, usedQuantity Integer/price BigDecimal; gọi các DAO item/role/order phù hợp.",
+        "path": "src/main/java/garaman/dao/PartUsageDAO6.java",
+        "line": 32,
+        "source": "private PartUsage6 readUsage(ResultSet rs) throws SQLException {"
+      },
+      {
+        "n": 34,
+        "report": 24,
+        "text": "Item/slice rồi lifetime.",
+        "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+        "line": 40,
+        "source": "req.setAttribute(\"sparePart\",part);req.setAttribute(\"partUsageList\",slice(all,usagePage));req.setAttribute(\"lifetimeUsageCount\",usages.getTotalUsageCount(code));"
+      },
+      {
+        "n": 35,
+        "report": 24,
+        "text": "COUNT dòng, không SUM quantity, thiếu dữ liệu trả0.",
+        "path": "src/main/java/garaman/dao/PartUsageDAO6.java",
+        "line": 14,
+        "source": "try(var ps=con.prepareStatement(\"SELECT COUNT(*) FROM tblPartUsage6 u JOIN tblSparePart6 s ON s.id=u.tblSparePart6id WHERE s.partCode=?\")) {"
+      },
+      {
+        "n": 36,
+        "report": 25,
+        "text": "Whitelist local asset, giữ back/filter/page.",
+        "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+        "line": 41,
+        "source": "String image=part.getImage();if(image!=null&&image.matches(\"/assets/[a-zA-Z0-9_.-]+\\\\.(svg|png|jpg|webp)\"))req.setAttribute(\"partImageUrl\",req.getContextPath()+image);"
+      },
+      {
+        "n": 37,
+        "report": 25,
+        "text": "JSP render PART và link usageId mỗi dòng.",
+        "path": "src/main/webapp/WEB-INF/views/manager/ServicePartDetailView6.jsp",
+        "line": 18,
+        "source": "<c:forEach var=\"u\" items=\"${partUsageList}\" varStatus=\"s\"><tr><td>${(currentPage - 1) * 20 + s.count}</td><td><c:out value=\"${u.order.repairOrderCode}\" /></td><td><c:out value=\"${u.order.cus.fullName}\" /></td><td><c:out value=\"${u.order.vehicle.licensePlate}\" /></td><td><fmt:formatDate value=\"${u.order.completionTime}\" pattern=\"dd/MM/yyyy HH:mm\" /></td><td><a class=\"button small\" href=\"<c:out value='${invoiceBaseUrl}' />&amp;usageId=${u.id}\">Xem hóa đơn</a></td></tr></c:forEach>"
+      },
+      {
+        "n": 38,
+        "report": 26,
+        "text": "Scalar usageId của đúng dòng đang hiển thị.",
+        "path": "src/main/webapp/WEB-INF/views/manager/ServicePartDetailView6.jsp",
+        "line": 10,
+        "source": "<c:forEach var=\"u\" items=\"${serviceUsageList}\" varStatus=\"s\"><tr><td>${(currentPage - 1) * 20 + s.count}</td><td><c:out value=\"${u.order.repairOrderCode}\" /></td><td><c:out value=\"${u.order.cus.fullName}\" /></td><td><c:out value=\"${u.order.vehicle.licensePlate}\" /></td><td><fmt:formatDate value=\"${u.order.completionTime}\" pattern=\"dd/MM/yyyy HH:mm\" /></td><td><a class=\"button small\" href=\"<c:out value='${invoiceBaseUrl}' />&amp;usageId=${u.id}\">Xem hóa đơn</a></td></tr></c:forEach>"
+      },
+      {
+        "n": 39,
+        "report": 27,
+        "text": "Không dùng0 để bỏ qua invoice action.",
+        "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+        "line": 28,
+        "source": "if(invoiceAction&&target<=0)throw new IllegalArgumentException(\"Mã lần sử dụng phải lớn hơn 0.\");"
+      },
+      {
+        "n": 40,
+        "report": 27,
+        "text": "Membership so giá trị Integer trên all đã lọc, kể cả ID>127; query lặp đúng thứ tự nhánh PART.",
+        "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+        "line": 34,
+        "source": "for(var u:all)if(Objects.equals(u.getId(),target))containsUsage=true;"
+      },
+      {
+        "n": 41,
+        "report": 28,
+        "text": "Handler gọi lookup scalar.",
+        "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+        "line": 49,
+        "source": "String invoiceCode;try(var invoices=new InvoiceDAO6()){invoiceCode=invoices.getInvoiceCodeByUsage(type,target);}"
+      },
+      {
+        "n": 42,
+        "report": 28,
+        "text": "Whitelist usage table + Invoice JOIN orderFK, không new Invoice trong lookup.",
+        "path": "src/main/java/garaman/dao/InvoiceDAO6.java",
+        "line": 14,
+        "source": "try(var ps=con.prepareStatement(\"SELECT i.invoiceCode FROM \"+table+\" u JOIN tblInvoice6 i ON i.tblRepairOrder6id=u.tblRepairOrder6id WHERE u.id=?\")) {"
+      },
+      {
+        "n": 43,
+        "report": 29,
+        "text": "Không object Java qua URL.",
+        "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+        "line": 51,
+        "source": "p.put(\"invoiceCode\",invoiceCode);resp.sendRedirect(url(req,\"/invoice\",p));return;"
+      },
+      {
+        "n": 44,
+        "report": 30,
+        "text": "Mở DAO, query code validated.",
+        "path": "src/main/java/garaman/servlet/InvoiceServlet6.java",
+        "line": 23,
+        "source": "Invoice6 invoice;try(var dao=new InvoiceDAO6()){invoice=dao.getInvoiceDetail(code);}"
+      },
+      {
+        "n": 45,
+        "report": 31,
+        "text": "new Invoice6/setter void, total getBigDecimal.",
+        "path": "src/main/java/garaman/dao/InvoiceDAO6.java",
+        "line": 22,
+        "source": "Invoice6 i=new Invoice6();i.setId(rs.getObject(\"id\",Integer.class));i.setInvoiceCode(rs.getString(\"invoiceCode\"));i.setIssueDate(rs.getTimestamp(\"issueDate\"));"
+      },
+      {
+        "n": 46,
+        "report": 31,
+        "text": "Graph order trên cùng connection, appointment null trong fixture.",
+        "path": "src/main/java/garaman/dao/InvoiceDAO6.java",
+        "line": 24,
+        "source": "RepairOrder6 o=findOrderById(rs.getObject(\"tblRepairOrder6id\",Integer.class));"
+      },
+      {
+        "n": 47,
+        "report": 32,
+        "text": "Nạp tất cả service lines, không filter kỳ.",
+        "path": "src/main/java/garaman/dao/InvoiceDAO6.java",
+        "line": 25,
+        "source": "o.setServiceUsage(new ServiceUsageDAO6(con).byOrder(o.getId()));"
+      },
+      {
+        "n": 48,
+        "report": 32,
+        "text": "Nạp tất cả part lines, cùng private readUsage/graph con; setters void.",
+        "path": "src/main/java/garaman/dao/InvoiceDAO6.java",
+        "line": 26,
+        "source": "o.setPartUsage(new PartUsageDAO6(con).byOrder(o.getId()));i.setOrder(o);"
+      },
+      {
+        "n": 49,
+        "report": 33,
+        "text": "Không bảng Payment; id logic=Invoice.id, amount BigDecimal.",
+        "path": "src/main/java/garaman/dao/InvoiceDAO6.java",
+        "line": 28,
+        "source": "Payment6 payment=new Payment6();"
+      },
+      {
+        "n": 50,
+        "report": 33,
+        "text": "Cashier từ FK Invoice khác người bán ở Order.",
+        "path": "src/main/java/garaman/dao/InvoiceDAO6.java",
+        "line": 33,
+        "source": "payment.setSs(new MemberDAO6(con).findSaleStaffById(rs.getObject(\"tblEmployee6tblMember6id\",Integer.class)));"
+      },
+      {
+        "n": 51,
+        "report": 33,
+        "text": "Khớp tiền rồi setPayment(void), return invoice đầy đủ.",
+        "path": "src/main/java/garaman/dao/InvoiceDAO6.java",
+        "line": 34,
+        "source": "if(total.compareTo(payment.getPaymentAmount())!=0)throw new SQLException(\"Số tiền đã thanh toán không khớp tổng hóa đơn\");"
+      },
+      {
+        "n": 52,
+        "report": 34,
+        "text": "Forward object trong request, Back đúng item/kỳ/page/usagePage.",
+        "path": "src/main/java/garaman/servlet/InvoiceServlet6.java",
+        "line": 30,
+        "source": "view(req,resp,\"manager/InvoiceDetailView6\");"
+      },
+      {
+        "n": 53,
+        "report": 34,
+        "text": "Hiển thị hai vai trò tách biệt, tất cả dòng/BigDecimal/getLineAmount, không rating.",
+        "path": "src/main/webapp/WEB-INF/views/manager/InvoiceDetailView6.jsp",
+        "line": 9,
+        "source": "<p id=\"saleStaff\"><strong>Nhân viên bán hàng:</strong> <c:out value=\"${invoice.order.ss.fullName}\" default=\"Chưa phân công\" /> <c:out value=\"${invoice.order.ss.employeeCode}\" /></p><p><strong>Điện thoại khách:</strong> <c:out value=\"${invoice.order.cus.phone}\" /></p><p><strong>Hoàn thành:</strong> <fmt:formatDate value=\"${invoice.order.completionTime}\" pattern=\"dd/MM/yyyy HH:mm\" /></p>"
+      }
+    ]
+  },
+  "sourceHash": "f0c79f6eb835cc5a8145068a161d6e15a97f682e65176925e039de5c334e736b"
+}

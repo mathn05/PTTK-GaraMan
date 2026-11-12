@@ -1,0 +1,41 @@
+@startuml
+actor "Quản lý" as M
+control RevenueServlet6 as R
+control ServicePartServlet6 as D
+control InvoiceServlet6 as I
+entity RevenueDAO6 as RD
+entity "ServiceDAO6 / SparePartDAO6" as Item
+entity "ServiceUsageDAO6 / PartUsageDAO6" as U
+entity InvoiceDAO6 as ID
+database MySQL as DB
+boundary JSP
+M -> R : home → menu → filter → list (GET)
+R -> R : validate range/type; query params context
+R -> RD : getRevenueStatistics(Date start,Date end,type)
+RD -> DB : aggregate independent service / part sources
+note right of DB
+Invoice.issueDate [start,end+1)
+Payment.status=PAID
+COUNT usage rows
+historical saleUnitPrice
+end note
+RD --> R : RevenueStats6[] sorted revenue/code/type
+R -> JSP : slice 20, whole-result total, currentPage/totalPages
+M -> D : GET itemType,itemCode,filter,page,usagePage
+D -> Item : getServiceInfo / getPartInfo
+D -> U : getTotalUsageCount(code) [all rows]
+D -> U : getAll...Usage(code,start,end) [PAID + issueDate]
+U -> DB : usage + shallow order/cus/vehicle
+D -> JSP : shared ServicePartDetailView6.jsp, branch-specific data
+M -> D : GET action=invoice,usageId + explicit context
+D -> D : verify usage belongs to current item/filter
+D -> ID : getInvoiceCodeByUsage(itemType,usageId)
+D --> M : redirect /invoice?invoiceCode=...&context
+M -> I : GET invoice
+I -> ID : getInvoiceDetail(invoiceCode)
+ID -> DB : view total, full order/customer/vehicle,
+ID -> DB : all services/parts, payment, sales staff and cashier
+ID --> I : Invoice6 graph
+I -> JSP : InvoiceDetailView6.jsp + back URL
+M -> D : Back preserves item/filter/list page/history page
+@enduml

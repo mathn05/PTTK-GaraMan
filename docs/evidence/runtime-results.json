@@ -1,0 +1,28 @@
+{
+  "target": "http://127.0.0.1:8080/garaman6",
+  "checks": [
+    {
+      "name": "Database outage returns HTTP 500, no fake login success",
+      "pass": true,
+      "actual": 500
+    },
+    {
+      "name": "Database outage response does not expose SQL/stack/password",
+      "pass": true,
+      "actual": "sanitized error page"
+    },
+    {
+      "name": "MySQL restart preserves persisted appointments and vehicles",
+      "pass": true,
+      "actual": {
+        "appointments": 3,
+        "vehicles": 4
+      }
+    },
+    {
+      "name": "Login recovers after native MySQL restart",
+      "pass": true,
+      "actual": 200
+    }
+  ]
+}

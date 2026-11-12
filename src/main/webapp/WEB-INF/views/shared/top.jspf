@@ -1,0 +1,23 @@
+<%@ page pageEncoding="UTF-8" %>
+<fmt:setLocale value="vi_VN" />
+<fmt:setTimeZone value="Asia/Ho_Chi_Minh" />
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><c:out value="${pageTitle}" /> · GaraMan</title>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/app.css">
+  <link rel="icon" href="${pageContext.request.contextPath}/assets/favicon.svg" type="image/svg+xml">
+  <script src="${pageContext.request.contextPath}/assets/app.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="${pageContext.request.contextPath}/login"><span class="brand-symbol">G</span> GARAMAN <small>AUTO SERVICE</small></a>
+  <c:if test="${not empty sessionScope.currentUser}">
+    <div class="account"><span><c:out value="${sessionScope.currentUser.fullName}" /></span>
+      <form action="${pageContext.request.contextPath}/login" method="post"><input type="hidden" name="action" value="logout"><input type="hidden" name="csrfToken" value="${sessionScope.csrfToken}"><button class="text-button" type="submit">Đăng xuất</button></form>
+    </div>
+  </c:if>
+</header>
+<main class="container">
+<c:if test="${not empty message}"><div class="alert" role="alert"><c:out value="${message}" /></div></c:if>

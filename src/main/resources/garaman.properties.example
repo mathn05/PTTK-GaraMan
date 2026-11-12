@@ -1,0 +1,11 @@
+# Copy to .local/garaman.properties (never commit local credentials).
+GARAMAN_DB_URL=jdbc:mysql://127.0.0.1:3306/garaman6?connectionTimeZone=Asia/Ho_Chi_Minh&forceConnectionTimeZoneToSession=false&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&sslMode=DISABLED
+GARAMAN_DB_USER=garaman_app
+GARAMAN_DB_PASSWORD=
+GARAMAN_TIME_ZONE=Asia/Ho_Chi_Minh
+GARAMAN_SLOT_DAYS=30
+GARAMAN_OPEN_HOUR=8
+GARAMAN_CLOSE_HOUR=17
+GARAMAN_BREAK_START=12
+GARAMAN_BREAK_END=13
+GARAMAN_SLOT_MINUTES=60

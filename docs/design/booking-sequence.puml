@@ -1,0 +1,50 @@
+@startuml
+actor "Khách hàng" as C
+boundary "JSP" as V
+control BookingServlet6 as B
+control AppointmentServlet6 as A
+database "MySQL" as DB
+entity CustomerDAO6 as CD
+entity VehicleDAO6 as VD
+entity SlotDAO6 as SD
+entity AppointmentDAO6 as AD
+C -> B : GET /booking
+B -> CD : getCustomerInfo(session.customerCode)
+CD -> DB : SELECT Member JOIN Customer
+B -> VD : getVehiclesOfCustomer(cus.id)
+VD -> DB : SELECT vehicles + brand
+B -> SD : getAvailableSlots(appointmentDate)
+SD -> DB : SELECT future AVAILABLE / expired HELD
+B -> V : cus,vehicleList,availableSlots,context
+C -> B : POST hold + CSRF + context
+B -> B : validate ownership/date/input
+B -> SD : holdSlot(slotId)
+SD -> DB : guarded atomic UPDATE token/expiry NOW+3min
+B -> B : new Appointment6; session context.draft
+B -> V : ConfirmView6.jsp + hold expiry
+alt Edit
+C -> B : POST edit context
+B -> SD : releaseSlot(slotId,holdCode)
+B -> B : clear token, preserve input
+B --> C : redirect booking
+else Confirm
+C -> A : POST /appointment context + CSRF
+A -> A : synchronized(session-owned context)
+alt context already complete
+A --> C : redirect recorded result
+else first completion
+A -> SD : validateHold(slotId,holdCode)
+A -> AD : createAppointment(draft,holdCode)
+AD -> DB : BEGIN
+AD -> SD : consumeHold on borrowed same connection
+SD -> DB : guarded UPDATE HELD→BOOKED, clear token, row lock
+AD -> DB : validate vehicle ownership; lock code sequence; INSERT PENDING, ss NULL
+AD -> DB : COMMIT (or ROLLBACK all on failure)
+AD --> A : persisted Appointment6
+A -> A : context.completed = result
+A --> C : redirect GET /booking?action=confirm
+C -> B : GET result
+B -> V : ConfirmView6.jsp success + actual appointment
+end
+end
+@enduml

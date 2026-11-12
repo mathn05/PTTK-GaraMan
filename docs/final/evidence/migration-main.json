@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "backupRestore": {
+    "database": "garaman6_restore_20261112_145013_750178_it",
+    "allTablesEqual": true,
+    "tableCount": 21,
+    "dumpSha256": "3fc9052229eb32b94a2b77ea3bcb7f68cc789f5bf6ee8711412bb3cb070aa07b"
+  },
+  "migration": {
+    "database": "garaman6",
+    "archive": "garaman6_archive_20261112_145017_825186_main",
+    "schemaHash": "8fcec9478e621e8776faa9c1695bb9040a1fb42b81ef9457fa343a3e44425e02",
+    "preflight": {
+      "payments": {
+        "PAID": 5,
+        "PENDING": 1,
+        "FAILED": 1
+      },
+      "orphans": 0,
+      "sharedPayments": 0,
+      "duplicateOrderAppointment": 0,
+      "nonAccountStatusNormalized": 4
+    },
+    "nextAppointmentId": 4,
+    "nextVehicleId": 5,
+    "success": true
+  },
+  "privateBackup": "C:\\Users\\admin\\Documents\\tai lieu nam 4\\PTTK\\BTL\\garaman\\.local\\backups\\v3-main-20261112_145013_750178"
+}

@@ -1,0 +1,168 @@
+{
+  "totals": {
+    "tests": 27,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "suites": [
+    {
+      "suite": "garaman.DatabaseIntegrationTest",
+      "tests": 25,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time": "2.109",
+      "timestamp": null,
+      "cases": [
+        {
+          "name": "optionalAccountIsAllNullAndPartialAccountIsRejected",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.58"
+        },
+        {
+          "name": "expiredHoldAppearsAvailableWithoutGetMutatingDatabase",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.044"
+        },
+        {
+          "name": "generatedSlotAndOneToOneFksProtectEverySqlWriter",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.043"
+        },
+        {
+          "name": "boxedIdentitiesAndZeroCountsHaveExplicitContracts",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.017"
+        },
+        {
+          "name": "mileageNullZeroAndKnownValuesRoundTrip",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.038"
+        },
+        {
+          "name": "concurrentVehicleCodesAreDistinct",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.056"
+        },
+        {
+          "name": "lifetimeDiffersFromPaidHistoryAndHydratesCustomerVehicleOrder",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.057"
+        },
+        {
+          "name": "servicePartAllRevenueMatchIndependentHandCalculation",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.024"
+        },
+        {
+          "name": "wrongTokenCannotReleaseOrConsumeAndBorrowedConnectionStaysOpen",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.048"
+        },
+        {
+          "name": "vehicleNormalizationNullableYearNullableMileageAndDuplicate",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.025"
+        },
+        {
+          "name": "bothUsageTypesResolveFullInvoiceWithSeparateSalespersonAndCashier",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.034"
+        },
+        {
+          "name": "expiredHoldCannotPersistButCanBeReclaimed",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.041"
+        },
+        {
+          "name": "concurrentFinalConfirmationCreatesExactlyOneAppointment",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.052"
+        },
+        {
+          "name": "dateBoundariesUseInvoiceNotUsageOrPaymentTime",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.011"
+        },
+        {
+          "name": "equalRevenueAndSameCodeAcrossTypesSortDeterministically",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.011"
+        },
+        {
+          "name": "timestampPreservesInstantMicrosecondsAndVietnamDate",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.021"
+        },
+        {
+          "name": "failedOwnershipRollsBackConsumedSlot",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.042"
+        },
+        {
+          "name": "authenticateRealCustomerManagerWrongAndInactive",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.503"
+        },
+        {
+          "name": "paidInvoiceMismatchAndSqlFailureAreExceptionsNotEmptySuccess",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.032"
+        },
+        {
+          "name": "largeDecimalAmountsAndPartMultiplicationAreExact",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.03"
+        },
+        {
+          "name": "mappingUsesSharedMemberIdAndNullableYear",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.012"
+        },
+        {
+          "name": "codeFinalizationFailureRollsBackSlotAndTemporaryInsert",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.052"
+        },
+        {
+          "name": "unpaidPaymentGroupAndExplicitNullChecks",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.024"
+        },
+        {
+          "name": "concurrentHoldOnlyOneConnectionWins",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.023"
+        },
+        {
+          "name": "monetaryFractionsSurviveAggregationAndInvoiceMapping",
+          "classname": "garaman.DatabaseIntegrationTest",
+          "time": "0.036"
+        }
+      ]
+    },
+    {
+      "suite": "garaman.PasswordAndContractTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time": "0.588",
+      "timestamp": null,
+      "cases": [
+        {
+          "name": "publicContractsPreserveFieldsArraysAndParameterNames",
+          "classname": "garaman.PasswordAndContractTest",
+          "time": "0.002"
+        },
+        {
+          "name": "passwordHashUsesSaltAndRejectsWrongOrMalformedPassword",
+          "classname": "garaman.PasswordAndContractTest",
+          "time": "0.584"
+        }
+      ]
+    }
+  ],
+  "sourceHash": "f0c79f6eb835cc5a8145068a161d6e15a97f682e65176925e039de5c334e736b"
+}

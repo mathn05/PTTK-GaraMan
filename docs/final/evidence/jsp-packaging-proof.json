@@ -1,0 +1,27 @@
+{
+  "architecture": "Servlet packages; JSP only render/send scalar",
+  "removedArtifactsAbsentFromSourceAndWar": true,
+  "scriptingInvalid": true,
+  "displayAssetsUnchanged": true,
+  "proof": [
+    {
+      "source": "src/main/java/garaman/servlet/BookingServlet6.java",
+      "line": 59,
+      "snippet": "Appointment6 draft=new Appointment6()",
+      "sha256": "262f073e2a3c86623b2dc0b64e73a1979d8caecb8d47abe2e1495248b96ed6d9"
+    },
+    {
+      "source": "src/main/java/garaman/servlet/VehicleServlet6.java",
+      "line": 37,
+      "snippet": "Vehicle6 v=new Vehicle6()",
+      "sha256": "a3811ec8b237748bafd82c969d7fad546da5ba93c7fcad684b50be0b835a98be"
+    },
+    {
+      "source": "src/main/java/garaman/servlet/AppointmentServlet6.java",
+      "line": 25,
+      "snippet": "Appointment6 draft=(Appointment6)c.get(\"draft\")",
+      "sha256": "e039e8b8e2c1de42cb322ed4a4e86ce2a0d5722ba799aad7a14bf19375e879f1"
+    }
+  ],
+  "sourceHash": "f0c79f6eb835cc5a8145068a161d6e15a97f682e65176925e039de5c334e736b"
+}

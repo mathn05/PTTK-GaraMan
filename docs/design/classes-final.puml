@@ -1,0 +1,275 @@
+@startuml
+hide empty members
+skinparam classAttributeIconSize 0
+class AppointmentDAO6 {
++createAppointment(garaman.entity.Appointment6 appointment, java.lang.String holdCode) : Appointment6
+}
+DAO6 <|-- AppointmentDAO6
+class CodeSequenceDAO6 {
++nextCode(java.lang.String prefix) : String
+}
+DAO6 <|-- CodeSequenceDAO6
+class CustomerDAO6 {
++getCustomerInfo(java.lang.String customerCode) : Customer6
+}
+DAO6 <|-- CustomerDAO6
+class DAO6 {
+#con : Connection
+#owner : boolean
++close() : void
+}
+class InvoiceDAO6 {
++getInvoiceCodeByUsage(java.lang.String itemType, int usageId) : String
++getInvoiceDetail(java.lang.String invoiceCode) : Invoice6
+}
+DAO6 <|-- InvoiceDAO6
+class MemberDAO6 {
++authenticate(java.lang.String username, java.lang.String password) : Member6
+}
+DAO6 <|-- MemberDAO6
+class PartUsageDAO6 {
++getAllPartUsageOfPart(java.lang.String partCode, java.util.Date startDate, java.util.Date endDate) : PartUsage6[]
++getTotalUsageCount(java.lang.String partCode) : int
+}
+DAO6 <|-- PartUsageDAO6
+class RevenueDAO6 {
++getRevenueStatistics(java.util.Date startDate, java.util.Date endDate, java.lang.String statisticType) : RevenueStats6[]
+}
+DAO6 <|-- RevenueDAO6
+class RowMapper6 {
+}
+class ServiceDAO6 {
++getServiceInfo(java.lang.String serviceCode) : Service6
+}
+DAO6 <|-- ServiceDAO6
+class ServiceUsageDAO6 {
++getTotalUsageCount(java.lang.String serviceCode) : int
++getAllServiceUsageOfService(java.lang.String serviceCode, java.util.Date startDate, java.util.Date endDate) : ServiceUsage6[]
+}
+DAO6 <|-- ServiceUsageDAO6
+class SlotDAO6 {
++findById(int slotId) : AppointmentSlot6
++holdSlot(int slotId) : AppointmentSlot6
++releaseSlot(int slotId, java.lang.String holdCode) : boolean
++validateHold(int slotId, java.lang.String holdCode) : boolean
++getAvailableSlots(java.time.LocalDate appointmentDate) : AppointmentSlot6[]
++consumeHold(int slotId, java.lang.String holdCode) : boolean
+}
+DAO6 <|-- SlotDAO6
+class SparePartDAO6 {
++getPartInfo(java.lang.String partCode) : SparePart6
+}
+DAO6 <|-- SparePartDAO6
+class UsageMapper6 {
+}
+class VehicleBrandDAO6 {
++getVehicleBrands() : VehicleBrand6[]
+}
+DAO6 <|-- VehicleBrandDAO6
+class VehicleDAO6 {
++getVehiclesOfCustomer(int customerId) : Vehicle6[]
++findById(int vehicleId) : Vehicle6
++saveVehicle(garaman.entity.Vehicle6 vehicle, int customerId) : Vehicle6
+}
+DAO6 <|-- VehicleDAO6
+class Account6 {
+-id : int
+-username : String
+-password : String
+-profileImage : String
+-status : String
+}
+class Appointment6 {
+-id : int
+-appointmentCode : String
+-requestDescription : String
+-createAt : Date
+-status : String
+-ss : SaleStaff6
+-vehicle : Vehicle6
+-slot : AppointmentSlot6
+-cus : Customer6
+}
+Appointment6 --> SaleStaff6 : ss
+Appointment6 --> Vehicle6 : vehicle
+Appointment6 --> AppointmentSlot6 : slot
+Appointment6 --> Customer6 : cus
+class AppointmentSlot6 {
+-id : int
+-startTime : Date
+-holdCode : String
+-holdExpiresAt : Date
+-status : String
+}
+class Category6 {
+-id : int
+-categoryName : String
+}
+class Customer6 {
+-customerCode : String
+}
+Member6 <|-- Customer6
+class Employee6 {
+-employeeCode : String
+-jobTitle : String
+}
+Member6 <|-- Employee6
+class Invoice6 {
+-id : int
+-invoiceCode : String
+-totalAmount : double
+-issueDate : Date
+-order : RepairOrder6
+-payment : Payment6
+}
+Invoice6 --> RepairOrder6 : order
+Invoice6 --> Payment6 : payment
+class Manager6 {
+}
+Employee6 <|-- Manager6
+class Member6 {
+-id : int
+-fullName : String
+-phone : String
+-email : String
+-address : String
+-acc : Account6
+}
+Member6 --> Account6 : acc
+class PartBrand6 {
+-id : int
+-name : String
+}
+class PartUsage6 {
+-id : int
+-usedQuantity : int
+-usageTime : Date
+-saleUnitPrice : double
+-note : String
+-sparePart : SparePart6
+-tech : Technician6
+-order : RepairOrder6
+}
+PartUsage6 --> SparePart6 : sparePart
+PartUsage6 --> Technician6 : tech
+PartUsage6 --> RepairOrder6 : order
+class Payment6 {
+-id : int
+-paymentAmount : double
+-paymentTime : Date
+-paymentMethod : String
+-status : String
+-ss : SaleStaff6
+-transactionReference : String
+}
+Payment6 --> SaleStaff6 : ss
+class RepairOrder6 {
+-id : int
+-repairOrderCode : String
+-createTime : Date
+-completionTime : Date
+-vehicleCondition : String
+-repairDescription : String
+-repairResult : String
+-repairStatus : String
+-serviceUsage : ServiceUsage6[]
+-partUsage : PartUsage6[]
+-vehicle : Vehicle6
+-cus : Customer6
+-ss : SaleStaff6
+-appointment : Appointment6
+}
+RepairOrder6 --> ServiceUsage6 : serviceUsage
+RepairOrder6 --> PartUsage6 : partUsage
+RepairOrder6 --> Vehicle6 : vehicle
+RepairOrder6 --> Customer6 : cus
+RepairOrder6 --> SaleStaff6 : ss
+RepairOrder6 --> Appointment6 : appointment
+class RevenueStats6 {
+-itemCode : String
+-itemName : String
+-itemType : String
+-usageCount : int
+-totalRevenue : double
+}
+class SaleStaff6 {
+}
+Employee6 <|-- SaleStaff6
+class Service6 {
+-id : int
+-serviceCode : String
+-serviceName : String
+-description : String
+-unitPrice : double
+}
+class ServiceUsage6 {
+-id : int
+-usageTime : Date
+-saleUnitPrice : double
+-note : String
+-service : Service6
+-tech : Technician6
+-order : RepairOrder6
+}
+ServiceUsage6 --> Service6 : service
+ServiceUsage6 --> Technician6 : tech
+ServiceUsage6 --> RepairOrder6 : order
+class SparePart6 {
+-id : int
+-partCode : String
+-partName : String
+-description : String
+-unit : String
+-technicalSpecifications : String
+-unitPrice : double
+-stockQuantity : int
+-image : String
+-brand : PartBrand6
+-cat : Category6
+}
+SparePart6 --> PartBrand6 : brand
+SparePart6 --> Category6 : cat
+class Technician6 {
+}
+Employee6 <|-- Technician6
+class Vehicle6 {
+-id : int
+-vehicleCode : String
+-licensePlate : String
+-vehicleModel : String
+-currentMileage : int
+-manufactureYear : Integer
+-cus : Customer6
+-brand : VehicleBrand6
+}
+Vehicle6 --> Customer6 : cus
+Vehicle6 --> VehicleBrand6 : brand
+class VehicleBrand6 {
+-id : int
+-name : String
+}
+class AppointmentServlet6 {
++doPost(jakarta.servlet.http.HttpServletRequest req, jakarta.servlet.http.HttpServletResponse resp) : void
+}
+class BookingServlet6 {
++doGet(jakarta.servlet.http.HttpServletRequest req, jakarta.servlet.http.HttpServletResponse resp) : void
++doPost(jakarta.servlet.http.HttpServletRequest req, jakarta.servlet.http.HttpServletResponse resp) : void
+}
+class InvoiceServlet6 {
++doGet(jakarta.servlet.http.HttpServletRequest req, jakarta.servlet.http.HttpServletResponse resp) : void
+}
+class LoginServlet6 {
++doGet(jakarta.servlet.http.HttpServletRequest req, jakarta.servlet.http.HttpServletResponse resp) : void
++doPost(jakarta.servlet.http.HttpServletRequest req, jakarta.servlet.http.HttpServletResponse resp) : void
+}
+class RevenueServlet6 {
++doGet(jakarta.servlet.http.HttpServletRequest req, jakarta.servlet.http.HttpServletResponse resp) : void
+}
+class ServicePartServlet6 {
++doGet(jakarta.servlet.http.HttpServletRequest req, jakarta.servlet.http.HttpServletResponse resp) : void
+}
+class VehicleServlet6 {
++doGet(jakarta.servlet.http.HttpServletRequest req, jakarta.servlet.http.HttpServletResponse resp) : void
++doPost(jakarta.servlet.http.HttpServletRequest req, jakarta.servlet.http.HttpServletResponse resp) : void
+}
+@enduml

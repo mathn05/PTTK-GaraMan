@@ -1,0 +1,1332 @@
+{
+  "time": "20261112_172201",
+  "root": "C:\\Users\\admin\\Documents\\tai lieu nam 4\\PTTK\\BTL\\garaman",
+  "checkpoint": "C:\\Users\\admin\\Documents\\tai lieu nam 4\\PTTK\\BTL\\garaman\\.local\\checkpoints\\servlet-architecture-20261112_172201",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "cf004a3574b0bf3fc8efe1ce2a171fd3881c9474e93cb68f87de15a80026da98",
+      "bytes": 587
+    },
+    {
+      "path": ".mvn/wrapper/maven-wrapper.properties",
+      "sha256": "1ab96d08531c63667c46b26524958688fb9805358642be28579f6d6adfbece8d",
+      "bytes": 171
+    },
+    {
+      "path": "docs/BUSINESS_RULES.md",
+      "sha256": "6ae844194e0d843b0f0e90eae7ed6d4acb42d82d4c3cd9f756cbcb531774a70f",
+      "bytes": 2678
+    },
+    {
+      "path": "docs/CONTRACTS.md",
+      "sha256": "135ad9e969542577f359cb4f8aaa214e35dc8eaf16471eb4e64ea9ceaa7000b5",
+      "bytes": 4527
+    },
+    {
+      "path": "docs/CONTRACTS_GENERATED.md",
+      "sha256": "f98f33fe0e8dde320f3cfbe1dd11863526d1d703d369cb72f7f7505c140a5804",
+      "bytes": 32845
+    },
+    {
+      "path": "docs/design/booking-sequence.puml",
+      "sha256": "e35c2a1d281a38cb5c4e96726dffefd7613b9954c1687cb3b77e5444cec9872f",
+      "bytes": 1694
+    },
+    {
+      "path": "docs/design/classes-final.puml",
+      "sha256": "0ac47cdad8fe6f88a24f25d258eb170c445edd839f910e7342780a47ecfe0334",
+      "bytes": 7029
+    },
+    {
+      "path": "docs/design/revenue-sequence.puml",
+      "sha256": "5ef00dba9f11f7bbb999b4fedae8ee761f6a2c5f0b8b785ceba8afdef58132b9",
+      "bytes": 1584
+    },
+    {
+      "path": "docs/design/SCENARIO_V3.md",
+      "sha256": "50745607fabac1f5e288c76c6a48759efd5bba14278423b93a9e6712379cd804",
+      "bytes": 4835
+    },
+    {
+      "path": "docs/DESIGN_CHANGES.md",
+      "sha256": "b611280c44e2039ac82ed81ff4c673893655858dc9df82605ed447afb3385522",
+      "bytes": 2884
+    },
+    {
+      "path": "docs/evidence/01-login.png",
+      "sha256": "2781d5fbd120ee8417b915279ed9814746acac5b33af6beef5cdc9c0b502916b",
+      "bytes": 20890
+    },
+    {
+      "path": "docs/evidence/02-booking.png",
+      "sha256": "4774ad2b18b2c3b5397f8684dcabb2ebb043390842c4aeb4a28a3d14cd517030",
+      "bytes": 50955
+    },
+    {
+      "path": "docs/evidence/03-confirm.png",
+      "sha256": "7ca2915bbd523e5d9557819aa452c2ce58d97a1c04ce52deaef41cbdbaaa94be",
+      "bytes": 38625
+    },
+    {
+      "path": "docs/evidence/04-booking-success.png",
+      "sha256": "43dbf3cb3dbb4d2e30560e41c9bc80a695b70ffac2a014e7bdb62d62cd04c41a",
+      "bytes": 39797
+    },
+    {
+      "path": "docs/evidence/05-booking-mobile.png",
+      "sha256": "3a49aa76e53b373e1d5ffaed7939baafbe3b20a85482f78758841d09d8297801",
+      "bytes": 42394
+    },
+    {
+      "path": "docs/evidence/06-revenue-filter.png",
+      "sha256": "6e1f6911e7a25ba92df7d939df74bcc479ab7435ee2de26f6383042ebd5c818e",
+      "bytes": 26464
+    },
+    {
+      "path": "docs/evidence/07-revenue-list.png",
+      "sha256": "2e4d890255c97a3fbbbf90b43ff726f83b9f11374cb5cb5fdb0a6a2f6c441ff7",
+      "bytes": 92395
+    },
+    {
+      "path": "docs/evidence/08-revenue-page2.png",
+      "sha256": "ade590305d6a84872e0e5433eacc4b04d828ca7c40571997dfb2366298470e8c",
+      "bytes": 49192
+    },
+    {
+      "path": "docs/evidence/09-part-detail.png",
+      "sha256": "e90f6b9075ba35e7353d9215c3213167fa3dfe38a85951281cdf32e5978fab6f",
+      "bytes": 61412
+    },
+    {
+      "path": "docs/evidence/10-invoice.png",
+      "sha256": "db00a9c7d736763e38de1345f98878bc754b1f0df51076bcf36edf9863de2828",
+      "bytes": 53629
+    },
+    {
+      "path": "docs/evidence/11-service-detail.png",
+      "sha256": "1a1d439dbc2b449dd3807a01c1cf246e6df5dbc5f953c6b349cc31c39263569c",
+      "bytes": 44589
+    },
+    {
+      "path": "docs/evidence/browser-results.json",
+      "sha256": "a402f6fa508f40455bc2da1d200bb7d2550687fbc97a068ca2348e11f4800850",
+      "bytes": 7203
+    },
+    {
+      "path": "docs/evidence/runtime-results.json",
+      "sha256": "641bbbbc07aa77c191d63740175a501d8795e6470765025ac9c7c6f00ecaac00",
+      "bytes": 665
+    },
+    {
+      "path": "docs/HTTP_VIEW_CONTRACT.md",
+      "sha256": "21ef0a50fdc75927825b4746f88188b871e789a4ebd22ae83d954ed8efa41d11",
+      "bytes": 3299
+    },
+    {
+      "path": "docs/review/00_Nguon_chuan_va_pham_vi.md",
+      "sha256": "a0b99cb49c382263c30bea6ce627ddb7bad5b13052dc1726ac22c03ac7214990",
+      "bytes": 11582
+    },
+    {
+      "path": "docs/review/01_Doi_chieu_thiet_ke_va_code.md",
+      "sha256": "6bb7706e53084b0f5e3fae6291c6b1e0350ad24eab86982a28bfd5a88eefa4f6",
+      "bytes": 104024
+    },
+    {
+      "path": "docs/review/02_Truy_vet_Scenario_V3.md",
+      "sha256": "e53f68ff76798b67aaa0f2fea3741eed6d780917bcf9af332149dc160378281b",
+      "bytes": 117299
+    },
+    {
+      "path": "docs/review/03_Kiem_chung_va_de_xuat_cap_nhat.md",
+      "sha256": "99c18fe26080b2ab323e44a0b97eae9074323b0014877f1bbf5fb6c5362cbb18",
+      "bytes": 29857
+    },
+    {
+      "path": "docs/review/code_snapshot_before.json",
+      "sha256": "12d1919b249d7341bf161d1c5ca6943ecb70ca680982216d8f320387c002f214",
+      "bytes": 26202
+    },
+    {
+      "path": "docs/review/evidence/browser/01-login.png",
+      "sha256": "2781d5fbd120ee8417b915279ed9814746acac5b33af6beef5cdc9c0b502916b",
+      "bytes": 20890
+    },
+    {
+      "path": "docs/review/evidence/browser/02-booking.png",
+      "sha256": "6a8d447f7552f8159ae01f02b5fa89a4213dd8328b8f75f3e39ec47348ff6664",
+      "bytes": 51401
+    },
+    {
+      "path": "docs/review/evidence/browser/03-confirm.png",
+      "sha256": "40c38b0af920efb553ccf86ddb4c683b650646f2814afe60d4f8f24cb2344270",
+      "bytes": 38611
+    },
+    {
+      "path": "docs/review/evidence/browser/04-booking-success.png",
+      "sha256": "546c946b6d33adced07b609d1864d406b15f9fec56fc177105f2d8b3de51dbb4",
+      "bytes": 39789
+    },
+    {
+      "path": "docs/review/evidence/browser/05-booking-mobile.png",
+      "sha256": "3a49aa76e53b373e1d5ffaed7939baafbe3b20a85482f78758841d09d8297801",
+      "bytes": 42394
+    },
+    {
+      "path": "docs/review/evidence/browser/06-revenue-filter.png",
+      "sha256": "6e1f6911e7a25ba92df7d939df74bcc479ab7435ee2de26f6383042ebd5c818e",
+      "bytes": 26464
+    },
+    {
+      "path": "docs/review/evidence/browser/07-revenue-list.png",
+      "sha256": "2e4d890255c97a3fbbbf90b43ff726f83b9f11374cb5cb5fdb0a6a2f6c441ff7",
+      "bytes": 92395
+    },
+    {
+      "path": "docs/review/evidence/browser/08-revenue-page2.png",
+      "sha256": "ade590305d6a84872e0e5433eacc4b04d828ca7c40571997dfb2366298470e8c",
+      "bytes": 49192
+    },
+    {
+      "path": "docs/review/evidence/browser/09-part-detail.png",
+      "sha256": "e90f6b9075ba35e7353d9215c3213167fa3dfe38a85951281cdf32e5978fab6f",
+      "bytes": 61412
+    },
+    {
+      "path": "docs/review/evidence/browser/10-invoice.png",
+      "sha256": "db00a9c7d736763e38de1345f98878bc754b1f0df51076bcf36edf9863de2828",
+      "bytes": 53629
+    },
+    {
+      "path": "docs/review/evidence/browser/11-service-detail.png",
+      "sha256": "1a1d439dbc2b449dd3807a01c1cf246e6df5dbc5f953c6b349cc31c39263569c",
+      "bytes": 44589
+    },
+    {
+      "path": "docs/review/evidence/browser/12-ordered-service.png",
+      "sha256": "6d80202f610e7a6db7905936359e77009d8d9a4ccecefc1340ba8354961f35d1",
+      "bytes": 46082
+    },
+    {
+      "path": "docs/review/evidence/browser/13-ordered-invoice.png",
+      "sha256": "74d9da86b738d4b1d9c5b6d50b1fbc21747b0eeeb1a9959dc4e7ca88a204572a",
+      "bytes": 54820
+    },
+    {
+      "path": "docs/review/evidence/build-result.json",
+      "sha256": "03a15d3af408da320e8225ac730fd3887e389b1aa7ca73979026b47d6cb38cf3",
+      "bytes": 80
+    },
+    {
+      "path": "docs/review/evidence/contracts-reflection.md",
+      "sha256": "f98f33fe0e8dde320f3cfbe1dd11863526d1d703d369cb72f7f7505c140a5804",
+      "bytes": 32845
+    },
+    {
+      "path": "docs/review/evidence/contracts-reflection.puml",
+      "sha256": "ea0bb4afb8a24b40b9ea426f727e85d9dab21e598fd4d936da1aaed44e1f7242",
+      "bytes": 7029
+    },
+    {
+      "path": "docs/review/evidence/document-validation.json",
+      "sha256": "d7f5c5fd8cce7b827f01f22474e173f628f1a702cfb09fe14fdafc6931b340f6",
+      "bytes": 1044
+    },
+    {
+      "path": "docs/review/evidence/final-runtime-health.json",
+      "sha256": "a5b88b41ec8c8f7627efa7dbd8eb4dbaeb6bcf2cdff71b034525ed3efa268eaa",
+      "bytes": 795
+    },
+    {
+      "path": "docs/review/evidence/findings.json",
+      "sha256": "38ba66d13fda66aa392b2660dc53503058369cd6e5a6edb3b523e6ea0fd9b47f",
+      "bytes": 47529
+    },
+    {
+      "path": "docs/review/evidence/invalid-brand-response.html",
+      "sha256": "d3a69a3572a29320505912b137bbd106af54510797dd2968e82c4df0c934eb69",
+      "bytes": 1432
+    },
+    {
+      "path": "docs/review/evidence/javap-inventory.txt",
+      "sha256": "9c3b92cafc1cb5da78c3de06adba0cbe7de8fb2eaa67d927b165cefe1f30a97b",
+      "bytes": 32189
+    },
+    {
+      "path": "docs/review/evidence/large-money-invoice.png",
+      "sha256": "fa83a4293d369a1fb2a040c00efc9bc3cf022355654fb16f1222d6345943c00f",
+      "bytes": 56183
+    },
+    {
+      "path": "docs/review/evidence/maven-package.log",
+      "sha256": "4ca090258ddf486e48877744a47a99fdf11da29f80cee70bdc5c803f7005f090",
+      "bytes": 2785
+    },
+    {
+      "path": "docs/review/evidence/ordered-module2.json",
+      "sha256": "ea598112e9f805dad0984b9e50cf8755cc423d9114a310df8be434793729c375",
+      "bytes": 890
+    },
+    {
+      "path": "docs/review/evidence/ordered-tomcat.log",
+      "sha256": "603d30fa2f18b7a1231021faff77b297bc810e6b8dca2c0edae996513b55c498",
+      "bytes": 6925
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-01.txt",
+      "sha256": "a98c5d6bf77ba142e877ab4c757d6255bba7f34ce629af4a24e566e3e9f56c39",
+      "bytes": 1361
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-02.txt",
+      "sha256": "fbee85fc2e981e9d45383fc5960355cfac7f14132af7a24591061eaa4e1000f9",
+      "bytes": 1163
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-03.txt",
+      "sha256": "1598b303697f04378b9f669600a406382a73f2ec51c1723afb7e692198a0daf9",
+      "bytes": 652
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-04.txt",
+      "sha256": "028ddcdcdff91ab71311730ccdd40913e22521fb72730ffa9af446fb6011e944",
+      "bytes": 208
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-05.txt",
+      "sha256": "8595bc76ba262d72bf32da63ce0ba0d5c432466ad2835c636cc8d348b85b4112",
+      "bytes": 444
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-06.txt",
+      "sha256": "c793abd7e5b2fd722afaf5fdd5b476aba967e70e1cd557291d425eb0f0ebe93b",
+      "bytes": 498
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-07.png",
+      "sha256": "c2b87eb23ee16f77408adf3be5a6f7b50b71872701c13acc2b106837f2439080",
+      "bytes": 85652
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-07.txt",
+      "sha256": "5050ba88957102915c33ff32b2b3ca8a60a51041520fa2beee28f8f8e2722220",
+      "bytes": 1291
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-08.png",
+      "sha256": "add295b2567c9f33fbd30eab121da4d914d599803b22468710bb70981d7bb76f",
+      "bytes": 114459
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-08.txt",
+      "sha256": "0ca8b75b75525580d09fa91d0f3429d2e31489941e0698430e281ed48ca24ac3",
+      "bytes": 1574
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-09.txt",
+      "sha256": "419bd3a7b12b1916778c12f89f05399d77c376e30c6e559c7adf0abe0fba7c2c",
+      "bytes": 2196
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-10.txt",
+      "sha256": "4ccf1f6dda77fe254edca0a899b8d5997ffceae06ba7839ba90d9c36d8bf301b",
+      "bytes": 2251
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-11.txt",
+      "sha256": "4348600687a40aa06af27e25bbeef8b933d4d70c27a5f963cd7e0408a920b7a2",
+      "bytes": 1567
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-12.png",
+      "sha256": "e707f7ec90bd0e218dedb022485f9f3a7d5f0a310ceb9bde9d42d0d7ff57e464",
+      "bytes": 125116
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-12.txt",
+      "sha256": "17eb8c8969e0eb8e6d8e6d9589f14cb023c9ffe49933e37e869bcbd53a7775f9",
+      "bytes": 2181
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-13.png",
+      "sha256": "ae8cbec6b1a2b723d64410e3ef79ebd6c8353f2d2ae9c42b707197b92789a83c",
+      "bytes": 122703
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-13.txt",
+      "sha256": "dba03384d54161cf26daef70c2bcefc675f0b1ebf7db1de9c92b64c005b82c19",
+      "bytes": 1810
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-14.png",
+      "sha256": "17394a3e2e943d4b29bf9e42fd9fe62b4b11ca7568eaca1f381382a1661993f1",
+      "bytes": 89963
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-14.txt",
+      "sha256": "d491bc06ec2ce63b12a63873dc50de342746808efa9ef39767f2dce5d5fcfb18",
+      "bytes": 2014
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-15.txt",
+      "sha256": "630a070ff85ec64b6758009084ba297d95a9b1fbbe46c2b6038427fc21eb7685",
+      "bytes": 1039
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-16.png",
+      "sha256": "5088d21181aff4f70cc99f018704dc1a7dd722f55b383cd55b11b9a2290168d7",
+      "bytes": 102967
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-16.txt",
+      "sha256": "f5f54fe7b370abe96bf21c01d3d2c2514a8fa6ac397346eadbc019f85548a730",
+      "bytes": 2001
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-17.png",
+      "sha256": "db9fc1b82b4769ca8bae74a19bbcc3f885c377593247b156eefe457ffc1714a3",
+      "bytes": 69684
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-17.txt",
+      "sha256": "dc57dde5bab9ef5b47d8af405b4e2c44d5d2ccdd7befd8e1b10833f7fbd6a288",
+      "bytes": 1306
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-18.txt",
+      "sha256": "db5b4c6754aaaae46f5b8926d95c64d4227e1f9e33e38f24a95fd5595b18af14",
+      "bytes": 123
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-19.txt",
+      "sha256": "fceeb1257bae6f13bff5ac02f07d3f563f1fee8413253549dc06dae9d1d1c757",
+      "bytes": 828
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-20.txt",
+      "sha256": "780371075790f1777f0040c3756b1327255eaf1d560e5fe026e55abf07ee7a26",
+      "bytes": 315
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-21.txt",
+      "sha256": "3e5a9bad55758f9fae3e2a1a584ebbba53d9945f7e33c57fc8fad355fd75dc42",
+      "bytes": 194
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-22.png",
+      "sha256": "529fb8135610e60779ac80c99bc81372cbaaada116f14833d822b58f6c23cde8",
+      "bytes": 110874
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-22.txt",
+      "sha256": "9934c79dfae360b71e12212049e6f98be3e5fca626c2275c445a4212a23218f1",
+      "bytes": 1064
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-23.txt",
+      "sha256": "583a23a70fdaa5288f9abc74968c812f4542d8fff8ed23da36f718d616ee0624",
+      "bytes": 788
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-24.png",
+      "sha256": "be53a8da4a454a7c3e1441a94f492dafd6127b9ea94492ce71f7f129be643418",
+      "bytes": 82456
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-24.txt",
+      "sha256": "e0e4b9b1b7cb8782b6cba0d6264310077c76c59c16978383bdd0c6c9ea2ea72f",
+      "bytes": 963
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-25.txt",
+      "sha256": "cb641e0e11f2906a6f7a3258b602103d269cdd5437da36209409055a5e5dcb8c",
+      "bytes": 1696
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-26.txt",
+      "sha256": "9508ba0857fbd496bc48b1608ec2c6f386bfb84e58184a83ea17a9b3c0e10da0",
+      "bytes": 1095
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-27.txt",
+      "sha256": "eca8aa064101b8cebb3330433cd0e52133a2dee07cd4e42408a2450ab1680758",
+      "bytes": 1383
+    },
+    {
+      "path": "docs/review/evidence/pdf/lab-page-28.txt",
+      "sha256": "aa043caaed4834c480a3cc4731b00af0f600e5548e7117b9f0b6fa5ac19939b3",
+      "bytes": 4
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-100.txt",
+      "sha256": "979a7f24ddd9e568d91adfe6ec06e9405ea09e9a287fef709ac0be05b93b8a45",
+      "bytes": 130
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-101.txt",
+      "sha256": "9040f4ff3d03b8fc4a5aeb33bed1228ee5d7db6cdf668a632c56163c36356b55",
+      "bytes": 536
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-102.txt",
+      "sha256": "a5c61af5100ec430432146d42b767f13fda6a55e8c69511865d3e98236b30268",
+      "bytes": 155
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-103.png",
+      "sha256": "27a82c8eb00eb3237d1e1fdb29266d0e767837e1b95df5e5b22a28bc25dafbf2",
+      "bytes": 251150
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-103.txt",
+      "sha256": "d630ff681ad427004278b533e8a90aab5056725fb14b15249e523f54a9385455",
+      "bytes": 1074
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-104.png",
+      "sha256": "408ad577e2f615580173a5453a20b53d7da74eb42296f3edc97eb9a43b268255",
+      "bytes": 208881
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-104.txt",
+      "sha256": "450893d566644d1b5af478908ef29ee5e9382d65fe49402ac31329f6679e513a",
+      "bytes": 1098
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-105.png",
+      "sha256": "9583835c9777ded5a1138f11b3d4bddfabdddb7026c692ca4d3c9787fd58c8b0",
+      "bytes": 196940
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-105.txt",
+      "sha256": "1d738627130b45cf91c8fd31937ba272c0a2557107511e72599c833065bbb8ce",
+      "bytes": 606
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-106.png",
+      "sha256": "41b5177123bbdc03fd4971423cc7ef56056613345179f2d6bb2aa6dd2f435a71",
+      "bytes": 176734
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-106.txt",
+      "sha256": "3a76dfefabbedfa9cf1902098cd79d558495372b04e9c136a969b930d37ff4ef",
+      "bytes": 2493
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-107.txt",
+      "sha256": "4c489e00384d3a2ba5e0e8747133f118e7ec4a159861da615ca4930842fddad9",
+      "bytes": 1006
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-108.txt",
+      "sha256": "77289543edda375a46f9c53a843d746a0936506b772c3e9ee5c5047af53d962c",
+      "bytes": 724
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-109.txt",
+      "sha256": "6e054df81949520606d4a9cc33cd608d2286f1290e84dba7192e19d0cbf1b5eb",
+      "bytes": 428
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-110.png",
+      "sha256": "fc5feafd2046fa42c3a8e981d1da0c527dae8199bd24e943e275b9ac1faac568",
+      "bytes": 184814
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-110.txt",
+      "sha256": "218c4868a6bedc8a4f87ce9647828151e3c8a13ae54ed5ca073bd2cc267a9186",
+      "bytes": 2685
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-111.png",
+      "sha256": "5237c1daec838bb5b6d9a7a569199d3888ac9c18d03e962135088e762999f64c",
+      "bytes": 203882
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-111.txt",
+      "sha256": "6ef0962bf01c3d8d7f8b248e5ee3f6601fe23df5af27293da2f5a744306562b8",
+      "bytes": 1026
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-112.png",
+      "sha256": "3afc51d6f344d41a40c417f97b4532dcfe7ceaa31a8b5bb65a9c8882dba0f753",
+      "bytes": 204683
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-112.txt",
+      "sha256": "fe5892f96b7fef62a4a1eaa872105d6dbb9b6208af5a800bdc1dfabf4bc3f13a",
+      "bytes": 736
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-113.png",
+      "sha256": "b4188dc056b293a78bd535b4c960ee80ffd3b9d7d36a5512e14aa2d60e19ca74",
+      "bytes": 109715
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-113.txt",
+      "sha256": "4f39b739dc87d53d0b81e5206ae72d8b8074efb4a50dfc2eb5287aef3b8966f4",
+      "bytes": 1642
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-96.png",
+      "sha256": "54129b8c967bad0ff8bc42edac2b59d092f62b35481a30098083bbb502baad92",
+      "bytes": 134394
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-96.txt",
+      "sha256": "2205de6295b4a23fcbd1b285f048902cb3bee81bd29eba4e2799a8b5f3a33bd6",
+      "bytes": 2281
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-97.png",
+      "sha256": "b90b4ab4992339ccca634292dbb4d310b954cd9981b1192b176dd73638133da7",
+      "bytes": 71012
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-97.txt",
+      "sha256": "47eb168c5a00d058923524420721971cb7deac7ab0f557971c8d47fed2d5e72c",
+      "bytes": 1075
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-98.txt",
+      "sha256": "1cc63897b671247697ed9827c3bd4fd576453e31dd6eda92f15f8ed8d52b24ef",
+      "bytes": 167
+    },
+    {
+      "path": "docs/review/evidence/pdf/lecture-printed-99.txt",
+      "sha256": "2ab42c43b28d782dab7362a92ea06891e8a3d4e92df1fb61b9b96a7af85395c6",
+      "bytes": 531
+    },
+    {
+      "path": "docs/review/evidence/review-tomcat.log",
+      "sha256": "a6e12dc4eaf633c13f816e5d582479118ec183f28271d8cdbb2fc755893d8c1a",
+      "bytes": 18908
+    },
+    {
+      "path": "docs/review/evidence/runtime-review.json",
+      "sha256": "48ee8149a9f337c603e5ffa8b5a9c317d31bba7d21c3c6a818301431c6b92bf6",
+      "bytes": 13822
+    },
+    {
+      "path": "docs/review/evidence/scenario-trace.json",
+      "sha256": "534ec4a47dcaf208dede4b6bb2b66ffcdefcb669ba2432586c48fa71442baefb",
+      "bytes": 213430
+    },
+    {
+      "path": "docs/review/evidence/schema-live.json",
+      "sha256": "4d3423c5472dd9196aa6898003ab8bb9375f686bf84e4958d84533f48879fd28",
+      "bytes": 47928
+    },
+    {
+      "path": "docs/review/evidence/snapshot-verification.json",
+      "sha256": "7f32ca2ebd689cd6a3353a51cc394502cd76d10036ea7e9321599dd31e8c287f",
+      "bytes": 38580
+    },
+    {
+      "path": "docs/scenario/Scenario_V3_Module1.md",
+      "sha256": "c218365f69050f66f3d1e79e0cc0e788b307ab232df956f0356de414d2550584",
+      "bytes": 22252
+    },
+    {
+      "path": "docs/scenario/Scenario_V3_Module2.md",
+      "sha256": "f790369a4d166405f24783249ac74bfd8a53b71a8d7856eb9cb4bd0c2a0e036e",
+      "bytes": 44057
+    },
+    {
+      "path": "docs/schema-metadata.json",
+      "sha256": "d24d5f17db56c6a7a91b61cc7cfb6bcb9b7d0ecfef379554d018bfa687d19070",
+      "bytes": 17718
+    },
+    {
+      "path": "docs/SCHEMA_MAPPING.md",
+      "sha256": "6a65044b4ea667348a3919480a038e0ab8d0aeaf0c4bedfe94b2fabc9c942d65",
+      "bytes": 6225
+    },
+    {
+      "path": "docs/SOURCE_MANIFEST.md",
+      "sha256": "127d73cbe0f37959a6a88518cdf1d8072f37d1631f452b2978c2dd0b21caa10e",
+      "bytes": 2673
+    },
+    {
+      "path": "docs/TEST_EVIDENCE.md",
+      "sha256": "093370c6bb6c398d85c33818cf2eb776ba9d11116a22d3b9e6422e2cd5cd81ef",
+      "bytes": 11386
+    },
+    {
+      "path": "docs/TRACEABILITY.md",
+      "sha256": "c09b1e0bee363d6c79cf73863019cf2412dbc443a91414084783520e3089fcee",
+      "bytes": 3696
+    },
+    {
+      "path": "input/GaraMan_Ho_so_dau_vao_va_quy_tac.md",
+      "sha256": "3d365ad457271849b16dde99d697e589485e2c5bc9fbb02d5e8c64f20a35a285",
+      "bytes": 21530
+    },
+    {
+      "path": "input/GaraMan_Prompt_Code_2_Module.md",
+      "sha256": "abaedd4a1daf3aea2320714accf778af936fbd8abf54b3ac6d8b881f1288a0d9",
+      "bytes": 63671
+    },
+    {
+      "path": "input/GaraMan_Prompt_Review_Code_va_Scenario_V3.md",
+      "sha256": "c19e93edf1c2ed8551fe342154481eae5bdccd78559e164c66c36630c2debe96",
+      "bytes": 34287
+    },
+    {
+      "path": "input/GaraMan_Prompt_Sua_Code_Dong_Bo_Thiet_Ke_V3.md",
+      "sha256": "d32761fd8451ee5f0e00195075476fd413b3789c2e9037bc15373a4e921e990b",
+      "bytes": 16609
+    },
+    {
+      "path": "input/GaraMan_Quyet_dinh_trien_khai_v2.md",
+      "sha256": "bbfa375d8b6cdac7a68c84de7a926c29b5c87c75c02661b77d4a4ea46fec4041",
+      "bytes": 27195
+    },
+    {
+      "path": "input/giao diện mẫu.pdf",
+      "sha256": "703abbea4e590a87b077f869d632541ca93d1f0fff4b830c1cd98d9822f9df07",
+      "bytes": 293242
+    },
+    {
+      "path": "input/grm_db.jpg",
+      "sha256": "719d86828ed07fb6f81510bf6883c54f35a84944d2c2d1e0027fa91646f51aea",
+      "bytes": 236680
+    },
+    {
+      "path": "input/test_tk.jpg",
+      "sha256": "308e695d31793afd66f7f17b7c4f85d05b95895407d15c2d4286c99c8323611d",
+      "bytes": 168567
+    },
+    {
+      "path": "input/tk_md1.jpg",
+      "sha256": "53e15cc6bafbc0d3d1b7924422184c81badbc9c1e108fa44e39b0e09d4f1e182",
+      "bytes": 182211
+    },
+    {
+      "path": "input/tk_md2.jpg",
+      "sha256": "d0441121abd9dae8bdd5ab94214b1d755e68c3430244e8b6fdc962ee4038e25c",
+      "bytes": 252449
+    },
+    {
+      "path": "mvnw",
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+      "bytes": 11790
+    },
+    {
+      "path": "mvnw.cmd",
+      "sha256": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c",
+      "bytes": 8481
+    },
+    {
+      "path": "pom.xml",
+      "sha256": "138066608aeed663e0ed8454ecab1dc5eb44fcf0900a57cf21c9e6cce61f5af1",
+      "bytes": 2324
+    },
+    {
+      "path": "README.md",
+      "sha256": "de33aaa9dbc5d9dd9254f3e0c6433f2701dedcd1351e0c5bd2ba5722ee169eb6",
+      "bytes": 12015
+    },
+    {
+      "path": "scripts/browser_regression_v3.py",
+      "sha256": "7d6102c1c30458c6c14273fe55989adebd0791a22676b0a4ff6c5b78da80081d",
+      "bytes": 11441
+    },
+    {
+      "path": "scripts/browser_test.py",
+      "sha256": "9068e51e9b2b652b181b8067d93901cb0248c9eab6200756fe064a1528beff1f",
+      "bytes": 16178
+    },
+    {
+      "path": "scripts/download_tools.py",
+      "sha256": "dabfc62b8a4f3ec67666ac32f88d55202603d9e0a0969a77e6e36de08598e060",
+      "bytes": 849
+    },
+    {
+      "path": "scripts/export_final_evidence.py",
+      "sha256": "351acaae733001d135b7e1e25b3d70e5b4ed2d0e3bf7ff20fe26556c0732380a",
+      "bytes": 20111
+    },
+    {
+      "path": "scripts/export_schema.py",
+      "sha256": "020e6d4501e0900b7d6f3cfb4bb4a7b85d5b136e984a8e91c3ec636f8c011b2e",
+      "bytes": 1074
+    },
+    {
+      "path": "scripts/ExportContracts.java",
+      "sha256": "66aac4babeecad52caea6a4e17212daada8069580e0787cf22665bc2416d888f",
+      "bytes": 5043
+    },
+    {
+      "path": "scripts/generate_entities.py",
+      "sha256": "8f344b06224837065f169220fae5d0d869dffe477218ac5342e424fc03b185ee",
+      "bytes": 4241
+    },
+    {
+      "path": "scripts/generate_final_design.py",
+      "sha256": "590d00d04d6bcee8ebbf2faec79f00953f5f5f40e370b079941c2cd333671c3a",
+      "bytes": 50195
+    },
+    {
+      "path": "scripts/generate_final_scenarios.py",
+      "sha256": "c72e7ce2b869d29e416056be2376d044105fd08ecba0c7a8f8d8f22b4cf3b189",
+      "bytes": 48264
+    },
+    {
+      "path": "scripts/local_runtime.py",
+      "sha256": "22875815b2ee31bf3e7a817aa4f082ea06413a0a7d1fda713519c2562f1f0960",
+      "bytes": 6690
+    },
+    {
+      "path": "scripts/migrate_v3.py",
+      "sha256": "0079b4529cd11ae800e4e63e60a988f33382fbce0fd144e5dd9157c81ed15140",
+      "bytes": 11879
+    },
+    {
+      "path": "scripts/prepare_slots.py",
+      "sha256": "9d0009020b10d458bf594f51af8d3d11dcaca10cb237a6efd1d1a0b389448182",
+      "bytes": 1189
+    },
+    {
+      "path": "scripts/requirements.txt",
+      "sha256": "018792b3360da3b7ee0ff348f71a35595e17b321f0d305660df9a40406881d57",
+      "bytes": 39
+    },
+    {
+      "path": "scripts/run_tomcat.py",
+      "sha256": "bc3043ea655454758bb449408fa8beea08b30cac83209118bff220a3e0245ee2",
+      "bytes": 4704
+    },
+    {
+      "path": "scripts/runtime_smoke.py",
+      "sha256": "77bb2cb2a651930d406e408fd3fdaadfc9e7ce54a1a7e596f50a134907863d92",
+      "bytes": 816
+    },
+    {
+      "path": "scripts/schema_tools.py",
+      "sha256": "4ae9a4b8ad2b8c4502f5ca9515ec3bf5cbb924959468daafa569c21a5fd8c333",
+      "bytes": 10292
+    },
+    {
+      "path": "scripts/seed_data.py",
+      "sha256": "7fae5e653529ddf7891e44c570e4f506075054996ad3377bcae839f5dcfc0859",
+      "bytes": 7818
+    },
+    {
+      "path": "scripts/Setup-GaraMan.ps1",
+      "sha256": "1d8d2613c42135227cf5288a46cc7bb22fa214d59429cce491f41f7b5853aca5",
+      "bytes": 1055
+    },
+    {
+      "path": "scripts/Start-GaraMan.ps1",
+      "sha256": "e323bb537e433be4f74fbc6959dadb8793fe7de387d65f8d336189a66109a817",
+      "bytes": 574
+    },
+    {
+      "path": "scripts/Stop-GaraMan.ps1",
+      "sha256": "2ee482485eb6456a1ac6b4424d71a32cd3bdcbe38fdd46763dcb63a040c5ecf0",
+      "bytes": 357
+    },
+    {
+      "path": "scripts/Test-GaraMan.ps1",
+      "sha256": "66b779bf7796627d6c2cc9e8abb82086c7ab1b3ae19e227355d93faeb7235514",
+      "bytes": 1189
+    },
+    {
+      "path": "scripts/test_guardrails.py",
+      "sha256": "60616c8f0d3b0c76416fe768b649e8e15560d49e2cdb0b84a04b22bcd73eb74c",
+      "bytes": 2646
+    },
+    {
+      "path": "scripts/test_support.py",
+      "sha256": "01f88b769eb81e8191838089326ccd050e0e43455ea5a6bd70dcaf416d268377",
+      "bytes": 4753
+    },
+    {
+      "path": "scripts/validate_final_documents.py",
+      "sha256": "27a6103ac09b5bffaf2cd25996922afd1aaec2c007648aec7d67ea046e14281d",
+      "bytes": 5069
+    },
+    {
+      "path": "scripts/verify_main_readonly.py",
+      "sha256": "4ab31cbc44270e865d8e96ef1dac8bdc6e330f2ec214c62d7d2e5663f2963063",
+      "bytes": 6231
+    },
+    {
+      "path": "scripts/write_evidence.py",
+      "sha256": "08ae1fc528939667a3901130087e7e6cfde83093d26d0ebdab5daeb695827c83",
+      "bytes": 8452
+    },
+    {
+      "path": "sql/preflight-v2.sql",
+      "sha256": "373957300747d87e1bd9c1d743694043f8e4ae2fcdf0e692c837629277a53b1c",
+      "bytes": 478
+    },
+    {
+      "path": "sql/schema-contract.json",
+      "sha256": "1c6779c085ef2ba7154577eb170616a891ae8972845f289b80895ff08eaebb94",
+      "bytes": 41670
+    },
+    {
+      "path": "sql/schema.sql",
+      "sha256": "d44b100312967acac459832270f03236f8b1ab1093f19e67d14faf224103749d",
+      "bytes": 9586
+    },
+    {
+      "path": "sql/seed-expected.json",
+      "sha256": "6ec9e85fa1c525ce0290b29724e024acc4a49b05a2130d55c53a8000403214f1",
+      "bytes": 1028
+    },
+    {
+      "path": "sql/seed-slots.sql",
+      "sha256": "d46a03de4df3ff0184485cc8dee8f51e78b2e112ee63021de14e5be3d6bf8c2c",
+      "bytes": 735
+    },
+    {
+      "path": "sql/seed.sql",
+      "sha256": "8c40bad462cb529409846b2ef8f704fc398fafe5c0298a27d281be4b5b7a3802",
+      "bytes": 11042
+    },
+    {
+      "path": "sql/V1__reconstructed_baseline.sql",
+      "sha256": "13e5ec9e65e2bab9258a072179e8abcdbfa9f5275b10edb74808e42cd78d63c4",
+      "bytes": 8133
+    },
+    {
+      "path": "sql/V2__booking_changes.sql",
+      "sha256": "029613a94aec4d37c169ef9a815778dc9139d49699daa430b30491d475b6332f",
+      "bytes": 1049
+    },
+    {
+      "path": "src/main/java/garaman/dao/AppointmentDAO6.java",
+      "sha256": "99aa593e5104d998a402b7360b99b82c98aa0cac80fe310b0489ef5f1ce41978",
+      "bytes": 3603
+    },
+    {
+      "path": "src/main/java/garaman/dao/CustomerDAO6.java",
+      "sha256": "1bb391890e90c2e4588767bf3575275144527a11adad681e726173b7a1378d95",
+      "bytes": 716
+    },
+    {
+      "path": "src/main/java/garaman/dao/DAO6.java",
+      "sha256": "912523238626f3105bedb5776b97357a4d502fac92b13bad3e2300de1c7172df",
+      "bytes": 2697
+    },
+    {
+      "path": "src/main/java/garaman/dao/InvoiceDAO6.java",
+      "sha256": "28e92c9e1adc595a3e791af418fee9c7cf1974c7159a4a033b44af4837159ea9",
+      "bytes": 2841
+    },
+    {
+      "path": "src/main/java/garaman/dao/MemberDAO6.java",
+      "sha256": "697e90018cbe9d1c6089905cf2ffa262e0374c165549efc880bbfd0675a4630a",
+      "bytes": 1272
+    },
+    {
+      "path": "src/main/java/garaman/dao/PartUsageDAO6.java",
+      "sha256": "c3a418565eb5cad245c977021b0cd6f6143c4ff34b5acea3fccee44ed4b914ea",
+      "bytes": 2028
+    },
+    {
+      "path": "src/main/java/garaman/dao/RevenueDAO6.java",
+      "sha256": "a96aa50eb23431d830eafcbccc017ae26cfbf71dacbd7ef5ca4fcfb23914521a",
+      "bytes": 2600
+    },
+    {
+      "path": "src/main/java/garaman/dao/RowMapper6.java",
+      "sha256": "4d93b9b787ccd91158f4e73d78a47d8faec759731661fb0a01f9406dab246dfc",
+      "bytes": 6895
+    },
+    {
+      "path": "src/main/java/garaman/dao/ServiceDAO6.java",
+      "sha256": "76d196bb2772236909000f0f732fe3bcab0f7173d2ab36b8cf9678eb68caf733",
+      "bytes": 875
+    },
+    {
+      "path": "src/main/java/garaman/dao/ServiceUsageDAO6.java",
+      "sha256": "f2f4eb6b75c0a7b8e3feef376bfc73aeebc7736448d712fa2047cb29786e6e88",
+      "bytes": 2089
+    },
+    {
+      "path": "src/main/java/garaman/dao/SlotDAO6.java",
+      "sha256": "d191de0e74683e9b0f154a4a199ee8f38b9173677dfdd3159f48998eca36d3eb",
+      "bytes": 4666
+    },
+    {
+      "path": "src/main/java/garaman/dao/SparePartDAO6.java",
+      "sha256": "b8e4d0ff14c1dd1df792ea7f170fbaffea8d3b1fc5770739e2d7f6b035e5c7a3",
+      "bytes": 1038
+    },
+    {
+      "path": "src/main/java/garaman/dao/UsageMapper6.java",
+      "sha256": "6464df73bba47bb57a7604358f8c9fa24af42ec297ea4f8b2d4900fb64f65715",
+      "bytes": 1244
+    },
+    {
+      "path": "src/main/java/garaman/dao/VehicleBrandDAO6.java",
+      "sha256": "607098210449d4fd37375abd5b4daa70894b9a8fede41357865db2d1f611faa2",
+      "bytes": 1233
+    },
+    {
+      "path": "src/main/java/garaman/dao/VehicleDAO6.java",
+      "sha256": "52c368e17d046691876497449f1f1fd33baeada64362aa63f8dc989a14c547b0",
+      "bytes": 3766
+    },
+    {
+      "path": "src/main/java/garaman/entity/Account6.java",
+      "sha256": "e3be317125367a23a7284c2d0daacf48e982734824ef2a60e4d6d2a908554244",
+      "bytes": 846
+    },
+    {
+      "path": "src/main/java/garaman/entity/Appointment6.java",
+      "sha256": "c6f817cfb2fb9efe849ddc88623515403b6d85270ede30e2f1320ea388b3228b",
+      "bytes": 1550
+    },
+    {
+      "path": "src/main/java/garaman/entity/AppointmentSlot6.java",
+      "sha256": "a21944f8c76f86cbd8ba488b68bfc0dc19ff1a76e1b1f1eff38c668b92e7f0ae",
+      "bytes": 890
+    },
+    {
+      "path": "src/main/java/garaman/entity/Category6.java",
+      "sha256": "14432b733f397b69f3ffc7bd3022c066f6e274fa8e5e15ed9acb3076ca2e6112",
+      "bytes": 382
+    },
+    {
+      "path": "src/main/java/garaman/entity/Customer6.java",
+      "sha256": "85a7c9d4a5e68682aec53000c2d308f20845b053762dca24423d3de307c7abb9",
+      "bytes": 289
+    },
+    {
+      "path": "src/main/java/garaman/entity/Employee6.java",
+      "sha256": "15f4d0742dc1ee7f91347fa713bb54288edf9a349fa756a84259737e07b74e77",
+      "bytes": 449
+    },
+    {
+      "path": "src/main/java/garaman/entity/Invoice6.java",
+      "sha256": "f40eb57ebd5939fd46afe5dfbf5d4612ac1478488ccc08780b8ef08cfd48e477",
+      "bytes": 1200
+    },
+    {
+      "path": "src/main/java/garaman/entity/Manager6.java",
+      "sha256": "69c3e9f89e31edd2c5f004977518ff1e399fee67e74b890b9b522ee3a9713540",
+      "bytes": 101
+    },
+    {
+      "path": "src/main/java/garaman/entity/Member6.java",
+      "sha256": "bfb85883fd4f5439c0cd26d1b0e4926edf79eda8d408ede40d93e55a36f7b6c8",
+      "bytes": 912
+    },
+    {
+      "path": "src/main/java/garaman/entity/PartBrand6.java",
+      "sha256": "2b1d36b3d6eed35090fe9577eef36341d670a703cc62fc819d7d835706f22189",
+      "bytes": 328
+    },
+    {
+      "path": "src/main/java/garaman/entity/PartUsage6.java",
+      "sha256": "c768d7671b7789f8a1158012444a29efe4789f7f5a82002b19f3b0c7801db110",
+      "bytes": 1625
+    },
+    {
+      "path": "src/main/java/garaman/entity/Payment6.java",
+      "sha256": "11942856e6f0020d1440fbfc78682bdd96d92b66d3ed82ea977060c7e1c1c209",
+      "bytes": 1448
+    },
+    {
+      "path": "src/main/java/garaman/entity/RepairOrder6.java",
+      "sha256": "a45075f746ec0384acf94c28f166bed4a1c8ab75c83a8f1e72c8ef1f817953c0",
+      "bytes": 2679
+    },
+    {
+      "path": "src/main/java/garaman/entity/RevenueStats6.java",
+      "sha256": "f14379e357ff1eb4355bbcb7bb6892ce5fb3e7fac9ef9aad6e21ba030f9849fb",
+      "bytes": 1070
+    },
+    {
+      "path": "src/main/java/garaman/entity/SaleStaff6.java",
+      "sha256": "a44ee2467175da60c1f1125ae5ba4fa7c139137d55e6b89ad88b43a083fee28b",
+      "bytes": 105
+    },
+    {
+      "path": "src/main/java/garaman/entity/Service6.java",
+      "sha256": "7a3044d4f28f0559e202474751547159078d637ca97ec3825cf4926be1cffd17",
+      "bytes": 1043
+    },
+    {
+      "path": "src/main/java/garaman/entity/ServiceUsage6.java",
+      "sha256": "281d59734f0da4974258f6f18d9a6b84619e0dd30fe025f6d6a4051279b52ccd",
+      "bytes": 1324
+    },
+    {
+      "path": "src/main/java/garaman/entity/SparePart6.java",
+      "sha256": "2c76c353b8a24271ead03de1d49d762c0741583e29be6f09c12e1307a0d71030",
+      "bytes": 2012
+    },
+    {
+      "path": "src/main/java/garaman/entity/Technician6.java",
+      "sha256": "c5b8fbec291420bcf9d4f4734aba444bd816c919007aa1b649000f736e6b235d",
+      "bytes": 107
+    },
+    {
+      "path": "src/main/java/garaman/entity/Vehicle6.java",
+      "sha256": "4e8fd9b0b43fe9d357fb0b7b9adc97797f68c0f3384e29872acf66ded2eb118d",
+      "bytes": 1411
+    },
+    {
+      "path": "src/main/java/garaman/entity/VehicleBrand6.java",
+      "sha256": "929e9c346df9f8b061409731f8fd041372e93c6b49117d6ca7b7cd124af0a494",
+      "bytes": 334
+    },
+    {
+      "path": "src/main/java/garaman/exception/BookingConflictException6.java",
+      "sha256": "8fca14e97c275448b0a45383b9971cb7970b2c90196b804c2d9b08405720ae34",
+      "bytes": 174
+    },
+    {
+      "path": "src/main/java/garaman/exception/DataAccessException6.java",
+      "sha256": "a067c506d135e658d7624cb2c767b10d4529cb5b00806df46dd723d3f98ec7a6",
+      "bytes": 188
+    },
+    {
+      "path": "src/main/java/garaman/filter/AppFilter6.java",
+      "sha256": "269652f9e1d36ebe4a6288701c497150aabea125c79c2cddcc73eee801ab578e",
+      "bytes": 2450
+    },
+    {
+      "path": "src/main/java/garaman/filter/AuthFilter6.java",
+      "sha256": "e24572432e314dbb6b54980236fda972b6c9ed52bf1af45fefe8eaad503497a7",
+      "bytes": 1141
+    },
+    {
+      "path": "src/main/java/garaman/servlet/AppointmentServlet6.java",
+      "sha256": "5bb5a8ea32825573238e12a57510d0a4b592ff7ee9d8b6d7cdc4bc094e3be50c",
+      "bytes": 1585
+    },
+    {
+      "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+      "sha256": "dc4fd2bc469af3dad77a51667a948fbb033414a98e4a91051dac4c5be6fb5200",
+      "bytes": 7301
+    },
+    {
+      "path": "src/main/java/garaman/servlet/InvoiceServlet6.java",
+      "sha256": "32e0667be033591a5b9a72ce426eb20a5da69a8a6ea21d4d36ec13543f869df7",
+      "bytes": 1496
+    },
+    {
+      "path": "src/main/java/garaman/servlet/LoginServlet6.java",
+      "sha256": "d2652fc30a1a6a662421f75f4d00b2769a856e8e7a1946fc1dcc02528d3c97ee",
+      "bytes": 2745
+    },
+    {
+      "path": "src/main/java/garaman/servlet/RevenueServlet6.java",
+      "sha256": "9e39e311540eab8388d8fa6c8da50ac6cc52b32ac47bea745f4aa056a6e02808",
+      "bytes": 3000
+    },
+    {
+      "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+      "sha256": "404baa1d0e2bc5fb0f32c3bab176e08873e5d9b9ca802241dbf7bc40a3293fde",
+      "bytes": 4364
+    },
+    {
+      "path": "src/main/java/garaman/servlet/TestRuntimeServlet6.java",
+      "sha256": "8944d3f200bed919bec7e57c1751bb79d9ae7a39875dc066c7b5653acdba0fe0",
+      "bytes": 1130
+    },
+    {
+      "path": "src/main/java/garaman/servlet/VehicleServlet6.java",
+      "sha256": "a3779a6a896c0e37085912fa00f4e257798f154c5c367d1d152aabbabe703828",
+      "bytes": 4243
+    },
+    {
+      "path": "src/main/java/garaman/util/BookingContext6.java",
+      "sha256": "0fa338eef09ea78d099b9c3d77119710fc25050a7defe0b90a06b8bb46571f93",
+      "bytes": 646
+    },
+    {
+      "path": "src/main/java/garaman/util/BookingSessionListener6.java",
+      "sha256": "617eebab2e48518c28afc575dcf67a5e725d3c2c761a62db88ba1e3402afc96d",
+      "bytes": 504
+    },
+    {
+      "path": "src/main/java/garaman/util/BusinessCode6.java",
+      "sha256": "4873e07fd57aee241ad2c593226d73c4f6547ef6737b8168a3f5303eeb28bc40",
+      "bytes": 955
+    },
+    {
+      "path": "src/main/java/garaman/util/Config6.java",
+      "sha256": "8d511d9f45164ec92c0da6e71acd1c007c3c052d0d87c4edd5f135e10f6324da",
+      "bytes": 1293
+    },
+    {
+      "path": "src/main/java/garaman/util/DateUtil6.java",
+      "sha256": "5cb53a44babad36d8dd877a2ef60ba211a46b5d8ad2f541a03b176443e9efc4a",
+      "bytes": 630
+    },
+    {
+      "path": "src/main/java/garaman/util/PasswordUtil6.java",
+      "sha256": "a659c12866164df9e75e8d5681f7790c68921f7fc584c5b0952678394ebe362c",
+      "bytes": 2326
+    },
+    {
+      "path": "src/main/java/garaman/util/SlotSetup6.java",
+      "sha256": "40ea61c2ca925963bfd00cad0ff9b62a545df56ee56c7bf0c3a429f5294d2afd",
+      "bytes": 1902
+    },
+    {
+      "path": "src/main/java/garaman/util/Web6.java",
+      "sha256": "f5056a26aea39ed9fb75986cd74f14f2c2959277cfa7af23ab3af4da3447dbc8",
+      "bytes": 5264
+    },
+    {
+      "path": "src/main/resources/garaman.properties.example",
+      "sha256": "00a9efcb46eea2de21518adaee41e34de2de67e38e77d9d68bd623b09a18ac28",
+      "bytes": 482
+    },
+    {
+      "path": "src/main/webapp/assets/app.css",
+      "sha256": "421c681d317b170d1c5e20e03674bd645255605b849af3360dd09919f27a4e03",
+      "bytes": 8761
+    },
+    {
+      "path": "src/main/webapp/assets/app.js",
+      "sha256": "835dfc8ac44f09698c6695daabd86b4bee5a94769edc66e094aa5ad70b051988",
+      "bytes": 2539
+    },
+    {
+      "path": "src/main/webapp/assets/favicon.svg",
+      "sha256": "c20c7200de53ab270f9e851e2141d2848afc255c7f50438d59c94ed3c1da03a9",
+      "bytes": 236
+    },
+    {
+      "path": "src/main/webapp/assets/part-filter.svg",
+      "sha256": "52f700dc755ec0430a9689c055c5f39fe05ed94b7069c8cd181d225df8991558",
+      "bytes": 454
+    },
+    {
+      "path": "src/main/webapp/assets/part-tyre.svg",
+      "sha256": "510952ff7b882f2c3531a4f9ddc9c43d8032dd3150e9cb4b072cd50363696b3d",
+      "bytes": 446
+    },
+    {
+      "path": "src/main/webapp/index.jsp",
+      "sha256": "ea54c1f345ac7251ce6f6461561e3e923046e18ea10139752418a3d86b999302",
+      "bytes": 128
+    },
+    {
+      "path": "src/main/webapp/META-INF/context.xml",
+      "sha256": "bc9061308cdbdaf047497dcc7e115ee9e887eb7ada178e1b8bc035fc3438b33f",
+      "bytes": 130
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/auth/LoginView6.jsp",
+      "sha256": "20a8050123c8e379dce0be570830427b28bec5a55affe5caa49f35562418e53c",
+      "bytes": 1114
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/customer/AddNewVehicleView6.jsp",
+      "sha256": "e9f3ddd5e4422ccade3f0091d15a35464b267713c5301c8165f6c5b605477a1b",
+      "bytes": 2014
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/customer/BookAppointmentView6.jsp",
+      "sha256": "b754f099c3b9fee0d17847aa7b342f887d851b18d955b535e2602d98151f20c6",
+      "bytes": 3488
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/customer/ConfirmView6.jsp",
+      "sha256": "7a87f5613c02505b349e290faa5e419fc36e5de7ae698b27b7ea6deb43234033",
+      "bytes": 2772
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/customer/CustomerHomeView6.jsp",
+      "sha256": "0dde577bbe9cb9ad152e7f594abbcb4092e5752d650524e25b38d76211a86150",
+      "bytes": 615
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/customer/PrepareAppointment6.jsp",
+      "sha256": "aafd22aed803a7c0de99c5a6e5e57ea8f595087f8fbf33794e0bf1385b003700",
+      "bytes": 681
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/customer/PrepareVehicle6.jsp",
+      "sha256": "49a31853d1a4e8d5bdf2bc62b4433916739464c0e49200bf01d0af3c55f8bdc2",
+      "bytes": 786
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/ErrorView6.jsp",
+      "sha256": "91906837aec7eab8f8264a72afc9d9a8215cee8a59c48575d9b6a7c340b4046f",
+      "bytes": 443
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/manager/InvoiceDetailView6.jsp",
+      "sha256": "3dda1de26745466cee89dd09cc183f1f5a2b7d9cb561b9c3cdd0dac8730bc7a1",
+      "bytes": 3936
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/manager/ManagerHomeView6.jsp",
+      "sha256": "5b97f28ec724dd6cf625556df05a2fdc5016556a6558913d975e631fa867b57a",
+      "bytes": 522
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/manager/ReportMenuView6.jsp",
+      "sha256": "d70078eae8d97da6c78d01a9755024ce3ba33ce274933a384290d97aec14ad41",
+      "bytes": 637
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/manager/RevenueStatisticsFilterView6.jsp",
+      "sha256": "c91942a0ea44e5eacc66ea3af31a6e4481718bda20793f0cd5a0be5c5f9aed31",
+      "bytes": 1610
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/manager/RevenueStatisticsListView6.jsp",
+      "sha256": "62b8ac3e757bbafac0f553862765f1a1c1896aeca0b1cd44dcb0471dda4b8ece",
+      "bytes": 2292
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/manager/ServicePartDetailView6.jsp",
+      "sha256": "91b400725e34288ec516e2169625fe24bdb06ae0dfa88028b32b455f390d3dd5",
+      "bytes": 4413
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/NotFoundView6.jsp",
+      "sha256": "39b795796851509babebb5ad5c478ea12b2abdd5dc5c9e1037aa1acd5db53cf9",
+      "bytes": 426
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/shared/bottom.jspf",
+      "sha256": "fda7b211eeac91e972e84c1ab041b10376b9f4a228dbdd890b88650f7cc8c748",
+      "bytes": 167
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/shared/pagination.jspf",
+      "sha256": "aa623867a0d757d5455f121c1a78ecd9445206ab941e074119cc12bc8b354a62",
+      "bytes": 760
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/shared/tags.jspf",
+      "sha256": "3aed78c7660a1f606ed7d8002efe9dabb608e6fe3f879309f52c3e2e081431e2",
+      "bytes": 230
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/shared/top.jspf",
+      "sha256": "d2677bb0a67247f8fabf5b3d7184a4704d3db85a8536e35035d768d12bd9fdbc",
+      "bytes": 1359
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/web.xml",
+      "sha256": "75e3ee82385f765a5dfef28eb9158b450c2c7862e2658752e7f0945a97732fd2",
+      "bytes": 1482
+    },
+    {
+      "path": "src/test/java/garaman/DatabaseIntegrationTest.java",
+      "sha256": "8dfe2c658c503ce53abe83c73b3b850dc36e11e9d4e65e428dbe5b398a52c0ea",
+      "bytes": 28881
+    },
+    {
+      "path": "src/test/java/garaman/PasswordAndContractTest.java",
+      "sha256": "36db448b15cbc727913f969ef68b22d02d73299e793522262c53724e16e0f13f",
+      "bytes": 3427
+    }
+  ]
+}

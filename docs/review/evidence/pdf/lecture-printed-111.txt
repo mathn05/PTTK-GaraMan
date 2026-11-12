@@ -1,0 +1,17 @@
+Chương 4. Thiết kế
+18. Lớp TKLoaihocluc đóng gói thông tin thực thể
+19. Lớp TKLoaihocluc trả kết quả cho hàm getTKHocluc()
+20. Hàm getTKHocluc() trả kết quả cho trang gdTKHocluc.jsp
+21. Trang gdTKHocluc.jsp hiển thị cho NV quản lí
+22. NV quản lí click chọn 1 loại học lực
+23. Trang gdTKHocluc.jsp gọi trang gdTKHLSinhvien.jsp
+24. Trang gdTKHLSinhvien.jsp gọi lớp TKSinhvienDAO yêu cầu lấy thông tin thống kê
+25. Lớp TKSinhvienDAO gọi hàm getTKSVcuaHL()
+26. Hàm getTKSVcuaHL() thwucj hiện và gọi lớp TKSinhvien đóng gói thông tin
+27. Lớp TKSinhvien đóng gói thông tin thực thể
+28. Lớp TKSinhvien trả kết quả lại cho hàm getTKSVcuaHL()
+29. Hàm getTKSVcuaHL() trả kết quả lại cho trang gdTKHLSinhvien.jsp
+30. Trang gdTKHLSinhvien.jsp hiển thị cho NV quản lí
+31. NV quản lí click 1 sinh viên
+111
+Hình 4.13: Biểu đồ thiết kế hoạt động modul xem thống kê loại học lực

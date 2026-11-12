@@ -1,0 +1,325 @@
+{
+  "target": "http://127.0.0.1:8082/garaman6",
+  "platform": "native Windows Chrome",
+  "timestamp": "2026-11-12T17:34:43.155816",
+  "checks": [
+    {
+      "name": "Unauthenticated booking redirects to login",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Wrong password receives generic login error",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Login restores previously requested protected booking route",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Customer home renders after successful login",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Customer blocked from manager reports",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "POST without CSRF is blocked",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Profile fields are readonly",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Future slots loaded from database",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Changing date keeps entered request and vehicle",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Add vehicle returns to booking with new vehicle selected",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Add vehicle preserves date and request",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Hold form accepts valid ownership and ignores tampered profile",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Confirmation escapes user text",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Confirmation displays hold expiry",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Edit restores selected vehicle and input",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Edit releases chosen slot",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Forged foreign vehicle receives 403",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Concurrent double-submit returns successful recorded result",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Only one appointment persisted after five submissions",
+      "pass": true,
+      "expected": 4,
+      "actual": 4
+    },
+    {
+      "name": "Refreshing success retains same appointment code",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "New tab receives a different booking context",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Unknown booking context is rejected",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Mobile booking has no document overflow",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Manager login opens manager home",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Manager blocked from customer booking",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Out-of-scope customer statistics is disabled",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "ALL report matches independent expected total",
+      "pass": true,
+      "expected": "5741000.00",
+      "actual": "5741000.00"
+    },
+    {
+      "name": "Report displays twenty rows and two pages",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Revenue sorted with tyre first",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "No customer rating displayed on report",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Second page has remaining seven rows and full total",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Shared detail renders part branch first",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Part lifetime count differs from filtered history",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Part detail has category brand stock specification image",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Invoice lookup redirects to correct invoice code",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Invoice displays all service and part lines",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Invoice has salesperson and cashier from different real employees",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Invoice total uses all historical lines",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Invoice Back preserves part and report context",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Shared detail renders service with no rating",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Service lifetime versus filtered history is correct",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Service usage also opens full same invoice",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "SERVICE total and page clamping",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "PART total and page clamping",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Empty report has page 1 / 0 and zero total",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Invalid date range receives 400 filter form",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Logout returns to login",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Logged-out session cannot access booking",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Browser JavaScript has no uncaught errors",
+      "pass": true,
+      "expected": [],
+      "actual": []
+    }
+  ],
+  "cleanup": {
+    "deleted": {
+      "tblAppointment6": 1,
+      "tblServiceUsage6": 0,
+      "tblPartUsage6": 0,
+      "tblVehicle6": 1,
+      "tblAppointmentSlot6": 0,
+      "tblCustomer6": 0,
+      "tblMember6": 0
+    },
+    "restoredTables": {
+      "tblAppointment6": true,
+      "tblVehicle6": true,
+      "tblAppointmentSlot6": true,
+      "tblServiceUsage6": true,
+      "tblPartUsage6": true,
+      "tblInvoice6": true,
+      "tblCustomer6": true,
+      "tblMember6": true
+    },
+    "allRestored": true,
+    "database": "garaman6_v3_it"
+  },
+  "error": null
+}

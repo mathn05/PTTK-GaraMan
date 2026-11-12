@@ -1,0 +1,231 @@
+{
+  "target": "http://127.0.0.1:8082/garaman6",
+  "checks": [
+    {
+      "name": "Actual application and SQL use V3 test schema",
+      "pass": true,
+      "actual": {
+        "database": "garaman6_v3_it",
+        "schemaHash": "8fcec9478e621e8776faa9c1695bb9040a1fb42b81ef9457fa343a3e44425e02"
+      }
+    },
+    {
+      "name": "No Payment/CodeSequence/SchemaVersion physical table",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Invalid brand 'abc' returns 400 with escaped retained input",
+      "pass": true,
+      "actual": 400
+    },
+    {
+      "name": "Invalid brand '' returns 400 with escaped retained input",
+      "pass": true,
+      "actual": 400
+    },
+    {
+      "name": "Invalid brand '-1' returns 400 with escaped retained input",
+      "pass": true,
+      "actual": 400
+    },
+    {
+      "name": "Invalid brand '0' returns 400 with escaped retained input",
+      "pass": true,
+      "actual": 400
+    },
+    {
+      "name": "Invalid brand '999999' returns 400 with escaped retained input",
+      "pass": true,
+      "actual": 400
+    },
+    {
+      "name": "Invalid brand '1 OR 1=1' returns 400 with escaped retained input",
+      "pass": true,
+      "actual": 400
+    },
+    {
+      "name": "Unsupported vehicle action is rejected",
+      "pass": true,
+      "actual": 400
+    },
+    {
+      "name": "Unsupported appointment action is rejected",
+      "pass": true,
+      "actual": 400
+    },
+    {
+      "name": "JSP only renders and has no entity packaging or DAO access",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Servlet-packaged new vehicle persists and redirects to booking",
+      "pass": true,
+      "actual": 200
+    },
+    {
+      "name": "Unknown mileage/year remain NULL and customer is server-owned",
+      "pass": true,
+      "actual": "(None, None, 1)"
+    },
+    {
+      "name": "Opening-hours caption has no hardcoded schedule",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Changing date actually fetches and renders slots of the selected day",
+      "pass": true,
+      "actual": "2026-11-14"
+    },
+    {
+      "name": "Servlet-packaged draft reaches confirmation with DB TTL",
+      "pass": true,
+      "actual": {
+        "ttl": "179994",
+        "url": "http://127.0.0.1:8082/garaman6/booking",
+        "slot": 100022,
+        "body": "XÁC NHẬN LỊCH HẸN\nCHI TIẾT YÊU CẦU ĐẶT LỊCH\nNgày hẹn\n14/11/2026\nKhung giờ hẹn\n10:00\nKhách hàng\nNguyễn Văn An\nSố điện thoại\n0912345678\nEmail\ncustomer6@example.com\nXe\nToyota Regression — V3794479684934\nNội dung yêu cầu\nClock skew regression\nKhung giờ đang được giữ đến 17:37:45 12/11/2026. Còn 03:00 để xác nhận.\n← CHỈNH SỬA\nXÁC NHẬN ĐẶT LỊCH →"
+      }
+    },
+    {
+      "name": "Client clock +10 minutes does not disable a valid hold",
+      "pass": true,
+      "actual": 600000
+    },
+    {
+      "name": "Client clock -10 minutes does not disable a valid hold",
+      "pass": true,
+      "actual": -600000
+    },
+    {
+      "name": "Real server expiry disables elapsed TTL",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Server rejects expired confirmation with 409 and no INSERT",
+      "pass": true,
+      "actual": 409
+    },
+    {
+      "name": "Ordered SERVICE first: lifetime5 and filtered2",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Back keeps ALL and original report page",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Ordered PART second: lifetime3 and filtered2",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Common invoice is HD0001 with four complete lines",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Salesperson and cashier remain different roles",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Invoice usageId '' has status 400",
+      "pass": true,
+      "actual": 400
+    },
+    {
+      "name": "Invoice usageId 'abc' has status 400",
+      "pass": true,
+      "actual": 400
+    },
+    {
+      "name": "Invoice usageId '0' has status 400",
+      "pass": true,
+      "actual": 400
+    },
+    {
+      "name": "Invoice usageId '-1' has status 400",
+      "pass": true,
+      "actual": 400
+    },
+    {
+      "name": "Invoice usageId '999999' has status 404",
+      "pass": true,
+      "actual": 404
+    },
+    {
+      "name": "Invoice usageId '2' has status 404",
+      "pass": true,
+      "actual": 404
+    },
+    {
+      "name": "Invoice lookup still enforces selected period",
+      "pass": true,
+      "actual": 404
+    },
+    {
+      "name": "Large invoice preserves exact cents in model and rendered text",
+      "pass": true,
+      "actual": {
+        "dataValue": "9007199257840991.01",
+        "text": "9.007.199.257.840.991,01 VNĐ"
+      }
+    },
+    {
+      "name": "Large whole-report total has no double conversion",
+      "pass": true,
+      "actual": "9007199259981991.01"
+    },
+    {
+      "name": "Unpaid invoice has no fabricated Payment/cashier",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Customer and vehicle IDs above 127 pass ownership by value",
+      "pass": true,
+      "actual": 200
+    },
+    {
+      "name": "Large-ID draft confirms without recreation and with correct owner",
+      "pass": true,
+      "actual": 200
+    },
+    {
+      "name": "Usage ID above 127 passes membership comparison by value",
+      "pass": true,
+      "actual": 200
+    }
+  ],
+  "cleanup": {
+    "deleted": {
+      "tblAppointment6": 1,
+      "tblServiceUsage6": 0,
+      "tblPartUsage6": 1,
+      "tblVehicle6": 2,
+      "tblAppointmentSlot6": 0,
+      "tblCustomer6": 1,
+      "tblMember6": 1
+    },
+    "restoredTables": {
+      "tblAppointment6": true,
+      "tblVehicle6": true,
+      "tblAppointmentSlot6": true,
+      "tblServiceUsage6": true,
+      "tblPartUsage6": true,
+      "tblInvoice6": true,
+      "tblCustomer6": true,
+      "tblMember6": true
+    },
+    "allRestored": true,
+    "database": "garaman6_v3_it"
+  },
+  "error": null,
+  "timestamp": "2026-11-12T17:34:49.135332"
+}

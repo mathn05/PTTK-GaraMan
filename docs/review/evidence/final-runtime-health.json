@@ -1,0 +1,23 @@
+﻿{
+    "checkedAt":  "2026-11-12T10:49:59.4393193+07:00",
+    "platform":  "Native Windows",
+    "mainLoginStatus":  200,
+    "listeners":  [
+                      {
+                          "LocalAddress":  "127.0.0.1",
+                          "LocalPort":  8080,
+                          "OwningProcess":  7568
+                      },
+                      {
+                          "LocalAddress":  "127.0.0.1",
+                          "LocalPort":  3306,
+                          "OwningProcess":  66704
+                      }
+                  ],
+    "mysqlServices":  [
+                          {
+                              "Name":  "MySQL94",
+                              "Status":  "Stopped"
+                          }
+                      ]
+}

@@ -1,0 +1,19 @@
+Chương 4. Thiết kế
+◦Thường, nếu lớp thực thể trong pha phân tích cần phương thức, hành động nào thì nên 
+đề xuất lớp DAO cho lớp thực thể tương ứng, và gán phương thức đang xem xét cho 
+lớp vùa đề xuất.
+◦Với mỗi phương thức của lớp DAO, cần lưu ý thiết kế tên gợi nhớ, các tham số đầu 
+vào, các tham số đầu ra.
+•
+Bước 4: Bổ sung các lướp thực thể liên quan đến modul. Giữ nguyên quan hệ giữa các 
+thực thể như các quan hệ giữa chúng trong biểu đồ lớp thực thể.
+a. Thiết kế tĩnh modul đăng kí học
+Các giao diện cho chức năng này được thiết kế như trong Hình 4.3. Biểu đồ lớp thiết kế tương 
+ứng trong Hình 4.4:
+•
+Tầng giao diện có các trang jsp: gdChinhSV, gdChonnganh, gdDangki, gdChonMH, 
+gdChonLHP, và doLuuDK.
+•
+Tầng thao tác với dữ liệu có các lớp DAO, KihocDAO, SinhvienKhoaDAO, 
+MonhocKihocDAO, LophocphanDAO, DangkihocDAO.
+97

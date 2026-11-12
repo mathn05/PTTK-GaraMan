@@ -1,0 +1,12 @@
+Chương 4. Thiết kế
+19. Giảng viên click chọn 1 môn học
+20. Trang gdMonhoc.jsp gọi trang gdLophocphan.jsp
+21. Trang gdLophocphan.jsp gọi lớp LophocphanDAO yêu cầu lấy danh sách các lớp học 
+phần của môn học đã chọn, do giảng viên đó giảng dạy
+22. Lớp LophocphanDAO gọi hàm getLHPcuaGV()
+23. Hàm getLHPcuaGV() thực hiện và gọi lớp Lophocphan để đóng gói thông tin
+24. Lớp Lophocphan đóng gói thông tin thực thể
+25. Lớp Lophocphan trả kết quả lại cho hàm getLHPcuaGV()
+26. Hàm getLHPcuaGV() trả kết quả lại cho trang gdLophocphan.jsp
+108
+Hình 4.11: Biểu đồ thiết kế hoạt động modul nhập điểm

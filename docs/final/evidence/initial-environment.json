@@ -1,0 +1,39 @@
+{
+  "nativeOS": "nt",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "database": [
+    "garaman6",
+    "9.4.0",
+    3306,
+    "+07:00",
+    1
+  ],
+  "legacyPayments": [
+    [
+      "PAID",
+      5,
+      5
+    ],
+    [
+      "PENDING",
+      1,
+      1
+    ],
+    [
+      "FAILED",
+      1,
+      1
+    ]
+  ],
+  "ordersWithAppointment": 0,
+  "incompleteAccountWithoutUsername": 0,
+  "existingSchemas": [
+    "garaman6",
+    "garaman6_it"
+  ],
+  "inputImage": {
+    "path": "input/grm_db.jpg",
+    "sha256": "719d86828ed07fb6f81510bf6883c54f35a84944d2c2d1e0027fa91646f51aea"
+  },
+  "requestedImageNamePresent": false
+}

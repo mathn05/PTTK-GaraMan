@@ -1,0 +1,12 @@
+Chương 4. Thiết kế
+c. Thiết kế tĩnh modul xem thống kê loại học lực
+Giao diện cho modul được thiết kế như trong Hình 4.7. Thiết kế biểu đồ lớp cho modul được 
+trình bày trong Hình 4.8:
+•
+Tầng giao diện gồm các trang jsp: gdChinhQL, gdChonTK, gdTKHocluc, 
+gdTKHLSinhvien, gdTKDiemSV, gdDiemMHSV.
+•
+Tầng xử lí truy cập dữ liệu: DAO, KihocDAO, TKHoclucDAO, TKSinhvienDAO, 
+DangkihocDAO.
+101
+Hình 4.6: Biểu đồ lớp thiết kế modul nhập điểm

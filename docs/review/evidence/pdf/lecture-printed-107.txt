@@ -1,0 +1,18 @@
+Chương 4. Thiết kế
+4. Lớp KihocDAO gọi hàm getKihoc()
+5. Hàm getKihoc() thục hiện và gọi lớp Kihoc đóng gói thông tin
+6. Lớp Kihoc đóng gói thông tin thực thể
+7. Lớp Kihoc trả kết quả cho hàm getKihoc()
+8. Hàm getKihoc() trả kết quả cho trang gdMonhoc.jsp
+9. Trang gdMonhoc.jsp hiển thị cho giảng viên
+10. Giảng viên chọn 1 kì học
+11. Trang gdMonhoc.jsp submit gọi chính nó xử lí
+12. Trang gdMonhoc.jsp gọi lớp MonhocKihocDAO yêu cầu lấy danh sách môn học do giảng 
+viên dạy trong kì được chọn.
+13. Lớp MonhocKihocDAO gọi hàm getMHcuaGV()
+14. Hàm getMHcuaGV() thực hiện và gọi lớp MonhocKihoc để đóng gói thông tin
+15. Lớp MonhocKihoc đóng gói thông tin thực thể
+16. Lớp MonhocKihoc trả kết quả lại cho hàm getMHcuaGV()
+17. Hàm getMHcuaGV() trả kết quả lại cho trang gdMonhoc.jsp
+18. Trang gdMonhoc.jsp hiển thị cho giảng viên
+107

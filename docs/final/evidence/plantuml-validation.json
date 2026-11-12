@@ -1,0 +1,50 @@
+[
+  {
+    "command": [
+      "java",
+      "-Djava.awt.headless=true",
+      "-DPLANTUML_LIMIT_SIZE=16384",
+      "-jar",
+      ".runtime/tools/plantuml-1.2025.10.jar",
+      "-checkonly",
+      "-charset",
+      "UTF-8",
+      "docs/final/design/module1-v3.puml",
+      "docs/final/design/module2-v3.puml"
+    ],
+    "exitCode": 0,
+    "seconds": 0.89,
+    "output": ""
+  },
+  {
+    "command": [
+      "java",
+      "-Djava.awt.headless=true",
+      "-DPLANTUML_LIMIT_SIZE=16384",
+      "-jar",
+      ".runtime/tools/plantuml-1.2025.10.jar",
+      "-tsvg",
+      "-charset",
+      "UTF-8",
+      "docs/final/design/module1-v3.puml",
+      "docs/final/design/module2-v3.puml"
+    ],
+    "exitCode": 0,
+    "seconds": 1.842,
+    "output": ""
+  },
+  {
+    "svg": "docs\\final\\design\\module1-v3.svg",
+    "validXML": true,
+    "width": "6310px",
+    "height": "1739px",
+    "bytes": 143581
+  },
+  {
+    "svg": "docs\\final\\design\\module2-v3.svg",
+    "validXML": true,
+    "width": "6389px",
+    "height": "2780px",
+    "bytes": 223985
+  }
+]

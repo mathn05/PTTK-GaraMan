@@ -1,0 +1,27 @@
+23
+DAO Pattern model Class
+Now, let’s put up our model object.
+package com.journaldev.model;
+public class Books {
+    private int isbn;
+    private String bookName;
+    public Books() {
+    }
+    public Books(int isbn, String bookName) {
+        this.isbn = isbn;
+        this.bookName = bookName;
+    }
+    // getter setter methods
+}
+It is a simple object with just 2 properties to keep things simple.
+DAO Pattern Interface
+Let’s define the interface to access the data associated with it at persistence level.
+package com.journaldev.dao;
+import com.journaldev.model.Books;
+import java.util.List;
+public interface BookDao {
+    List<Books> getAllBooks();
+    Books getBookByIsbn(int isbn);
+    void saveBook(Books book);
+    void deleteBook(Books book);
+}

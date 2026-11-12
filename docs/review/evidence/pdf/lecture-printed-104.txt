@@ -1,0 +1,19 @@
+Chương 4. Thiết kế
+a. Thiết kế động modul đăng kí học
+Biểu đồ hoạt động của modul được trình bày trong Hình 4.9. Biểu đồ tuần tự được trình bày trong 
+Hình 4.10, với kịch bản cụ thể như sau:
+1. Tại giao diện chính của sinh viên, sau khi đăng nhập, sinh viên click chọn chức năng đăng 
+kí học.
+2. Trang gdChinhSV.jsp gọi trang gdChonnganh.jsp.
+3. Trang gdChonnganh.jsp gọi lớp KhoaDAO yêu cầu tìm danh sách ngành học của sinh 
+viên.
+4. Lớp KhoaDAO gọi hàm getNganhhoccuaSV()
+5. Hàm getNganhhoccuaSV() gọi lớp Khoa để đóng gói thông tin
+6. Lớp Khoa đóng gói thông tin thực thể
+7. Lớp Khoa trả kết quả về cho hàm getNganhhoccuaSV()
+8. Hàm getNganhhoccuaSV() trả kết quả cho trang gdChonnganh,jsp
+9. Trang gdChonnganh.jsp hiển thị cho sinh viên
+10. Sinh viên chọn 1 ngành học để đăng kí
+11. Trang gdChonnganh.jsp gọi trang gdDangki.jsp
+104
+Hình 4.9: Biểu đồ thiết kế hoạt động modul đăng kí học

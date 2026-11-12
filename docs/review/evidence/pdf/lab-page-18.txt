@@ -1,0 +1,3 @@
+18
+The above page acts for both functionalities to create a new User and Edit the same user. 
+The edit page looks like:

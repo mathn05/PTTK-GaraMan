@@ -1,0 +1,41 @@
+Chương 4. Thiết kế
+31. Lớp DangkihocDAO gọi hàm getDiemcuaLHP()
+32. Hàm getDiemcuaLHP() thực hiện và gọi lớp Dangkihoc để đóng gói thông tin
+33. Lớp Dangkihoc đóng gói thông tin thực thể
+34. Lớp Dangkihoc trả kết quả cho hàm getDiemcuaLHP()
+35. Hàm getDiemcuaLHP() trả kết quả cho trang gdDiem.jsp
+36. Trang gdDiem.jsp hiển thị cho giảng viên
+37. Giảng viên nhập các đầu điểm cho sinh viên và click lưu
+38. Trang gdDiem.jsp gọi doLuudiem.jsp
+39. Trang doLuudiem.jsp gọi lớp Dangkihoc yêu cầu set lại accs thuộc tính điểm mới nhập.
+40. Lớp Dangkihoc gọi các hàm set thuộc tính điểm tương ứng
+41. Lớp Dangkihoc trả đối tượng về cho trang doLuudiem.jsp
+42. Trang doLuudiem.jsp gọi lớp DangkihocDAO yêu cầu lưu điểm cho lớp học phần
+43. Lớp DangkihocDAO gọi hàm luuDiemcuaLHP()
+44. Lớp DangkihocDAO trả kết quả lại cho trang doLuudiem.jsp
+45. Trang doLuudiem.jsp hiện thống báo lưu thành công
+46. Giảng viên click vào OK của thông báo
+47. Trang doLuudiem.jsp gọi trang gdChinhGV.jsp
+48. Trang gdChinhGV.jsp hiển thị
+c. Thiết kế động cho modul xem thống kê loại học lực
+Biểu đồ hoạt động của modul xem thống kê loại học lực được trình bày trong Hình 4.13. Tương 
+ứng với biểu đồ tuần tự được trình bày trong Hình 4.14, kịch bản các hoạt động diễn ra như sau:
+1. Tại trang gdChinhQL.jsp, sau khi đăng nhập, nhân viên quản lí chọn chức năng xem 
+thống kê
+2. Trang gdChinhQL.jsp gọi trang gdChonTK.jsp
+3. Trang gdChonTK.jsp hiển thị cho NV quản lí
+4. NV quản lí click xem thống kê loại học lực
+5. Trang gdChonTK.jsp gọi trang gdTKHocluc.jsp
+6. Trang gdTKHocluc.jsp gọi lớp KihocDAO yêu cầu lấy danh sách các kì đã học
+7. Lớp KihocDAO gọi hàm getKihoc()
+8. Hàm getKihoc() thực hiện và gọi lớp Kihoc đóng gói thông tin
+9. Lớp Kihoc đóng gói thông tin thực thể.
+10. Lớp Kihoc trả kết quả về cho hàm getKihoc()
+11. Hàm getKihoc() trả kết quả về cho trang gdTKHocluc.jsp
+12. Trang gdTKHocluc.jsp hiển thị cho NV quản lí
+13. NV quản lí click chọn 1 kì học để xem thống kê
+14. Trang gdTKHocluc.jsp submit vào chính nó để xử lí
+15. Trang gdTKHocluc.jsp gọi lớp TKLoaihoclucDAO yêu cầu lấy thông tin thống kê
+16. Lớp TKLoaihoclucDAO gọi hàm getTKHocluc()
+17. Hàm getTKHocluc() thực hiện và gọi lớp TKLoaihocluc đóng gói thông tin
+110

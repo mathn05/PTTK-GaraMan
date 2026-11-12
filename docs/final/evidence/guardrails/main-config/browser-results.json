@@ -1,0 +1,14 @@
+{
+  "target": "http://127.0.0.1:8082/garaman6",
+  "platform": "native Windows Chrome",
+  "timestamp": "2026-11-12T17:34:49.586565",
+  "checks": [
+    {
+      "name": "Unhandled test failure",
+      "pass": false,
+      "actual": "Traceback (most recent call last):\n  File \"C:\\Users\\admin\\Documents\\tai lieu nam 4\\PTTK\\BTL\\garaman\\scripts\\browser_test.py\", line 151, in <module>\n    try:main()\n        ^^^^^^\n  File \"C:\\Users\\admin\\Documents\\tai lieu nam 4\\PTTK\\BTL\\garaman\\scripts\\browser_test.py\", line 39, in main\n    T=GuardedTest(BASE)\n      ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\admin\\Documents\\tai lieu nam 4\\PTTK\\BTL\\garaman\\scripts\\test_support.py\", line 23, in __init__\n    raise RuntimeError('Refuse writes outside explicitly configured test schema')\nRuntimeError: Refuse writes outside explicitly configured test schema\n"
+    }
+  ],
+  "cleanup": null,
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\admin\\Documents\\tai lieu nam 4\\PTTK\\BTL\\garaman\\scripts\\browser_test.py\", line 151, in <module>\n    try:main()\n        ^^^^^^\n  File \"C:\\Users\\admin\\Documents\\tai lieu nam 4\\PTTK\\BTL\\garaman\\scripts\\browser_test.py\", line 39, in main\n    T=GuardedTest(BASE)\n      ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\admin\\Documents\\tai lieu nam 4\\PTTK\\BTL\\garaman\\scripts\\test_support.py\", line 23, in __init__\n    raise RuntimeError('Refuse writes outside explicitly configured test schema')\nRuntimeError: Refuse writes outside explicitly configured test schema\n"
+}

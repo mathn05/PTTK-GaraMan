@@ -1,0 +1,742 @@
+{
+  "time": "2026-11-12T09:57:59",
+  "root": "C:\\Users\\admin\\Documents\\tai lieu nam 4\\PTTK\\BTL\\garaman",
+  "git": "No .git repository; content SHA-256 snapshot",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 587,
+      "sha256": "cf004a3574b0bf3fc8efe1ce2a171fd3881c9474e93cb68f87de15a80026da98"
+    },
+    {
+      "path": ".mvn/wrapper/maven-wrapper.properties",
+      "bytes": 171,
+      "sha256": "1ab96d08531c63667c46b26524958688fb9805358642be28579f6d6adfbece8d"
+    },
+    {
+      "path": "docs/BUSINESS_RULES.md",
+      "bytes": 2678,
+      "sha256": "6ae844194e0d843b0f0e90eae7ed6d4acb42d82d4c3cd9f756cbcb531774a70f"
+    },
+    {
+      "path": "docs/CONTRACTS.md",
+      "bytes": 4527,
+      "sha256": "135ad9e969542577f359cb4f8aaa214e35dc8eaf16471eb4e64ea9ceaa7000b5"
+    },
+    {
+      "path": "docs/CONTRACTS_GENERATED.md",
+      "bytes": 32845,
+      "sha256": "f98f33fe0e8dde320f3cfbe1dd11863526d1d703d369cb72f7f7505c140a5804"
+    },
+    {
+      "path": "docs/design/booking-sequence.puml",
+      "bytes": 1694,
+      "sha256": "e35c2a1d281a38cb5c4e96726dffefd7613b9954c1687cb3b77e5444cec9872f"
+    },
+    {
+      "path": "docs/design/classes-final.puml",
+      "bytes": 7029,
+      "sha256": "0ac47cdad8fe6f88a24f25d258eb170c445edd839f910e7342780a47ecfe0334"
+    },
+    {
+      "path": "docs/design/revenue-sequence.puml",
+      "bytes": 1584,
+      "sha256": "5ef00dba9f11f7bbb999b4fedae8ee761f6a2c5f0b8b785ceba8afdef58132b9"
+    },
+    {
+      "path": "docs/design/SCENARIO_V3.md",
+      "bytes": 4835,
+      "sha256": "50745607fabac1f5e288c76c6a48759efd5bba14278423b93a9e6712379cd804"
+    },
+    {
+      "path": "docs/DESIGN_CHANGES.md",
+      "bytes": 2884,
+      "sha256": "b611280c44e2039ac82ed81ff4c673893655858dc9df82605ed447afb3385522"
+    },
+    {
+      "path": "docs/evidence/01-login.png",
+      "bytes": 20890,
+      "sha256": "2781d5fbd120ee8417b915279ed9814746acac5b33af6beef5cdc9c0b502916b"
+    },
+    {
+      "path": "docs/evidence/02-booking.png",
+      "bytes": 50955,
+      "sha256": "4774ad2b18b2c3b5397f8684dcabb2ebb043390842c4aeb4a28a3d14cd517030"
+    },
+    {
+      "path": "docs/evidence/03-confirm.png",
+      "bytes": 38625,
+      "sha256": "7ca2915bbd523e5d9557819aa452c2ce58d97a1c04ce52deaef41cbdbaaa94be"
+    },
+    {
+      "path": "docs/evidence/04-booking-success.png",
+      "bytes": 39797,
+      "sha256": "43dbf3cb3dbb4d2e30560e41c9bc80a695b70ffac2a014e7bdb62d62cd04c41a"
+    },
+    {
+      "path": "docs/evidence/05-booking-mobile.png",
+      "bytes": 42394,
+      "sha256": "3a49aa76e53b373e1d5ffaed7939baafbe3b20a85482f78758841d09d8297801"
+    },
+    {
+      "path": "docs/evidence/06-revenue-filter.png",
+      "bytes": 26464,
+      "sha256": "6e1f6911e7a25ba92df7d939df74bcc479ab7435ee2de26f6383042ebd5c818e"
+    },
+    {
+      "path": "docs/evidence/07-revenue-list.png",
+      "bytes": 92395,
+      "sha256": "2e4d890255c97a3fbbbf90b43ff726f83b9f11374cb5cb5fdb0a6a2f6c441ff7"
+    },
+    {
+      "path": "docs/evidence/08-revenue-page2.png",
+      "bytes": 49192,
+      "sha256": "ade590305d6a84872e0e5433eacc4b04d828ca7c40571997dfb2366298470e8c"
+    },
+    {
+      "path": "docs/evidence/09-part-detail.png",
+      "bytes": 61412,
+      "sha256": "e90f6b9075ba35e7353d9215c3213167fa3dfe38a85951281cdf32e5978fab6f"
+    },
+    {
+      "path": "docs/evidence/10-invoice.png",
+      "bytes": 53629,
+      "sha256": "db00a9c7d736763e38de1345f98878bc754b1f0df51076bcf36edf9863de2828"
+    },
+    {
+      "path": "docs/evidence/11-service-detail.png",
+      "bytes": 44589,
+      "sha256": "1a1d439dbc2b449dd3807a01c1cf246e6df5dbc5f953c6b349cc31c39263569c"
+    },
+    {
+      "path": "docs/evidence/browser-results.json",
+      "bytes": 7203,
+      "sha256": "a402f6fa508f40455bc2da1d200bb7d2550687fbc97a068ca2348e11f4800850"
+    },
+    {
+      "path": "docs/evidence/runtime-results.json",
+      "bytes": 665,
+      "sha256": "641bbbbc07aa77c191d63740175a501d8795e6470765025ac9c7c6f00ecaac00"
+    },
+    {
+      "path": "docs/HTTP_VIEW_CONTRACT.md",
+      "bytes": 3299,
+      "sha256": "21ef0a50fdc75927825b4746f88188b871e789a4ebd22ae83d954ed8efa41d11"
+    },
+    {
+      "path": "docs/schema-metadata.json",
+      "bytes": 17718,
+      "sha256": "d24d5f17db56c6a7a91b61cc7cfb6bcb9b7d0ecfef379554d018bfa687d19070"
+    },
+    {
+      "path": "docs/SCHEMA_MAPPING.md",
+      "bytes": 6225,
+      "sha256": "6a65044b4ea667348a3919480a038e0ab8d0aeaf0c4bedfe94b2fabc9c942d65"
+    },
+    {
+      "path": "docs/SOURCE_MANIFEST.md",
+      "bytes": 2673,
+      "sha256": "127d73cbe0f37959a6a88518cdf1d8072f37d1631f452b2978c2dd0b21caa10e"
+    },
+    {
+      "path": "docs/TEST_EVIDENCE.md",
+      "bytes": 11386,
+      "sha256": "093370c6bb6c398d85c33818cf2eb776ba9d11116a22d3b9e6422e2cd5cd81ef"
+    },
+    {
+      "path": "docs/TRACEABILITY.md",
+      "bytes": 3696,
+      "sha256": "c09b1e0bee363d6c79cf73863019cf2412dbc443a91414084783520e3089fcee"
+    },
+    {
+      "path": "input/GaraMan_Ho_so_dau_vao_va_quy_tac.md",
+      "bytes": 21530,
+      "sha256": "3d365ad457271849b16dde99d697e589485e2c5bc9fbb02d5e8c64f20a35a285"
+    },
+    {
+      "path": "input/GaraMan_Prompt_Code_2_Module.md",
+      "bytes": 63671,
+      "sha256": "abaedd4a1daf3aea2320714accf778af936fbd8abf54b3ac6d8b881f1288a0d9"
+    },
+    {
+      "path": "input/GaraMan_Prompt_Review_Code_va_Scenario_V3.md",
+      "bytes": 34287,
+      "sha256": "c19e93edf1c2ed8551fe342154481eae5bdccd78559e164c66c36630c2debe96"
+    },
+    {
+      "path": "input/GaraMan_Quyet_dinh_trien_khai_v2.md",
+      "bytes": 27195,
+      "sha256": "bbfa375d8b6cdac7a68c84de7a926c29b5c87c75c02661b77d4a4ea46fec4041"
+    },
+    {
+      "path": "input/giao diện mẫu.pdf",
+      "bytes": 293242,
+      "sha256": "703abbea4e590a87b077f869d632541ca93d1f0fff4b830c1cd98d9822f9df07"
+    },
+    {
+      "path": "input/grm_db.jpg",
+      "bytes": 237559,
+      "sha256": "f1a83f6599514329a6924468243c3c09524ca2fd5f644859f04cc153132cd01b"
+    },
+    {
+      "path": "input/test_tk.jpg",
+      "bytes": 164481,
+      "sha256": "a6d807bd9c0be0a9cbcbacfc0dcbaa3e9330227088e7daf77189c908c06b4f28"
+    },
+    {
+      "path": "input/tk_md1.jpg",
+      "bytes": 175688,
+      "sha256": "4587c9c5854282ba8faee44b3b06a232a1ff6d4e2479a32351542f1917a39d45"
+    },
+    {
+      "path": "input/tk_md2.jpg",
+      "bytes": 248865,
+      "sha256": "09204fc03ffdfe7dd3d93cacb14e43826bead5140d97953a7b90d961d5207e28"
+    },
+    {
+      "path": "mvnw",
+      "bytes": 11790,
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02"
+    },
+    {
+      "path": "mvnw.cmd",
+      "bytes": 8481,
+      "sha256": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c"
+    },
+    {
+      "path": "pom.xml",
+      "bytes": 2324,
+      "sha256": "138066608aeed663e0ed8454ecab1dc5eb44fcf0900a57cf21c9e6cce61f5af1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 10876,
+      "sha256": "a1eb9542adafbe156663797989e989a72b0a43cc629c6002f21091cc98693b7d"
+    },
+    {
+      "path": "scripts/browser_test.py",
+      "bytes": 15355,
+      "sha256": "07356ef4fc5844a5b5bf43b1aa09f2179e34a753809b758abc49c5980101ec42"
+    },
+    {
+      "path": "scripts/download_tools.py",
+      "bytes": 849,
+      "sha256": "dabfc62b8a4f3ec67666ac32f88d55202603d9e0a0969a77e6e36de08598e060"
+    },
+    {
+      "path": "scripts/export_schema.py",
+      "bytes": 1074,
+      "sha256": "020e6d4501e0900b7d6f3cfb4bb4a7b85d5b136e984a8e91c3ec636f8c011b2e"
+    },
+    {
+      "path": "scripts/ExportContracts.java",
+      "bytes": 4949,
+      "sha256": "a55fcaa7791bbd189b385c27f983e872fafcedbbd27a57ca0d2f235190fbd1c0"
+    },
+    {
+      "path": "scripts/generate_entities.py",
+      "bytes": 3556,
+      "sha256": "80d53a18e74b0a1acb485ac712e1d2a9f830bd12b00230ed79ddc9b1e71f76b5"
+    },
+    {
+      "path": "scripts/local_runtime.py",
+      "bytes": 7111,
+      "sha256": "efb4c6aa88d236b568c8e357a9733f7a5eb855494e43f40a6d7788e130a564d3"
+    },
+    {
+      "path": "scripts/requirements.txt",
+      "bytes": 39,
+      "sha256": "018792b3360da3b7ee0ff348f71a35595e17b321f0d305660df9a40406881d57"
+    },
+    {
+      "path": "scripts/run_tomcat.py",
+      "bytes": 4240,
+      "sha256": "2e6f5f86062ce252a6f92e1af048360502c9ce9fe4c11c96d34bb18e0667b89d"
+    },
+    {
+      "path": "scripts/runtime_smoke.py",
+      "bytes": 2767,
+      "sha256": "d6a80cd3de63d8ea003b61ec4ff1654c89b5a82d7470d50c22ee3cb8614fecd2"
+    },
+    {
+      "path": "scripts/seed_data.py",
+      "bytes": 7657,
+      "sha256": "e15afd009678dd0d01aa34992d61e51d3bad69ca46d487de7a6d14b5ef83d857"
+    },
+    {
+      "path": "scripts/Setup-GaraMan.ps1",
+      "bytes": 1097,
+      "sha256": "4ad585f43a68384fd8e2635841546c6eadfe075f5be680ca2379f17b08623277"
+    },
+    {
+      "path": "scripts/Start-GaraMan.ps1",
+      "bytes": 616,
+      "sha256": "128f0a7c22fabd977c3c4521d52cded3ed2dd5d695919fb166454bfe92af1490"
+    },
+    {
+      "path": "scripts/Stop-GaraMan.ps1",
+      "bytes": 357,
+      "sha256": "2ee482485eb6456a1ac6b4424d71a32cd3bdcbe38fdd46763dcb63a040c5ecf0"
+    },
+    {
+      "path": "scripts/Test-GaraMan.ps1",
+      "bytes": 517,
+      "sha256": "d9ff8cd31a2f9ffcd9c33a2278859b7971ef7e3505cdb0a380ff3db7e6ad3309"
+    },
+    {
+      "path": "scripts/write_evidence.py",
+      "bytes": 8452,
+      "sha256": "08ae1fc528939667a3901130087e7e6cfde83093d26d0ebdab5daeb695827c83"
+    },
+    {
+      "path": "sql/preflight-v2.sql",
+      "bytes": 478,
+      "sha256": "373957300747d87e1bd9c1d743694043f8e4ae2fcdf0e692c837629277a53b1c"
+    },
+    {
+      "path": "sql/schema.sql",
+      "bytes": 9412,
+      "sha256": "9166b6a43ddc691893b2088d8421ffc8d37087dd227d973a6f3ac9ffa6e92cfd"
+    },
+    {
+      "path": "sql/seed-expected.json",
+      "bytes": 1028,
+      "sha256": "6ec9e85fa1c525ce0290b29724e024acc4a49b05a2130d55c53a8000403214f1"
+    },
+    {
+      "path": "sql/seed-slots.sql",
+      "bytes": 752,
+      "sha256": "1aa2363509af273d6220f423a79cda4d0c809b1bb3c6e83e63369499d631fd04"
+    },
+    {
+      "path": "sql/seed.sql",
+      "bytes": 11139,
+      "sha256": "ca5e93633d888453e5795889b0e357f5ba028b1a243406f4004fc340a69f1452"
+    },
+    {
+      "path": "sql/V1__reconstructed_baseline.sql",
+      "bytes": 8133,
+      "sha256": "13e5ec9e65e2bab9258a072179e8abcdbfa9f5275b10edb74808e42cd78d63c4"
+    },
+    {
+      "path": "sql/V2__booking_changes.sql",
+      "bytes": 1049,
+      "sha256": "029613a94aec4d37c169ef9a815778dc9139d49699daa430b30491d475b6332f"
+    },
+    {
+      "path": "src/main/java/garaman/dao/AppointmentDAO6.java",
+      "bytes": 3029,
+      "sha256": "1d8381f5bc95f5a5390250080900499894daad8b6c27c01f09463821f0540f73"
+    },
+    {
+      "path": "src/main/java/garaman/dao/CodeSequenceDAO6.java",
+      "bytes": 1366,
+      "sha256": "b55417d18372aadb8337c06692bd47c37b9ee8292260c0c57fdd60bb4e17634d"
+    },
+    {
+      "path": "src/main/java/garaman/dao/CustomerDAO6.java",
+      "bytes": 697,
+      "sha256": "031ac193083c8e75a712c5ebacbe466e55f820fa18dc96f7bf8cfebf51ab6afe"
+    },
+    {
+      "path": "src/main/java/garaman/dao/DAO6.java",
+      "bytes": 1474,
+      "sha256": "17a41c0eb238d180de4e3d4f0447f3df3a1104b05aada25500785fa24b0923f6"
+    },
+    {
+      "path": "src/main/java/garaman/dao/InvoiceDAO6.java",
+      "bytes": 2822,
+      "sha256": "88133c9bd60fe273ca635a15f3de3c3e05fc0253d01cd5f44ec6d668b8f3628a"
+    },
+    {
+      "path": "src/main/java/garaman/dao/MemberDAO6.java",
+      "bytes": 1243,
+      "sha256": "a9f952259b31e08a245885fb4d6e66d7acdf1e8bd8b0aa32e73d80c094dc405c"
+    },
+    {
+      "path": "src/main/java/garaman/dao/PartUsageDAO6.java",
+      "bytes": 2010,
+      "sha256": "104de2ca9de19fe120456087011d8476586dcb5a4bf7dd5ca6bf8371ed1fc0b5"
+    },
+    {
+      "path": "src/main/java/garaman/dao/RevenueDAO6.java",
+      "bytes": 2624,
+      "sha256": "bbad52bdafcacf58618f0fe1c29eee0d46db325635b22cf1b65b6d74aeb9c293"
+    },
+    {
+      "path": "src/main/java/garaman/dao/RowMapper6.java",
+      "bytes": 6760,
+      "sha256": "0f99850137265b66926118b534886b7fe0f9c08c03e7f079cecd1027a29bb6cc"
+    },
+    {
+      "path": "src/main/java/garaman/dao/ServiceDAO6.java",
+      "bytes": 857,
+      "sha256": "7a591b99bad87a2a83e206d0a7fbfa41da485a93290bca841d74cc846f056054"
+    },
+    {
+      "path": "src/main/java/garaman/dao/ServiceUsageDAO6.java",
+      "bytes": 2071,
+      "sha256": "d2fac885130453b72b5ccfbeaa98a79d72d86df4c985edf6668bea700fd49507"
+    },
+    {
+      "path": "src/main/java/garaman/dao/SlotDAO6.java",
+      "bytes": 4080,
+      "sha256": "8d33e86279fce30c82d5bffed3faf23b4315fd3d0bcec55edf5e27d41db8cf99"
+    },
+    {
+      "path": "src/main/java/garaman/dao/SparePartDAO6.java",
+      "bytes": 1011,
+      "sha256": "be1e232eb96473d2f17e2f5c76d880633484e08d33e5f1b0b8be0504ee99f223"
+    },
+    {
+      "path": "src/main/java/garaman/dao/UsageMapper6.java",
+      "bytes": 1214,
+      "sha256": "b9dc3b9c167a481beac8075479e0f8b75b14d2fbcdc905275d42362ab8f2db1d"
+    },
+    {
+      "path": "src/main/java/garaman/dao/VehicleBrandDAO6.java",
+      "bytes": 788,
+      "sha256": "39bcc8b4c042a86d744691ab62a6674a246d3f3db02070b76a80781eb107cca5"
+    },
+    {
+      "path": "src/main/java/garaman/dao/VehicleDAO6.java",
+      "bytes": 3627,
+      "sha256": "fccb1af999386ff05f71facd41cf8d807cd050f176c3ba8b0a2444b69ff360ca"
+    },
+    {
+      "path": "src/main/java/garaman/entity/Account6.java",
+      "bytes": 846,
+      "sha256": "e3be317125367a23a7284c2d0daacf48e982734824ef2a60e4d6d2a908554244"
+    },
+    {
+      "path": "src/main/java/garaman/entity/Appointment6.java",
+      "bytes": 1550,
+      "sha256": "c6f817cfb2fb9efe849ddc88623515403b6d85270ede30e2f1320ea388b3228b"
+    },
+    {
+      "path": "src/main/java/garaman/entity/AppointmentSlot6.java",
+      "bytes": 890,
+      "sha256": "a21944f8c76f86cbd8ba488b68bfc0dc19ff1a76e1b1f1eff38c668b92e7f0ae"
+    },
+    {
+      "path": "src/main/java/garaman/entity/Category6.java",
+      "bytes": 382,
+      "sha256": "14432b733f397b69f3ffc7bd3022c066f6e274fa8e5e15ed9acb3076ca2e6112"
+    },
+    {
+      "path": "src/main/java/garaman/entity/Customer6.java",
+      "bytes": 289,
+      "sha256": "85a7c9d4a5e68682aec53000c2d308f20845b053762dca24423d3de307c7abb9"
+    },
+    {
+      "path": "src/main/java/garaman/entity/Employee6.java",
+      "bytes": 449,
+      "sha256": "15f4d0742dc1ee7f91347fa713bb54288edf9a349fa756a84259737e07b74e77"
+    },
+    {
+      "path": "src/main/java/garaman/entity/Invoice6.java",
+      "bytes": 1057,
+      "sha256": "2c6bf1add103154122d0f541e549fda8e5938f17f01e8d7fb4918bc5c5ad17f9"
+    },
+    {
+      "path": "src/main/java/garaman/entity/Manager6.java",
+      "bytes": 101,
+      "sha256": "69c3e9f89e31edd2c5f004977518ff1e399fee67e74b890b9b522ee3a9713540"
+    },
+    {
+      "path": "src/main/java/garaman/entity/Member6.java",
+      "bytes": 912,
+      "sha256": "bfb85883fd4f5439c0cd26d1b0e4926edf79eda8d408ede40d93e55a36f7b6c8"
+    },
+    {
+      "path": "src/main/java/garaman/entity/PartBrand6.java",
+      "bytes": 328,
+      "sha256": "2b1d36b3d6eed35090fe9577eef36341d670a703cc62fc819d7d835706f22189"
+    },
+    {
+      "path": "src/main/java/garaman/entity/PartUsage6.java",
+      "bytes": 1372,
+      "sha256": "6f9aa48d6fdcaa6aca2efc36005843def9b3eecd1c00f62399ada76296dda087"
+    },
+    {
+      "path": "src/main/java/garaman/entity/Payment6.java",
+      "bytes": 1303,
+      "sha256": "6e1c29ade23dd2108205bd1e15268467558d62dc7740f0080cea561544596b5d"
+    },
+    {
+      "path": "src/main/java/garaman/entity/RepairOrder6.java",
+      "bytes": 2679,
+      "sha256": "a45075f746ec0384acf94c28f166bed4a1c8ab75c83a8f1e72c8ef1f817953c0"
+    },
+    {
+      "path": "src/main/java/garaman/entity/RevenueStats6.java",
+      "bytes": 926,
+      "sha256": "d533cedb21c744e371d3773a1ec7d458ce13be3b64ef7b6e92edea5ca9932a88"
+    },
+    {
+      "path": "src/main/java/garaman/entity/SaleStaff6.java",
+      "bytes": 105,
+      "sha256": "a44ee2467175da60c1f1125ae5ba4fa7c139137d55e6b89ad88b43a083fee28b"
+    },
+    {
+      "path": "src/main/java/garaman/entity/Service6.java",
+      "bytes": 902,
+      "sha256": "3057a02453f890b93f572ee56c7129903a384d6a496e971977672d5ca256e6f6"
+    },
+    {
+      "path": "src/main/java/garaman/entity/ServiceUsage6.java",
+      "bytes": 1179,
+      "sha256": "d231ee8c8818f3c6869f45df00c6b1d4187eba6cf0883591d562ddd95fed2a53"
+    },
+    {
+      "path": "src/main/java/garaman/entity/SparePart6.java",
+      "bytes": 1871,
+      "sha256": "83023109f0a7fed3ef2acb3e952c0c272993113c3bd1a1f379f4369877c8f325"
+    },
+    {
+      "path": "src/main/java/garaman/entity/Technician6.java",
+      "bytes": 107,
+      "sha256": "c5b8fbec291420bcf9d4f4734aba444bd816c919007aa1b649000f736e6b235d"
+    },
+    {
+      "path": "src/main/java/garaman/entity/Vehicle6.java",
+      "bytes": 1448,
+      "sha256": "ffe6e9b35706cc53446947b83b5d0e68832e6f617a137f5ec59f7414ccdf7751"
+    },
+    {
+      "path": "src/main/java/garaman/entity/VehicleBrand6.java",
+      "bytes": 334,
+      "sha256": "929e9c346df9f8b061409731f8fd041372e93c6b49117d6ca7b7cd124af0a494"
+    },
+    {
+      "path": "src/main/java/garaman/exception/BookingConflictException6.java",
+      "bytes": 169,
+      "sha256": "3e12fe4fd9ec92148de52c4bf1430cef26463aa7ab153b6fc69cdafa3e723150"
+    },
+    {
+      "path": "src/main/java/garaman/exception/DataAccessException6.java",
+      "bytes": 183,
+      "sha256": "7b46c8d8d7943c67382e7902886df57d4a75a57b4f97279f2cd6f74638073e59"
+    },
+    {
+      "path": "src/main/java/garaman/filter/AppFilter6.java",
+      "bytes": 2415,
+      "sha256": "b486e786e7540455da5cf4ba37752194e8ad5964881413e1e0873fa59e353849"
+    },
+    {
+      "path": "src/main/java/garaman/filter/AuthFilter6.java",
+      "bytes": 1121,
+      "sha256": "b64d6f685fed19083b4e735faf4e0e69a9613a78a6f4adfa235288015366d7d2"
+    },
+    {
+      "path": "src/main/java/garaman/servlet/AppointmentServlet6.java",
+      "bytes": 1556,
+      "sha256": "8996afb38cacddd8cc959104a015746ad94da6dbab0405d1763143e9748bcc15"
+    },
+    {
+      "path": "src/main/java/garaman/servlet/BookingServlet6.java",
+      "bytes": 5862,
+      "sha256": "e16b48bff66950525b7f94b88b01fa433224111d927427dcfd5dc813642b75f6"
+    },
+    {
+      "path": "src/main/java/garaman/servlet/InvoiceServlet6.java",
+      "bytes": 1471,
+      "sha256": "e28f8e579a974eac2c4cf7b6999a30d0b2ea7cae87c2c3a4ca9823e93ee32b49"
+    },
+    {
+      "path": "src/main/java/garaman/servlet/LoginServlet6.java",
+      "bytes": 2710,
+      "sha256": "cdc8ff211dcda143b48ad1a6155cb2f813211d58898d5afb2a14eceb237c3144"
+    },
+    {
+      "path": "src/main/java/garaman/servlet/RevenueServlet6.java",
+      "bytes": 2975,
+      "sha256": "7fb7264ebfa9bb7a103716ac7514039fdd5531f7069b7e23d9b214a68423a98c"
+    },
+    {
+      "path": "src/main/java/garaman/servlet/ServicePartServlet6.java",
+      "bytes": 4000,
+      "sha256": "df3e469e537c38fff3178e5c32710c9ef05544143d646649ec6fb8e04fc0b26c"
+    },
+    {
+      "path": "src/main/java/garaman/servlet/VehicleServlet6.java",
+      "bytes": 2246,
+      "sha256": "ef72c7adfc604baa8bea70f97a891df00e0648f6f648dc69247bda0dbd90e69c"
+    },
+    {
+      "path": "src/main/java/garaman/util/BookingContext6.java",
+      "bytes": 627,
+      "sha256": "eba2ea0f94a2ef40d14d67d53a8f08fbcaaa16cd780b6395d34c23f0f3217bbc"
+    },
+    {
+      "path": "src/main/java/garaman/util/BookingSessionListener6.java",
+      "bytes": 492,
+      "sha256": "f06bba8cce12a7666215204d2a3efdd1a8563790924746a4855e65d53b79f49e"
+    },
+    {
+      "path": "src/main/java/garaman/util/Config6.java",
+      "bytes": 1265,
+      "sha256": "6392eaa274f4dcf48bdbda394a38fa4635525435deb550f6cb2e90234f094be5"
+    },
+    {
+      "path": "src/main/java/garaman/util/DateUtil6.java",
+      "bytes": 617,
+      "sha256": "98abc1dd0d18fb2f176c33906c8a7bbb78e38fd87565dedd584322275cfdb657"
+    },
+    {
+      "path": "src/main/java/garaman/util/PasswordUtil6.java",
+      "bytes": 2283,
+      "sha256": "47fdfaf27e480c0e522c17622882126a78a75bc16c22d442c0fbedc05793e6f8"
+    },
+    {
+      "path": "src/main/java/garaman/util/SlotSetup6.java",
+      "bytes": 1874,
+      "sha256": "c54e68727b935037f21ba741c3ce1fef588b22e57434701541fc01f6f4dd2014"
+    },
+    {
+      "path": "src/main/java/garaman/util/Web6.java",
+      "bytes": 5197,
+      "sha256": "18baea19bf941eadecf5ba72c943fcab18bb480624c34c84d09080d2e154149a"
+    },
+    {
+      "path": "src/main/resources/garaman.properties.example",
+      "bytes": 482,
+      "sha256": "00a9efcb46eea2de21518adaee41e34de2de67e38e77d9d68bd623b09a18ac28"
+    },
+    {
+      "path": "src/main/webapp/assets/app.css",
+      "bytes": 8761,
+      "sha256": "421c681d317b170d1c5e20e03674bd645255605b849af3360dd09919f27a4e03"
+    },
+    {
+      "path": "src/main/webapp/assets/app.js",
+      "bytes": 2376,
+      "sha256": "8ef132b464264e795c64e021b661297cf22cfe8023139fbc1ba6a0add3132667"
+    },
+    {
+      "path": "src/main/webapp/assets/favicon.svg",
+      "bytes": 236,
+      "sha256": "c20c7200de53ab270f9e851e2141d2848afc255c7f50438d59c94ed3c1da03a9"
+    },
+    {
+      "path": "src/main/webapp/assets/part-filter.svg",
+      "bytes": 454,
+      "sha256": "52f700dc755ec0430a9689c055c5f39fe05ed94b7069c8cd181d225df8991558"
+    },
+    {
+      "path": "src/main/webapp/assets/part-tyre.svg",
+      "bytes": 446,
+      "sha256": "510952ff7b882f2c3531a4f9ddc9c43d8032dd3150e9cb4b072cd50363696b3d"
+    },
+    {
+      "path": "src/main/webapp/index.jsp",
+      "bytes": 128,
+      "sha256": "ea54c1f345ac7251ce6f6461561e3e923046e18ea10139752418a3d86b999302"
+    },
+    {
+      "path": "src/main/webapp/META-INF/context.xml",
+      "bytes": 130,
+      "sha256": "bc9061308cdbdaf047497dcc7e115ee9e887eb7ada178e1b8bc035fc3438b33f"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/auth/LoginView6.jsp",
+      "bytes": 1114,
+      "sha256": "20a8050123c8e379dce0be570830427b28bec5a55affe5caa49f35562418e53c"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/customer/AddNewVehicleView6.jsp",
+      "bytes": 2011,
+      "sha256": "3f537cf7cef65e6ee9d1525dea806e6184b33dabe4c17f66056d6a8b13665426"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/customer/BookAppointmentView6.jsp",
+      "bytes": 3440,
+      "sha256": "5235d47c3210e30429380938ce17c9297e11d73837950c82eb9c8147c08dbfe5"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/customer/ConfirmView6.jsp",
+      "bytes": 2770,
+      "sha256": "8741dd01166a2a8efc6906fcf563ac04c27881e19201516b97c1270f617be533"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/customer/CustomerHomeView6.jsp",
+      "bytes": 615,
+      "sha256": "0dde577bbe9cb9ad152e7f594abbcb4092e5752d650524e25b38d76211a86150"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/ErrorView6.jsp",
+      "bytes": 443,
+      "sha256": "91906837aec7eab8f8264a72afc9d9a8215cee8a59c48575d9b6a7c340b4046f"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/manager/InvoiceDetailView6.jsp",
+      "bytes": 4199,
+      "sha256": "2d85b5a8b43e22a19f471f3883511a09c5e9952e53b816501d55db6fbfe70deb"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/manager/ManagerHomeView6.jsp",
+      "bytes": 522,
+      "sha256": "5b97f28ec724dd6cf625556df05a2fdc5016556a6558913d975e631fa867b57a"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/manager/ReportMenuView6.jsp",
+      "bytes": 637,
+      "sha256": "d70078eae8d97da6c78d01a9755024ce3ba33ce274933a384290d97aec14ad41"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/manager/RevenueStatisticsFilterView6.jsp",
+      "bytes": 1610,
+      "sha256": "c91942a0ea44e5eacc66ea3af31a6e4481718bda20793f0cd5a0be5c5f9aed31"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/manager/RevenueStatisticsListView6.jsp",
+      "bytes": 2292,
+      "sha256": "62b8ac3e757bbafac0f553862765f1a1c1896aeca0b1cd44dcb0471dda4b8ece"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/manager/ServicePartDetailView6.jsp",
+      "bytes": 4413,
+      "sha256": "91b400725e34288ec516e2169625fe24bdb06ae0dfa88028b32b455f390d3dd5"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/NotFoundView6.jsp",
+      "bytes": 426,
+      "sha256": "39b795796851509babebb5ad5c478ea12b2abdd5dc5c9e1037aa1acd5db53cf9"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/shared/bottom.jspf",
+      "bytes": 167,
+      "sha256": "fda7b211eeac91e972e84c1ab041b10376b9f4a228dbdd890b88650f7cc8c748"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/shared/pagination.jspf",
+      "bytes": 760,
+      "sha256": "aa623867a0d757d5455f121c1a78ecd9445206ab941e074119cc12bc8b354a62"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/shared/tags.jspf",
+      "bytes": 230,
+      "sha256": "3aed78c7660a1f606ed7d8002efe9dabb608e6fe3f879309f52c3e2e081431e2"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/views/shared/top.jspf",
+      "bytes": 1359,
+      "sha256": "d2677bb0a67247f8fabf5b3d7184a4704d3db85a8536e35035d768d12bd9fdbc"
+    },
+    {
+      "path": "src/main/webapp/WEB-INF/web.xml",
+      "bytes": 1482,
+      "sha256": "75e3ee82385f765a5dfef28eb9158b450c2c7862e2658752e7f0945a97732fd2"
+    },
+    {
+      "path": "src/test/java/garaman/DatabaseIntegrationTest.java",
+      "bytes": 18409,
+      "sha256": "e429f186aefeecb6f4c1f12c3075d9accf7317fcf4fd3bd8ef4c3eab4700fee7"
+    },
+    {
+      "path": "src/test/java/garaman/PasswordAndContractTest.java",
+      "bytes": 2474,
+      "sha256": "edc77d30de2b4c82d3d9a55696a05f8d2b4544bb1583b2b8aa001b239718d533"
+    }
+  ]
+}

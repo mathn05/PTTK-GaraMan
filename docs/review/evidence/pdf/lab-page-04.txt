@@ -1,0 +1,5 @@
+4
+1. Create an Eclipse Dynamic Web Project
+To create a new dynamic Web project in Eclipse:
+1. On the main menu select File > New > Project....
+2. In the upcoming wizard choose Web > Dynamic Web Project.

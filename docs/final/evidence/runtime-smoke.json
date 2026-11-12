@@ -1,0 +1,7 @@
+{
+  "target": "http://127.0.0.1:8082/garaman6",
+  "actualDatabase": "garaman6_v3_it",
+  "schemaHash": "8fcec9478e621e8776faa9c1695bb9040a1fb42b81ef9457fa343a3e44425e02",
+  "loginStatus": 200,
+  "databaseShutdownPerformed": false
+}

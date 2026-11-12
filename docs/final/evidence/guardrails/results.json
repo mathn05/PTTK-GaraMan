@@ -1,0 +1,203 @@
+{
+  "checks": [
+    {
+      "name": "main-config",
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "pass": true,
+      "cleanup": null
+    },
+    {
+      "name": "main-http",
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "pass": true,
+      "cleanup": null
+    },
+    {
+      "name": "main-jdbc",
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "pass": true,
+      "cleanup": null
+    },
+    {
+      "name": "cleanup-failure",
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "pass": true,
+      "cleanup": {
+        "deleted": {
+          "tblAppointment6": 0,
+          "tblServiceUsage6": 0,
+          "tblPartUsage6": 0,
+          "tblVehicle6": 1,
+          "tblAppointmentSlot6": 0,
+          "tblCustomer6": 0,
+          "tblMember6": 0
+        },
+        "restoredTables": {
+          "tblAppointment6": true,
+          "tblVehicle6": true,
+          "tblAppointmentSlot6": true,
+          "tblServiceUsage6": true,
+          "tblPartUsage6": true,
+          "tblInvoice6": true,
+          "tblCustomer6": true,
+          "tblMember6": true
+        },
+        "allRestored": true,
+        "database": "garaman6_v3_it"
+      }
+    }
+  ],
+  "mainDatabaseUnchanged": true,
+  "before": {
+    "tblappointment6": {
+      "rows": 6,
+      "sha256": "56f419ef01ddaa4ef851b883284443ee671d9cd2ba242c91acbba962aa84eefd"
+    },
+    "tblappointmentslot6": {
+      "rows": 240,
+      "sha256": "c16bb934224abf8676e6387fbc4c32a277a28970b25fa39cf71e691d199fc0f5"
+    },
+    "tblcategory6": {
+      "rows": 3,
+      "sha256": "d17e7e29f46bd08367fc2852bbbda1e148f8c2fb1194dec21a423ea651c879a7"
+    },
+    "tblcustomer6": {
+      "rows": 3,
+      "sha256": "35ef110976a180823809a7ae2499e2f9905a91c0ca971721258ecfe0942d3a3a"
+    },
+    "tblemployee6": {
+      "rows": 5,
+      "sha256": "df035bd5132b7385ca2160ab6b58010afc2366ec5cde5ed3c517c81356144bd8"
+    },
+    "tblinvoice6": {
+      "rows": 7,
+      "sha256": "f1df63e3cc3f0cc86d722b54d119458821982de6ebd4a105e7cf0d5854e12cdd"
+    },
+    "tblmember6": {
+      "rows": 8,
+      "sha256": "8f9bd249188d3b9cd7a227abf79a6bc01e2afeebe1c46836bf7ead583f5dd7b8"
+    },
+    "tblpartbrand6": {
+      "rows": 2,
+      "sha256": "23f7430f3602e9c5d41bccb863aa64d8917c122cd7631e4bd6a64aea516b91b6"
+    },
+    "tblpartreceipt6": {
+      "rows": 1,
+      "sha256": "08b85a8dbd9eafdaacb8e4410931005f1e851e2022aa65af255d2854a81bac9c"
+    },
+    "tblpartusage6": {
+      "rows": 8,
+      "sha256": "d131b41521c101df95291c33f578f1dfe8be9eeffc18c607d470f77477851841"
+    },
+    "tblreceiptdetail6": {
+      "rows": 3,
+      "sha256": "d97ace9cf760a2fd256b3f5a47ec81598cb147095334708cae8a72c414f3620c"
+    },
+    "tblrepairorder6": {
+      "rows": 8,
+      "sha256": "a2c8fe41a6751b4939ebdd350659a15c210aa126ba2d86ab6d9cc0ea94f412dd"
+    },
+    "tblservice6": {
+      "rows": 25,
+      "sha256": "a8e92606356c8f8f731b506bfd100adb1ea26b94dcc6d30255d8eecb3fce3472"
+    },
+    "tblserviceusage6": {
+      "rows": 29,
+      "sha256": "0d89b53b7b7c345de3ecbe607ade9e1293136d5f8ea5059f7311c62d7c559015"
+    },
+    "tblsparepart6": {
+      "rows": 3,
+      "sha256": "54a164e9e19746900e71a4d749f877ab26280b7ce9e0969cd749ba11bb006335"
+    },
+    "tblsupplier6": {
+      "rows": 1,
+      "sha256": "b23e9f62feeed5a99bf5a087a9a5ca143c844ef1dcca7283bbeebff0e75d2311"
+    },
+    "tblvehicle6": {
+      "rows": 4,
+      "sha256": "3f63ba778e790bff2c62544d4551666900f59ef6b52c2d972c4d95531312b431"
+    },
+    "tblvehiclebrand6": {
+      "rows": 3,
+      "sha256": "a537c914867d3f78e7dab8b55e2e6f690860d6c5e2c8848f1261b40ccc636435"
+    }
+  },
+  "after": {
+    "tblappointment6": {
+      "rows": 6,
+      "sha256": "56f419ef01ddaa4ef851b883284443ee671d9cd2ba242c91acbba962aa84eefd"
+    },
+    "tblappointmentslot6": {
+      "rows": 240,
+      "sha256": "c16bb934224abf8676e6387fbc4c32a277a28970b25fa39cf71e691d199fc0f5"
+    },
+    "tblcategory6": {
+      "rows": 3,
+      "sha256": "d17e7e29f46bd08367fc2852bbbda1e148f8c2fb1194dec21a423ea651c879a7"
+    },
+    "tblcustomer6": {
+      "rows": 3,
+      "sha256": "35ef110976a180823809a7ae2499e2f9905a91c0ca971721258ecfe0942d3a3a"
+    },
+    "tblemployee6": {
+      "rows": 5,
+      "sha256": "df035bd5132b7385ca2160ab6b58010afc2366ec5cde5ed3c517c81356144bd8"
+    },
+    "tblinvoice6": {
+      "rows": 7,
+      "sha256": "f1df63e3cc3f0cc86d722b54d119458821982de6ebd4a105e7cf0d5854e12cdd"
+    },
+    "tblmember6": {
+      "rows": 8,
+      "sha256": "8f9bd249188d3b9cd7a227abf79a6bc01e2afeebe1c46836bf7ead583f5dd7b8"
+    },
+    "tblpartbrand6": {
+      "rows": 2,
+      "sha256": "23f7430f3602e9c5d41bccb863aa64d8917c122cd7631e4bd6a64aea516b91b6"
+    },
+    "tblpartreceipt6": {
+      "rows": 1,
+      "sha256": "08b85a8dbd9eafdaacb8e4410931005f1e851e2022aa65af255d2854a81bac9c"
+    },
+    "tblpartusage6": {
+      "rows": 8,
+      "sha256": "d131b41521c101df95291c33f578f1dfe8be9eeffc18c607d470f77477851841"
+    },
+    "tblreceiptdetail6": {
+      "rows": 3,
+      "sha256": "d97ace9cf760a2fd256b3f5a47ec81598cb147095334708cae8a72c414f3620c"
+    },
+    "tblrepairorder6": {
+      "rows": 8,
+      "sha256": "a2c8fe41a6751b4939ebdd350659a15c210aa126ba2d86ab6d9cc0ea94f412dd"
+    },
+    "tblservice6": {
+      "rows": 25,
+      "sha256": "a8e92606356c8f8f731b506bfd100adb1ea26b94dcc6d30255d8eecb3fce3472"
+    },
+    "tblserviceusage6": {
+      "rows": 29,
+      "sha256": "0d89b53b7b7c345de3ecbe607ade9e1293136d5f8ea5059f7311c62d7c559015"
+    },
+    "tblsparepart6": {
+      "rows": 3,
+      "sha256": "54a164e9e19746900e71a4d749f877ab26280b7ce9e0969cd749ba11bb006335"
+    },
+    "tblsupplier6": {
+      "rows": 1,
+      "sha256": "b23e9f62feeed5a99bf5a087a9a5ca143c844ef1dcca7283bbeebff0e75d2311"
+    },
+    "tblvehicle6": {
+      "rows": 4,
+      "sha256": "3f63ba778e790bff2c62544d4551666900f59ef6b52c2d972c4d95531312b431"
+    },
+    "tblvehiclebrand6": {
+      "rows": 3,
+      "sha256": "a537c914867d3f78e7dab8b55e2e6f690860d6c5e2c8848f1261b40ccc636435"
+    }
+  }
+}

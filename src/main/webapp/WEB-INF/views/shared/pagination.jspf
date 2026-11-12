@@ -1,0 +1,6 @@
+<%@ page pageEncoding="UTF-8" %>
+<nav class="pagination" aria-label="Phân trang">
+  <c:choose><c:when test="${currentPage > 1}"><a class="button secondary small" href="<c:out value='${previousUrl}' />">← Trang trước</a></c:when><c:otherwise><span class="button secondary small disabled">← Trang trước</span></c:otherwise></c:choose>
+  <span>Trang <strong id="currentPage">${currentPage}</strong> / <strong id="totalPages">${totalPages}</strong> · ${totalRows} kết quả</span>
+  <c:choose><c:when test="${currentPage < totalPages}"><a class="button secondary small" href="<c:out value='${nextUrl}' />">Trang sau →</a></c:when><c:otherwise><span class="button secondary small disabled">Trang sau →</span></c:otherwise></c:choose>
+</nav>

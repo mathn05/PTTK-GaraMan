@@ -1,0 +1,28 @@
+Chương 4. Thiết kế
+41. Trang gdTKDiemSV.jsp gọi trang gdDiemMHSV.jsp
+42. Trang gdDiemMHSV.jsp gọi lớp DangkihocDAO yêu cầu lấy thông tin điểm chi tiết của 
+môn học
+43. Lớp DangkihocDAO gọi hàm getDiemMHcuaSV()
+44. Hàm getDiemMHcuaSV() thực hiện và gọi lớp Dangkihoc đóng gói thông tin
+45. Lớp Dangkihoc đóng gói thông tin thực thể
+46. Lớp Dangkihoc trả lại cho hàm getDiemMHcuaSV()
+47. Hàm getDiemMHcuaSV() trả kết quả cho trang gdDiemMHSV.jsp
+48. Trang gdDiemMHSV.jsp hiển thị cho NV quản lí
+4.3.3 Thiết kế triển khai
+Quy trình tiến hành các bước như sau:
+•
+Bước 1: Vẽ biểu đồ triển khai của hệ thống: Các máy sẽ cài đặt hệ thống. Mỗi máy đặt 
+các modul hay package nào. Các modul/package tương tác với nhau thế nào.
+Áp dụng cho hệ thống, các package được thiết kế theo cấu trúc trong Hình 4.15:
+•
+Các lớp thực thể đặt chung trong gói model
+•
+Các lớp DAO đặt chung trong gói dao.
+•
+Các trang jsp để trong gói view. Gói view được chia nhỏ thành các gói nhỏ hơn tương ứng 
+với các giao diện cho các người dùng khác nhau:
+◦Các trang thao tác cho đăng nhập, quản lí mật khẩu đặt trong gói thanhvien.
+◦Các trang cho chức năng liên quan đến giảng viên đặt trong gói giangvien
+◦Các trang cho chức năng liên quan đến nhân viên quản lí đặt trong gói quanli
+◦Các trang cho chức năng liên quan đến sinh viên đặt trong gói sinhvien
+113

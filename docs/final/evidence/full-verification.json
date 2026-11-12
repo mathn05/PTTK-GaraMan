@@ -1,0 +1,8 @@
+{
+  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/Test-GaraMan.ps1 -Smoke",
+  "exitCode": 0,
+  "seconds": 61.325,
+  "nativeWindows": true,
+  "log": "docs\\final\\evidence\\full-verification.log",
+  "finishedAt": "2026-11-12T17:34:55+0700"
+}

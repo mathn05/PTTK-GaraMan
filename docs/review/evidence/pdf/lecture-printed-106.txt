@@ -1,0 +1,41 @@
+Chương 4. Thiết kế
+19. Sinh viên click tiếp tục để đăng kí.
+20. Trang gdDangki.jsp gọi trang gdChonMH.jsp
+21. Trang gdChonMH.jsp gọi lớp MonhocKihocDAO yêu cầu lấy danh sách môn học mà 
+sinh viên được đăng kí
+22. Lớp MonhocKihocDAO gọi hàm getMonhoccuaSV()
+23. Hàm getMonhoccuaSV() thực hiện và gọi lớp MonhocKihoc để đóng gói
+24. Lớp MonhocKihoc đóng gói thông tin thực thể
+25. Lớp MonhocKihoc trả kết quả lại cho hàm getMonhoccuaSV()
+26. Hàm getMonhoccuaSV() trả kết quả lại cho trang gdChonMH.jsp
+27. Trang gdChonMH.jsp hiển thị cho sinh viên.
+28. Sinh viên click chọn 1 môn học
+29. Trang gdChonMH.jsp gọi trang gdChonLHP.jsp
+30. Trang gdChonLHP.jsp gọi lớp LophocphanDAO yêu cầu tìm danh sách lớp học phần của 
+môn học đã chọn.
+31. Lớp LophocphanDAO gọi hàm getLHPcuaMH()
+32. Hàm getLHPcuaMH() thực hiện và gọi lớp Lophocphan
+33. Lớp Lophocphan đóng gói thông tin thực thể
+34. Lớp Lophocphan trả lại kết quả cho hàm getLHPcuaMH()
+35. Hàm getLHPcuaMH() trả kết quả cho trang gdChonLHP.jsp
+36. Trang  gdChonLHP.jsp hiển thị cho sinh viên
+37. Sinh viên chọn 1 lớp học phần để đăng kí
+38. Trang  gdChonLHP.jsp gọi lại trang gdDangki.jsp
+39. Trang gdDangki.jsp hiển thị cho sinh viên. (có thể lặp lại các bước 18 đến 38 cho đến khi 
+đủ số tín chỉ tối thiểu)
+40. Sinh viên click chọn lưu đăng kí
+41. Trang gdDangki.jsp gọi trang doLuuDK.jsp
+42. Trang doLuuDK.jsp gọi lớp DangkihocDAO yêu cầu lưu
+43. Lớp DangkihocDAO gọi hàm luuDKcuaSV()
+44. Lớp DangkihocDAO trả lại lớp doLuuDK.jsp
+45. Lớp doLuuDK.jsp thông báo thành công
+46. Sinh viên click OK của thông báo
+47. Trang doLuuDK.jsp gọi lại trang gdChinhSV.jsp
+48. Trang gdChinhSV.jsp hiển thị.
+b. Thiết kế động modul nhập điểm
+Biểu đồ hoạt động của modul nhập điểm được trình bày trong Hình 4.11. Tương ứng với biểu đồ 
+tuần tự được trình bày trong Hình 4.12, kịch bản các hoạt động diễn ra như sau:
+1. Tại trang gdChinhGV.jsp, sau khi đăng nhập, giảng viên chọn chức năng nhập điểm
+2. Trang gdChinhGV.jsp gọi trang gdMonhoc.jsp
+3. Trang gdMonhoc.jsp gọi lớp KihocDAO yêu cầu lấy thông tin các học kì đang học.
+106

@@ -1,0 +1,90 @@
+{
+  "target": "http://127.0.0.1:8082/garaman6",
+  "platform": "native Windows Chrome",
+  "timestamp": "2026-11-12T17:34:53.443119",
+  "checks": [
+    {
+      "name": "Unauthenticated booking redirects to login",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Wrong password receives generic login error",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Login restores previously requested protected booking route",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Customer home renders after successful login",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Customer blocked from manager reports",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "POST without CSRF is blocked",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Profile fields are readonly",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Future slots loaded from database",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Changing date keeps entered request and vehicle",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "Unhandled test failure",
+      "pass": false,
+      "actual": "Traceback (most recent call last):\n  File \"C:\\Users\\admin\\Documents\\tai lieu nam 4\\PTTK\\BTL\\garaman\\scripts\\browser_test.py\", line 151, in <module>\n    try:main()\n        ^^^^^^\n  File \"C:\\Users\\admin\\Documents\\tai lieu nam 4\\PTTK\\BTL\\garaman\\scripts\\browser_test.py\", line 67, in main\n    if os.environ.get('GARAMAN_TEST_FAIL_AFTER_VEHICLE')=='1':raise RuntimeError('Intentional cleanup verification failure')\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Intentional cleanup verification failure\n"
+    }
+  ],
+  "cleanup": {
+    "deleted": {
+      "tblAppointment6": 0,
+      "tblServiceUsage6": 0,
+      "tblPartUsage6": 0,
+      "tblVehicle6": 1,
+      "tblAppointmentSlot6": 0,
+      "tblCustomer6": 0,
+      "tblMember6": 0
+    },
+    "restoredTables": {
+      "tblAppointment6": true,
+      "tblVehicle6": true,
+      "tblAppointmentSlot6": true,
+      "tblServiceUsage6": true,
+      "tblPartUsage6": true,
+      "tblInvoice6": true,
+      "tblCustomer6": true,
+      "tblMember6": true
+    },
+    "allRestored": true,
+    "database": "garaman6_v3_it"
+  },
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\admin\\Documents\\tai lieu nam 4\\PTTK\\BTL\\garaman\\scripts\\browser_test.py\", line 151, in <module>\n    try:main()\n        ^^^^^^\n  File \"C:\\Users\\admin\\Documents\\tai lieu nam 4\\PTTK\\BTL\\garaman\\scripts\\browser_test.py\", line 67, in main\n    if os.environ.get('GARAMAN_TEST_FAIL_AFTER_VEHICLE')=='1':raise RuntimeError('Intentional cleanup verification failure')\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Intentional cleanup verification failure\n"
+}

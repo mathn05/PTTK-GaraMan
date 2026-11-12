@@ -1,0 +1,24 @@
+19
+10. Creating Error JSP page
+Here’s the code of the Error.jsp page which simply shows the exception message:
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" isErrorPage="true" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Error</title>
+</head>
+<body>
+ <center>
+  <h1>Error</h1>
+  <h2><%=exception.getMessage() %><br/> </h2>
+ </center> 
+</body>
+</html>
+11. Deploying and Testing the Application
+It's time to see a demo of the above User Management web application. Deploy this web 
+application in tomcat server. 
+Type the following URL in your web browser to access the User 
+Management application: http://localhost:8080/jsp-servlet-jdbc-mysql-crud-example/
+Create a new User
